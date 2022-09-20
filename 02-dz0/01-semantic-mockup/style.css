@@ -1,0 +1,32 @@
+body {
+    color: white;
+    text-align: center;
+}
+header h1{
+    background: red;
+    font-size: 4em;
+    margin-bottom: 0;
+}
+nav {
+    background: orange;
+    font-size: 2em;
+    padding: 10px;
+}
+a:link {
+    color: white;
+}
+main {
+    background: #1D9735;
+    padding: 8px;
+    font-size: 1.3em;
+}
+article {
+    text-align: left;
+    background: blue;
+    padding: 10px;
+    margin: 8px;
+}
+footer {
+    background: #b833dc;
+    font-size: 4em;
+}
