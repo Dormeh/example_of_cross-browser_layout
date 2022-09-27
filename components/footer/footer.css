@@ -14,8 +14,6 @@
 }
 
 .footer_text {
-    position: absolute;
-    max-width: 75%;
     min-width: 640px;
     margin: 0 0 136px 0;
 
