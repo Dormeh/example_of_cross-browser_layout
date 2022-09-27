@@ -1,35 +1,29 @@
 /* Стилизация кнопки */
 .button {
-    padding: 0;
+    padding:  15px 65px 14px 65px;
     border: none;
-    font: inherit;
-    color: inherit;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
     cursor: pointer;
     outline-style: none;
 
-    height: 48px;
-    width: 189px;
     border-radius: 8px;
-}
+    margin: 16px;
+    transition: opacity 200ms ease-in-out, background 200ms ease-in-out;
 
-.button__title {
-    font-size: 16px;
 }
 
 .button_primary {
     color: var(--white);
     background: var(--ligth-blue);
 
-    transition: opacity 200ms ease-in-out, background 200ms ease-in-out;
-    margin: 16px;
 }
 
 .button_secondary {
     color: var(--white);
     background: var(--secondary);
-
-    transition: opacity 200ms ease-in-out, background 200ms ease-in-out;
-    margin: 16px;
 
 }
 
@@ -41,8 +35,6 @@
     border-style: solid;
     border-width: 1px;
 
-    transition: opacity 200ms ease-in-out, border-color 200ms ease-in-out;
-    margin: 16px;
 
 }
 
@@ -60,9 +52,5 @@
 
 .button:disabled {
     pointer-events: none;
-    opacity: 0.5;
-}
-
-.button:disabled .button__title {
     opacity: 0.5;
 }
