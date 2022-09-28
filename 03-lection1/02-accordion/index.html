@@ -1,18 +1,41 @@
 <!DOCTYPE html>
 <!-- Страница с аккордеоном -->
 <html lang="ru">
-    <head>
-        <link rel="stylesheet" href="../../assets/css/main.css">
-        <link rel="stylesheet" href="./accordion.css">
-    </head>
-    <body>
-        <details>
-            <summary>
-                Accordion item
-            </summary>
-            <p>
-                Hidden content
-            </p>
-        </details>
-    </body>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="./accordion.css">
+    <title>Accordion</title>
+</head>
+<body>
+<div class="accordion">
+    <details class="accordion__card">
+        <summary class="accordion__summary">
+            Accordion item 1
+            <img class="accordion__marker" src="../../assets/images/marker.svg" alt="arrow marker">
+        </summary>
+        <p class="accordion__text">
+            Hidden content
+        </p>
+    </details>
+    <details class="accordion__card">
+        <summary class="accordion__summary">
+            Accordion item 2
+            <img class="accordion__marker" src="../../assets/images/marker.svg" alt="arrow marker">
+        </summary>
+        <p class="accordion__text">
+            Hidden content
+        </p>
+    </details>
+    <details class="accordion__card">
+        <summary class="accordion__summary">
+            Accordion item 3
+            <img class="accordion__marker" src="../../assets/images/marker.svg" alt="arrow marker">
+        </summary>
+        <p class="accordion__text">
+            Hidden content
+        </p>
+    </details>
+</div>
+</body>
 </html>
