@@ -5,6 +5,8 @@
 
 .accordion {
     margin: 0;
+    max-width: 1110px;
+    width: 100%;
     display: inline-block;
     font-size: 16px;
     line-height: 24px;
@@ -15,26 +17,30 @@
 }
 
 .accordion__text {
-    margin: 0 49px 32px 32px;
+    margin: 0;
+    padding-bottom: 32px;
 }
 
 .accordion__summary {
-    margin: 24px 28px 24px 32px;;
+    padding: 24px 0 24px 0;
     outline: none;
-
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
 
 .accordion__card[open] .accordion__marker {
     transform: rotate(180deg);
 }
 
-.accordion__marker {
-    margin: 0 0 0 490px;
-}
-
 .accordion__card {
+    padding-left: 32px;
+    padding-right: 32px;
     box-sizing: border-box;
     background: var(--white);
+    transition: height 0.2s ease-out;
+    height: 72px;
 
     border: 1px solid var(--grey-3);
     border-radius: 8px;
@@ -43,4 +49,8 @@
 
 .accordion__card:last-child {
     margin-bottom: 0;
+}
+
+.accordion__card[open] {
+    height: 154px;
 }
