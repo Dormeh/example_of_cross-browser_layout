@@ -1,5 +1,5 @@
 .preview {
-    height: 1036px;
+    flex-grow: 1;
     background: var(--grey-5);
 }
 .preview__cards {
