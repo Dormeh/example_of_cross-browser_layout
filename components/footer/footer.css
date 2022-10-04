@@ -23,3 +23,21 @@
     line-height: 24px;
     color: #212429;
 }
+.footer_layout {
+    background: var(--grey-5);
+
+}
+
+.footer__title_layout {
+    padding-top: 56px;
+    padding-bottom: 56px;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #ACB5BD;
+}

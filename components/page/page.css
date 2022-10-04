@@ -9,5 +9,12 @@
 }
 
 .page__preview {
+    padding-top: 36px;
+    padding-bottom: 36px;
     flex-grow: 1;
+    background: var(--grey-5);
+}
+
+.page__container {
+    margin-left: 56px;
 }

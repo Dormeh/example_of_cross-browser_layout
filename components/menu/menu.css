@@ -1,3 +1,44 @@
 .menu {
     width: 229px;
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+}
+
+.menu__list {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+ .menu__link {
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: var(--black);
+}
+
+.menu__title {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    color: var(--black);
+    margin: 0 0 16px 0;
+}
+
+.menu__footer {
+   margin-top: 30px;
+}
+
+.menu__link:focus {
+    color: #D84910;
 }
