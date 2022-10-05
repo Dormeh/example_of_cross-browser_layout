@@ -19,7 +19,7 @@
     border-radius: 12px;
 }
 
-.preview__component-content_histogram {
+.preview__content_histogram {
     width: 300px;
     place-items: start;
     place-content: start;
