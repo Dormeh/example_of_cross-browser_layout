@@ -9,7 +9,7 @@
     font-size: 50px;
     line-height: 64px;
 
-    color: #212429;
+    color: var(--black);
 }
 
 .header_layout {
