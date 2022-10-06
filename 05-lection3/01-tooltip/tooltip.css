@@ -11,7 +11,10 @@
 
 .tooltip__helper {
     display: none;
-    position: relative;
+    position: absolute;
+    bottom: calc(100% + 10px);
+    right: 50%;
+    transform: translateX(50%);
     white-space: nowrap;
     background: var(--ligth-blue);
     box-shadow: 0 2px 4px rgba(33, 36, 41, 0.05);
@@ -29,11 +32,8 @@
 
 .tooltip__trigger:hover ~ .tooltip__helper {
     display: block;
-    position: absolute;
-    bottom: calc(100% + 10px);
-    right: 50%;
-    transform: translateX(50%);
 }
+
 .tooltip__helper:before {
     position: absolute;
     content: "";
