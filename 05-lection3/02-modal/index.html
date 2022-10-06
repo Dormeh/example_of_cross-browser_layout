@@ -1,12 +1,36 @@
 <!DOCTYPE html>
 <!-- Страница с модалкой -->
 <html lang="ru">
-    <head>
-        <link rel="stylesheet" href="../../assets/css/main.css">
-        <link rel="stylesheet" href="./modal.css">
-        <title>Modal</title>
-    </head>
-    <body>
-    </body>
-    <script src="./index.js"></script> 
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="./modal.css">
+    <link rel="stylesheet" href="../../03-lection1/01-button/button.css">
+    <title>Modal</title>
+</head>
+<body>
+<div class="wrapper"
+     style="display: flex; align-items: center; align-content: center; height: 100%; justify-content: center;">
+    <button id="modal-open" class="button button_primary">Open modal</button>
+</div>
+<div id="modal" class="modal">
+    <div class="modal__overlay">
+    </div>
+    <div class="modal__preview">
+        <div class="modal__header">
+            <h5 class="modal__title">Modal title</h5>
+            <button id="modal-close" class="modal__close">
+                <img src="../../assets/images/close_icon.svg" alt="close-icon">
+            </button>
+
+        </div>
+        <p class="modal__body">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
+            consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim
+            velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+    </div>
+</div>
+</body>
+<script src="./index.js"></script>
 </html>
+
