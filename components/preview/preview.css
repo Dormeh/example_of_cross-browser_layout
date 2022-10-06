@@ -1,5 +1,5 @@
 .preview {
-    height: 1036px;
+    flex-grow: 1;
     background: var(--grey-5);
 }
 .preview__cards {
@@ -7,4 +7,32 @@
     display: flex;
     flex-wrap: wrap;
     gap: 30px 30px
+}
+
+.preview_layout {
+    display: flex;
+    padding: 32px 48px;
+    margin-left: 56px;
+    height: 100%;
+    background: var(--white);
+    box-shadow: 0 2px 4px rgba(33, 36, 41, 0.05);
+    border-radius: 12px;
+}
+
+.preview__content_histogram {
+    width: 300px;
+    place-items: start;
+    place-content: start;
+}
+
+.preview__title {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 38px;
+    margin: 0 0 24px 0;
+
+    color: var(--grey-4);
+
 }
