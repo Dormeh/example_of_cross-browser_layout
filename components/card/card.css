@@ -11,7 +11,4 @@
         width: 164px;
         height: 210px;
     }
-    .card:nth-child(3n + 1) {
-        display: none;
-    }
 }

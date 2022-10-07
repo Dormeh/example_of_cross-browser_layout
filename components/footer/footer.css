@@ -1,10 +1,8 @@
 .footer {
-    text-align: center;
+    height: 100%;
 }
 
 .footer__title {
-    margin: 71px 0 32px 0;
-
     font-family: 'Inter', serif;
     font-style: normal;
     font-weight: 500;
@@ -13,9 +11,15 @@
     color: #212429;
 }
 
-.footer__text {
-    margin: 0 0 136px 0;
+.footer__content {
+    padding: 1.9rem;
+    display: grid;
+    place-items: center;
+}
 
+.footer__text {
+    max-width: 640px;
+    text-align: center;
     font-family: 'Inter', serif;
     font-style: normal;
     font-weight: 400;
@@ -23,6 +27,7 @@
     line-height: 24px;
     color: #212429;
 }
+
 .footer_layout {
     background: var(--grey-5);
 
@@ -43,7 +48,16 @@
 }
 
 @media screen and (max-width: 380px) {
-    .footer {
-        display: none;
+    .footer__title {
+        font-weight: 400;
+        font-size: 28px;
+        line-height: 38px;
+    }
+
+    .footer__text {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 20px;
+
     }
 }
