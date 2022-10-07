@@ -1,10 +1,8 @@
 .footer {
-    text-align: center;
+    height: 100%;
 }
 
 .footer__title {
-    margin: 71px 0 32px 0;
-
     font-family: 'Inter', serif;
     font-style: normal;
     font-weight: 500;
@@ -13,9 +11,16 @@
     color: #212429;
 }
 
-.footer_text {
-    margin: 0 0 136px 0;
+.footer__content {
+    padding-top: 1.9em;
+    display: grid;
+    place-items: center;
+}
 
+.footer__text {
+    margin: 0;
+    max-width: 640px;
+    text-align: center;
     font-family: 'Inter', serif;
     font-style: normal;
     font-weight: 400;
@@ -23,6 +28,7 @@
     line-height: 24px;
     color: #212429;
 }
+
 .footer_layout {
     background: var(--grey-5);
 
@@ -40,4 +46,23 @@
     letter-spacing: 0.04em;
     text-transform: uppercase;
     color: #ACB5BD;
+}
+
+@media screen and (max-width: 380px) {
+    .footer__title {
+        font-weight: 400;
+        font-size: 28px;
+        line-height: 38px;
+    }
+
+    .footer__content {
+        padding: 0 0 2rem 0;
+    }
+
+    .footer__text {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 20px;
+
+    }
 }
