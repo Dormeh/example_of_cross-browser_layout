@@ -3,8 +3,9 @@
     background: var(--grey-5);
 }
 .preview__cards {
-    padding-top: 68px;
+    padding: 68px 0 64px 0;
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 30px 30px
 }
@@ -35,4 +36,11 @@
 
     color: var(--grey-4);
 
+}
+
+@media screen and (max-width: 380px) {
+    .preview__cards {
+        padding: 24px 0;
+        gap: 23px 16px;
+    }
 }

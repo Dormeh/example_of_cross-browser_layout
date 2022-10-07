@@ -13,7 +13,7 @@
     color: #212429;
 }
 
-.footer_text {
+.footer__text {
     margin: 0 0 136px 0;
 
     font-family: 'Inter', serif;
@@ -40,4 +40,10 @@
     letter-spacing: 0.04em;
     text-transform: uppercase;
     color: #ACB5BD;
+}
+
+@media screen and (max-width: 380px) {
+    .footer {
+        display: none;
+    }
 }

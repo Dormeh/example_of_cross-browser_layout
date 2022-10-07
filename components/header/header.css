@@ -1,8 +1,15 @@
 .header {
-    padding: 96px 0 77px;
+    padding: 25px 0;
+    box-sizing: border-box;
+}
+
+.header__head {
+    display: flex;
+    justify-content: space-between;
 }
 
 .header__title {
+    margin: 40px 0;
     font-family: 'Inter', serif;
     font-style: normal;
     font-weight: 500;
@@ -14,4 +21,23 @@
 
 .header_layout {
     padding: 0;
+}
+
+@media screen and (max-width: 380px) {
+    .header {
+        padding: 16px 0 20px 0;
+    }
+    .header__title {
+        margin: 49px 0;
+    }
+    .header__head {
+        justify-content: center;
+    }
+    .header__title {
+        font-family: 'Inter', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 28px;
+        line-height: 38px;
+    }
 }
