@@ -7,13 +7,31 @@
     font-weight: 400;
 }
 
+.menu__button {
+    padding: 0;
+    display: none;
+    outline-style: none;
+    border: none;
+    background: transparent;
+    color: var(--grey-4);
+    text-align: center;
+}
+
+.menu__icon {
+    left: 15px;
+    position: absolute;
+    width: 18px;
+    height: 20px;
+    top: 20px;
+}
+
 .menu__list {
     padding: 0;
     margin: 0;
     list-style-type: none;
 }
 
- .menu__link {
+.menu__link {
     text-decoration: none;
     font-size: 14px;
     line-height: 22px;
@@ -29,9 +47,19 @@
 }
 
 .menu__footer {
-   margin-top: 30px;
+    margin-top: 30px;
 }
 
 .menu__link:focus, .menu__link_active {
     color: var(--red-orange);
+}
+
+@media screen and (max-width: 768px) {
+    .menu {
+        display: none;
+    }
+
+    .menu__button {
+        display: block;
+    }
 }

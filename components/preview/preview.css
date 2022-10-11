@@ -2,6 +2,7 @@
     flex-grow: 1;
     background: var(--grey-5);
 }
+
 .preview__cards {
     padding: 68px 0 64px 0;
     display: flex;
@@ -14,7 +15,6 @@
     display: flex;
     padding: 32px 48px;
     margin-left: 56px;
-    height: 100%;
     background: var(--white);
     box-shadow: 0 2px 4px rgba(33, 36, 41, 0.05);
     border-radius: 12px;
@@ -33,14 +33,30 @@
     font-size: 28px;
     line-height: 38px;
     margin: 0 0 24px 0;
-
     color: var(--grey-4);
-
 }
 
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 768px) {
     .preview__cards {
         padding: 24px 0;
         gap: 23px 16px;
+    }
+
+    .preview_layout {
+        padding: 0;
+        margin: 0;
+        box-shadow: none;
+    }
+
+    .preview__content_histogram {
+        width: 100%;
+        place-items: start;
+        place-content: start;
+    }
+
+    .preview__title {
+        font-size: 20px;
+        line-height: 26px;
+        margin: 0 0 20px 0;
     }
 }
