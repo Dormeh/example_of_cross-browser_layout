@@ -58,6 +58,10 @@
     color: var(--grey-2);
 }
 
+.radio__input:focus ~ .radio__state .radio__title {
+    text-decoration: underline;
+}
+
 .radio__input:disabled ~ .radio__state .radio__control {
     background: var(--grey-2);
     cursor: default;
