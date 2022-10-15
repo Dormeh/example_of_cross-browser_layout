@@ -7,6 +7,7 @@
 @import "../../components/card/card.css";
 @import "../../components/menu/menu.css";
 @import "../../components/gridLayout/gridLayout.css";
+@import "../../components/tabs-switcher/tabs-switcher.css";
 
 :root {
     --white: #ffffff;
