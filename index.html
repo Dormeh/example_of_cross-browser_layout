@@ -27,9 +27,26 @@
         </div>
 
     </header>
+    <input class="tabs-switcher__input" type="radio" id="all-tab" name="tabsSwitcher" checked>
+    <input class="tabs-switcher__input" type="radio" id="complex-tab" name="tabsSwitcher">
+    <input class="tabs-switcher__input" type="radio" id="simple-tab" name="tabsSwitcher">
+
+    <nav class="tabs-switcher">
+        <div class="container">
+            <div class="tabs-switcher__menu">
+                <label class="tabs-switcher__label" for="all-tab">All components</label>
+
+                <label class="tabs-switcher__label" for="complex-tab">Complex</label>
+
+                <label class="tabs-switcher__label" for="simple-tab">Simple</label>
+            </div>
+
+        </div>
+    </nav>
+
     <main class="preview">
         <div class="container">
-            <div class="preview__cards">
+            <div class="preview__cards preview__cards_all">
                 <div class="card"></div>
                 <div class="card"></div>
                 <div class="card"></div>
@@ -37,6 +54,19 @@
                 <div class="card"></div>
                 <div class="card"></div>
             </div>
+            <div class="preview__cards preview__cards_complex">
+                <!-- Сложные компоненты -->
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+            </div>
+            <div class="preview__cards preview__cards_simple">
+                <!-- Простые компоненты -->
+                <div class="card"></div>
+                <div class="card"></div>
+            </div>
+
 
         </div>
 

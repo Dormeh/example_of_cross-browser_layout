@@ -1,0 +1,45 @@
+.tabs-switcher__input {
+    position: absolute;
+    outline: none;
+    clip: rect(0, 0, 0, 0);
+}
+
+#all-tab:checked ~ .tabs-switcher .tabs-switcher__label[for="all-tab"]::after,
+#complex-tab:checked ~ .tabs-switcher .tabs-switcher__label[for="complex-tab"]::after,
+#simple-tab:checked ~ .tabs-switcher .tabs-switcher__label[for="simple-tab"]::after {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 5px;
+    width: 100%;
+    top: 100%;
+    color: var(--black);
+    background: var(--black);
+}
+
+#all-tab:checked ~ .preview .preview__cards_all,
+#complex-tab:checked ~ .preview .preview__cards_complex,
+#simple-tab:checked ~ .preview .preview__cards_simple {
+    display: flex;
+}
+
+.tabs-switcher__label::after {
+    display: none;
+}
+
+.tabs-switcher__label {
+    position: relative;
+    cursor: pointer;
+    padding-bottom: 8px;
+}
+
+.tabs-switcher__menu {
+    display: inline-flex;
+    gap: 40px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+}
+
