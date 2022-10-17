@@ -8,35 +8,52 @@
     <title>Input</title>
 </head>
 <body>
-    <div class="wrapper"
-         style="display:grid; grid-gap: 30px; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));">
+<div class="wrapper"
+     style="display:grid; grid-gap: 30px; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));">
 
-        <label for="input1" class="input">Label
-            <input type="text" id="input1" placeholder="Placeholder" class="input__input-text">
-        </label>
-
-        <label for="input2" class="input">Focus
-            <input type="text" id="input2" placeholder="Placeholder" class="input__input-text" tabindex="1">
-        </label>
-
-        <label for="input3" class="input">Success
-            <input type="text" id="input3" placeholder="Placeholder" class="input__input-text input__input-text_success">
-            <svg class="input__success-icon">
-                <use href="../../assets/images/icons_sprite.svg#success"></use>
-            </svg>
-
-        </label>
-        <label for="input4" class="input">Error
-            <input type="text" id="input4" placeholder="Placeholder" class="input__input-text input__input-text_invalid">
-            <svg class="input__error-icon">
-                <use href="../../assets/images/icons_sprite.svg#error"></use>
-            </svg>
-
-        </label>
-
+    <div class="input">
+        <input type="text" placeholder="Placeholder" class="input__input-text">
+        <svg class="input__icon input__success-icon">
+            <use href="../../assets/images/icons_sprite.svg#success"></use>
+        </svg>
+        <svg class="input__icon input__icon_error">
+            <use href="../../assets/images/icons_sprite.svg#error"></use>
+        </svg>
     </div>
+
+    <div class="input">
+        <input type="text" placeholder="Placeholder" class="input__input-text" tabindex="1">
+        <svg class="input__icon input__success-icon">
+            <use href="../../assets/images/icons_sprite.svg#success"></use>
+        </svg>
+        <svg class="input__icon input__icon_error">
+            <use href="../../assets/images/icons_sprite.svg#error"></use>
+        </svg>
+    </div>
+
+    <div class="input input_success">
+        <input type="text" placeholder="Placeholder" class="input__input-text">
+        <svg class="input__icon input__icon_success">
+            <use href="../../assets/images/icons_sprite.svg#success"></use>
+        </svg>
+        <svg class="input__icon input__icon_error">
+            <use href="../../assets/images/icons_sprite.svg#error"></use>
+        </svg>
+    </div>
+
+    <div class="input input_invalid">
+        <input type="text" placeholder="Placeholder" class="input__input-text">
+        <svg class="input__icon input__icon_success">
+            <use href="../../assets/images/icons_sprite.svg#success"></use>
+        </svg>
+        <svg class="input__icon input__icon_error">
+            <use href="../../assets/images/icons_sprite.svg#error"></use>
+        </svg>
+    </div>
+
+</div>
 <script>
-  const input = document.getElementById('input2');
+  const input = document.querySelector('[tabindex="1"]');
   input.focus();
 </script>
 </body>

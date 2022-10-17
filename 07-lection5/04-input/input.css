@@ -24,9 +24,10 @@
 
 }
 
-::placeholder {
+.input__input-text::placeholder {
     color: var(--grey-2);
 }
+
 .input__input-text:focus {
     color: var(--grey-4);
     border: 1px solid var(--ligth-blue);
@@ -35,53 +36,30 @@
     outline: none;
 }
 
-.input__input-text:focus ~ .input__placeholder {
+.input__icon {
+    width: 24px;
+    height: 24px;
+    top: calc(50%);
+    transform: translate(-100%, -50%);
+    position: absolute;
+    left: calc(100% - 18px);
     display: none;
 }
 
-.input__placeholder {
-    display: flex;
-    position: absolute;
-    top: calc(50% + 9px);
-    left: 24px;
-    transform: translateY(-50%);
-    text-transform: none;
-
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 26px;
-    color: var(--grey-2);
-}
-
-.input__container {
-    background: var(--white);
-    border: 1px solid var(--grey-2);
-    border-radius: 8px;
-
-}
-
-.input__success-icon {
-    width: 24px;
-    height: 24px;
-    top: calc(50% + 9px);
-    transform: translate(-100%, -50%);
+.input_success .input__icon_success {
     color: var(--blue);
-    position: absolute;
-    left: calc(100% - 18px);
+    display: block;
 }
 
-.input__input-text.input__input-text_invalid {
+.input_invalid .input__icon_error {
+    color: var(--red);
+    display: block;
+}
+
+.input_invalid {
     border: 1px solid var(--red);
     box-shadow: 0 1px 1px rgba(240, 61, 62, 0.1);
     border-radius: 8px;
 }
 
-.input__error-icon {
-    width: 24px;
-    height: 24px;
-    top: calc(50% + 9px);
-    transform: translate(-100%, -50%);
-    color: var(--red);
-    position: absolute;
-    left: calc(100% - 18px);
-}
+
