@@ -1,6 +1,9 @@
 .header {
     padding: 24px 0;
     box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400
 }
 
 .header__head {
@@ -26,7 +29,32 @@
     color: var(--black);
 }
 
+.header__menu {
+    display: inline-flex;
+    gap: 24px;
+    justify-content: space-between;
+}
+
+.header__nav-link {
+    color: var(--grey-3);
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.header__nav-link:focus, .header__nav-link_focused {
+    color: var(--black);
+}
+
+.header__theme-toggle-wrapper {
+    width: 163px;
+}
+
 @media screen and (max-width: 768px) {
+    .header__menu {
+        display: none;
+    }
+
     .header {
         padding: 16px 0 20px 0;
     }
@@ -44,9 +72,6 @@
     }
 
     .header__title {
-        font-family: 'Inter', sans-serif;
-        font-style: normal;
-        font-weight: 400;
         font-size: 28px;
         line-height: 38px;
     }

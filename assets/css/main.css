@@ -8,6 +8,16 @@
 @import "../../components/menu/menu.css";
 @import "../../components/gridLayout/gridLayout.css";
 @import "../../components/tabs-switcher/tabs-switcher.css";
+@import "../../03-lection1/01-button/button.css";
+@import "../../05-lection3/01-tooltip/tooltip.css";
+@import "../../07-lection5/01-checkbox/checkbox.css";
+@import "../../07-lection5/02-radio/radio.css";
+@import "../../07-lection5/03-toggler/toggler.css";
+@import "../../07-lection5/04-input/input.css";
+@import "../../05-lection3/03-calendar/calendar.css";
+@import "../../05-lection3/02-modal/modal.css";
+@import "../../04-lection2/01-histogram/histogram.css";
+@import "../../06-lection4/01-avatar/avatar.css";
 
 :root {
     --white: #ffffff;

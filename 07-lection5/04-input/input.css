@@ -2,9 +2,10 @@
     font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 500;
-    font-size: 12px;
-    line-height: 18px;
+    font-size: 0.75em;
+    line-height: 1.125em;
     color: var(--grey-3);
+    text-align: start;
 
 }
 
@@ -15,20 +16,20 @@
 }
 
 .input__label {
-    font-size: 12px;
-    line-height: 18px;
+    font-size: 0.75em;
+    line-height: 2.5em;
     letter-spacing: 0.04em;
     text-transform: uppercase;
 }
 
 .input__input-text {
-    padding: 17px 24px 17px 24px;
+    padding: 1.1em 1.5em 1.1em 1.5em;
     background: var(--white);
     border: 1px solid var(--grey-2);
-    border-radius: 8px;
+    border-radius: 0.4em;
     font-weight: 400;
-    font-size: 20px;
-    line-height: 26px;
+    font-size: 1.25em;
+    line-height: 1.625em;
 
 }
 
@@ -40,17 +41,17 @@
     color: var(--grey-4);
     border: 1px solid var(--ligth-blue);
     box-shadow: 0 1px 1px rgba(51, 154, 240, 0.1);
-    border-radius: 8px;
+    border-radius: 0.4em;
     outline: none;
 }
 
 .input__icon {
-    width: 24px;
-    height: 24px;
+    width: 2em;
+    height: 2em;
     top: calc(50%);
     transform: translate(-100%, -50%);
     position: absolute;
-    left: calc(100% - 18px);
+    left: calc(100% - 1.125em);
     display: none;
 }
 
@@ -67,7 +68,21 @@
 .input_invalid .input__input-text {
     border: 1px solid var(--red);
     box-shadow: 0 1px 1px rgba(240, 61, 62, 0.1);
-    border-radius: 8px;
+    border-radius: 0.4em;
 }
 
+.input_main-page-preview {
+    font-size: 9px;
+    width: 100%;
+}
 
+.input_main-page-preview .input__input-text {
+    padding: 0.6em;
+
+}
+
+@media screen and (max-width: 768px) {
+    .input {
+        font-size: 6px;
+    }
+}
