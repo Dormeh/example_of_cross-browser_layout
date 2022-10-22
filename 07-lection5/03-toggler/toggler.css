@@ -23,7 +23,7 @@
     width: 52px;
     height: 28px;
     background: var(--white);
-    border: 1px solid var(--grey-2);
+    border: 1px solid var(--grey-3);
     border-radius: 16px;
     cursor: pointer;
 }
@@ -33,7 +33,7 @@
     width: 24px;
     height: 24px;
     transform: scale(.9);
-    background: var(--grey-2);
+    background: var(--grey-3);
 }
 
 .toggle__title {
@@ -70,4 +70,23 @@
 
 .toggle__input:focus ~ .toggle__state .toggle__title {
     text-decoration: underline;
+}
+
+
+.toggle__theme-icon, .toggle__input:checked ~ .toggle__theme-icon_sun {
+    width: 24px;
+    height: 24px;
+    color: var(--grey-3);
+}
+
+.toggle__input:checked ~ .toggle__theme-icon_moon, .toggle__input ~ .toggle__theme-icon_sun {
+    color: var(--black)
+}
+
+.toggle_main-page {
+    width: 100%;
+    gap: 15px;
+    display: inline-flex;
+    justify-content: flex-end;
+
 }

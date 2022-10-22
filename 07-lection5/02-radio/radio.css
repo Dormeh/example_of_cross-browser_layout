@@ -13,7 +13,7 @@
 .radio__state {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 1em;
 }
 
 .radio__control {
@@ -21,17 +21,17 @@
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
-    width: 28px;
-    height: 28px;
+    width: 1.75em;
+    height: 1.75em;
     background: var(--white);
-    border: 1px solid var(--grey-2);
-    border-radius: 14px;
+    border: 0.0625em solid var(--grey-2);
+    border-radius: 0.875em;
     cursor: pointer;
 }
 
 .radio__icon {
-    width: 18px;
-    height: 18px;
+    width: 1.125em;
+    height: 1.125em;
     border-radius: 50%;
     display: none;
 }
@@ -40,13 +40,13 @@
     font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 1em;
+    line-height: 1.5em;
     color: #495057;
 }
 
 .radio__input:checked ~ .radio__state .radio__control {
-    border: 2px solid var(--ligth-blue);
+    border: 0.125em solid var(--ligth-blue);
 }
 
 .radio__input:checked ~ .radio__state .radio__icon {
@@ -65,4 +65,10 @@
 .radio__input:disabled ~ .radio__state .radio__control {
     background: var(--grey-2);
     cursor: default;
+}
+
+@media screen and (max-width: 768px) {
+    .radio {
+        font-size: 10px;
+    }
 }

@@ -35,8 +35,18 @@
     margin: 0 0 24px 0;
     color: var(--grey-4);
 }
+.preview__button-inner {
+    display: flex;
+    padding-bottom: 92px;
+    justify-content: center;
+    align-items: center;
+}
 
 @media screen and (max-width: 768px) {
+    .preview__button-inner {
+        padding-bottom: 30px;
+
+    }
     .preview__cards {
         padding: 24px 0;
         gap: 23px 16px;
