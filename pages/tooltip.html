@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device=width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/normalize.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../04-lection2/01-histogram/histogram.css">
+    <title>Layout</title>
+</head>
+<body>
+<div class="page">
+    <div class="page__tempHeaderFixHeight">
+        <header class="header header_layout">
+            <div class="container">
+                <div class="header__head">
+                    <button class="menu__button">
+                        <svg class="menu__icon">
+                            <use href="../assets/images/icons_sprite.svg#menu"></use>
+                        </svg>
+                    </button>
+                    <svg class="header__logo">
+                        <use href="../assets/images/icons_sprite.svg#page-logo"></use>
+                    </svg>
+
+                </div>
+            </div>
+
+        </header>
+
+    </div>
+    <div class="page__preview">
+        <div class="container">
+            <div class="gridLayout">
+                <aside class="menu">
+                    <h5 class="menu__title">Components</h5>
+
+                    <ul class="menu__list">
+                        <li>
+                            <a class="menu__link" href="../pages/modal.html">Modal</a>
+                        </li>
+                        <li>
+                            <a class="menu__link menu__link_active" href="../pages/tooltip.html">Tooltip</a>
+                        </li>
+                        <li>
+                            <a class="menu__link" href="../pages/avatar.html">Avatar</a>
+                        </li>
+                        <li>
+                            <a class="menu__link" href="../pages/calendar.html">Calendar</a>
+                        </li>
+                        <li>
+                            <a class="menu__link" href="../pages/histogram.html">Histogram</a>
+                        </li>
+                        <li>
+                            <a class="menu__link" href="../pages/custom-form-elements.html">Custom from elements</a>
+                        </li>
+                    </ul>
+                    <div class="menu__footer">
+                        <a class="menu__link" href="../index.html">Main page</a>
+                    </div>
+
+                </aside>
+                <main class="preview preview_layout">
+                    <div class="preview__content preview__content_tooltip">
+                        <h3 class="preview__title">Tooltip</h3>
+                        <div class="tooltip tooltip_component-page">
+                            <svg class="tooltip__trigger">
+                                <use class="tooltip-icon" href="../assets/images/icons_sprite.svg#tooltip-question">
+
+                                </use>
+                            </svg>
+                            <div class="tooltip__helper">Helper Text</div>
+
+                        </div>
+<!--                        <div class="preview__wrapper" style="display: flex; flex-direction: column; justify-content: end; align-items: start; width: 100%;">-->
+
+<!--                        </div>-->
+
+                </main>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer class="footer footer_layout">
+        <div class="container">
+            <div class="footer__content footer__content_layout">
+                <h2 class="footer__title footer__title_layout">Reusable component library</h2>
+
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

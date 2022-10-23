@@ -19,13 +19,18 @@
     box-shadow: 0 2px 4px rgba(33, 36, 41, 0.05);
     border-radius: 12px;
 }
-
+.preview__content{
+    display: flex;
+    flex-direction: column;
+}
 .preview__content_histogram {
     width: 300px;
     place-items: start;
     place-content: start;
 }
-
+.preview__content_tooltip {
+    align-items: center;
+}
 .preview__title {
     font-family: 'Inter', sans-serif;
     font-style: normal;
@@ -62,6 +67,13 @@
         width: 100%;
         place-items: start;
         place-content: start;
+    }
+    .preview__content_tooltip {
+        width: 100%;
+
+    }
+    .preview__content_tooltip .preview__title {
+        align-self: flex-start;
     }
 
     .preview__title {

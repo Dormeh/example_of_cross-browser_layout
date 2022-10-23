@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device=width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/normalize.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../04-lection2/01-histogram/histogram.css">
+    <script defer src="../05-lection3/02-modal/index.js"></script>
+    <title>Layout</title>
+</head>
+<body>
+<div class="page">
+    <div class="page__tempHeaderFixHeight">
+        <header class="header header_layout">
+            <div class="container">
+                <div class="header__head">
+                    <button class="menu__button">
+                        <svg class="menu__icon">
+                            <use href="../assets/images/icons_sprite.svg#menu"></use>
+                        </svg>
+                    </button>
+                    <svg class="header__logo">
+                        <use href="../assets/images/icons_sprite.svg#page-logo"></use>
+                    </svg>
+
+                </div>
+            </div>
+
+        </header>
+
+    </div>
+    <div class="page__preview">
+        <div class="container">
+            <div class="gridLayout">
+                <aside class="menu">
+                    <h5 class="menu__title">Components</h5>
+
+                    <ul class="menu__list">
+                        <li>
+                            <a class="menu__link menu__link_active" href="../pages/modal.html">Modal</a>
+                        </li>
+                        <li>
+                            <a class="menu__link" href="../pages/tooltip.html">Tooltip</a>
+                        </li>
+                        <li>
+                            <a class="menu__link" href="#">Avatar</a>
+                        </li>
+                        <li>
+                            <a class="menu__link" href="#">Calendar</a>
+                        </li>
+                        <li>
+                            <a class="menu__link" href="../pages/histogram.html">Histogram</a>
+                        </li>
+                        <li>
+                            <a class="menu__link" href="#">Custom from elements</a>
+                        </li>
+                    </ul>
+                    <div class="menu__footer">
+                        <a class="menu__link" href="../index.html">Main page</a>
+                    </div>
+
+                </aside>
+                <main class="preview preview_layout">
+                    <div class="preview__content">
+                        <h3 class="preview__title">Modal</h3>
+
+                        <button id="modal-open" class="button button_primary">Open modal</button>
+
+                        <div id="modal" class="modal modal_component-page">
+                            <div class="modal__preview">
+
+                                <button id="modal-close" class="modal__close modal__close_component-page">
+                                    <img src="../assets/images/close_icon.svg" alt="close-icon">
+                                </button>
+
+                                <div class="input input_component-page">
+                                    <label class="input__label">name</label>
+                                    <div class="input__container">
+                                        <input type="text" placeholder="Placeholder" class="input__input-text">
+                                        <svg class="input__icon input__success-icon">
+                                            <use href="../../assets/images/icons_sprite.svg#success"></use>
+                                        </svg>
+                                        <svg class="input__icon input__icon_error">
+                                            <use href="../../assets/images/icons_sprite.svg#error"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+
+                                <div class="input input_component-page">
+                                    <label class="input__label">email</label>
+                                    <div class="input__container">
+                                        <input type="text" placeholder="Placeholder" class="input__input-text"
+                                               tabindex="1">
+                                        <svg class="input__icon input__success-icon">
+                                            <use href="../../assets/images/icons_sprite.svg#success"></use>
+                                        </svg>
+                                        <svg class="input__icon input__icon_error">
+                                            <use href="../../assets/images/icons_sprite.svg#error"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+
+                                <button class="button button_primary modal_button-set" type="submit">Submit</button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </main>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer class="footer footer_layout">
+        <div class="container">
+            <div class="footer__content footer__content_layout">
+                <h2 class="footer__title footer__title_layout">Reusable component library</h2>
+
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

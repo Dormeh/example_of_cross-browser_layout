@@ -58,8 +58,15 @@
     transform: translateY(2em);
 }
 
+.tooltip_component-page {
+    transform: translate(2em, 5em);
+}
+
 @media screen and (max-width: 768px) {
-    .tooltip {
+    .tooltip_main-page-preview {
         font-size: 12px;
+    }
+    .tooltip_component-page {
+        transform: translate(0, 5em);
     }
 }
