@@ -62,7 +62,7 @@
 }
 
 @media screen and (max-width: 768px) {
-    .histogram {
+    .histogram_main-page-preview {
         font-size: 8px;
         width: 90%;
     }
