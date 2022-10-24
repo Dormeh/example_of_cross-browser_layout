@@ -22,7 +22,29 @@
                     <svg class="header__logo">
                         <use href="../assets/images/icons_sprite.svg#page-logo"></use>
                     </svg>
+                    <div class="header__menu">
+                        <a href="#" class="header__nav-link header__nav-link_focused">Components</a>
+                        <a href="#" class="header__nav-link">About</a>
+                        <a href="#" class="header__nav-link">Contact</a>
+                        <div class="header__theme-toggle-wrapper">
+                            <label class="toggle toggle_main-page">
+                                <input type="checkbox" class="toggle__input">
+                                <svg class="toggle__theme-icon toggle__theme-icon_sun">
+                                    <use href="../assets/images/icons_sprite.svg#theme-toggle-sun"></use>
+                                </svg>
 
+                                <div class="toggle__state">
+                                    <div class="toggle__control">
+                                        <div class="toggle__icon"></div>
+                                    </div>
+                                </div>
+                                <svg class="toggle__theme-icon toggle__theme-icon_moon">
+                                    <use href="../assets/images/icons_sprite.svg#theme-toggle-moon"></use>
+                                </svg>
+                            </label>
+
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -61,20 +83,34 @@
 
                 </aside>
                 <main class="preview preview_layout">
-                    <div class="preview__content preview__content_tooltip">
-                        <h3 class="preview__title">Tooltip</h3>
-                        <div class="tooltip tooltip_component-page">
-                            <svg class="tooltip__trigger">
-                                <use class="tooltip-icon" href="../assets/images/icons_sprite.svg#tooltip-question">
+                    <div class="preview__content">
+                        <div class="preview__content-wrapper preview__content-wrapper_tooltip">
+                            <h3 class="preview__title">Tooltip</h3>
+                            <div class="tooltip tooltip_component-page">
+                                <svg class="tooltip__trigger">
+                                    <use class="tooltip-icon" href="../assets/images/icons_sprite.svg#tooltip-question">
 
-                                </use>
-                            </svg>
-                            <div class="tooltip__helper">Helper Text</div>
+                                    </use>
+                                </svg>
+                                <div class="tooltip__helper">Helper Text</div>
+
+                            </div>
 
                         </div>
-<!--                        <div class="preview__wrapper" style="display: flex; flex-direction: column; justify-content: end; align-items: start; width: 100%;">-->
+                        <input class="tabs-switcher__input" type="radio" id="html-preview" name="tabsSwitcher" checked>
+                        <input class="tabs-switcher__input" type="radio" id="css-preview" name="tabsSwitcher">
 
-<!--                        </div>-->
+                        <nav class="tabs-switcher">
+                            <div class="tabs-switcher__menu">
+                                <label class="tabs-switcher__label" for="html-preview">HTML</label>
+
+                                <label class="tabs-switcher__label" for="css-preview">CSS</label>
+
+                            </div>
+
+                        </nav>
+
+                    </div>
 
                 </main>
 

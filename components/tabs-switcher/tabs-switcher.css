@@ -6,9 +6,11 @@
 
 #all-tab:checked ~ .tabs-switcher .tabs-switcher__label[for="all-tab"]::after,
 #complex-tab:checked ~ .tabs-switcher .tabs-switcher__label[for="complex-tab"]::after,
-#simple-tab:checked ~ .tabs-switcher .tabs-switcher__label[for="simple-tab"]::after {
+#simple-tab:checked ~ .tabs-switcher .tabs-switcher__label[for="simple-tab"]::after,
+#html-preview:checked ~ .tabs-switcher .tabs-switcher__label[for="html-preview"]::after,
+#css-preview:checked ~ .tabs-switcher .tabs-switcher__label[for="css-preview"]::after {
     content: "";
-    position: absolute;
+    /*position: absolute;*/
     display: block;
     height: 5px;
     width: 100%;
@@ -30,14 +32,16 @@
 .tabs-switcher__label {
     white-space: nowrap;
     color: var(--grey-3);
-    position: relative;
+    /*position: relative;*/
     cursor: pointer;
     padding-bottom: 8px;
 }
 
 #all-tab:checked ~ .tabs-switcher .tabs-switcher__label[for="all-tab"],
 #complex-tab:checked ~ .tabs-switcher .tabs-switcher__label[for="complex-tab"],
-#simple-tab:checked ~ .tabs-switcher .tabs-switcher__label[for="simple-tab"] {
+#simple-tab:checked ~ .tabs-switcher .tabs-switcher__label[for="simple-tab"],
+#html-preview:checked ~ .tabs-switcher .tabs-switcher__label[for="html-preview"],
+#css-preview:checked ~ .tabs-switcher .tabs-switcher__label[for="css-preview"] {
     color: var(--black);
 }
 

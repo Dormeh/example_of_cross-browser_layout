@@ -59,7 +59,7 @@
 }
 
 .tooltip_component-page {
-    transform: translate(2em, 5em);
+    /*transform: translate(2em, 5em);*/
 }
 
 @media screen and (max-width: 768px) {
@@ -67,6 +67,7 @@
         font-size: 12px;
     }
     .tooltip_component-page {
-        transform: translate(0, 5em);
+        align-self: flex-end;
+        transform: translateX(50%);
     }
 }

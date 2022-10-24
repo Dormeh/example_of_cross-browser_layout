@@ -13,9 +13,12 @@
 .avatar_main-page-preview {
     transform: translateY(-1.3em);
 }
+.avatar_component-page {
+    font-size: 20px;
+}
 
 @media screen and (max-width: 768px) {
-    .avatar {
+    .avatar_main-page-preview {
         font-size: 11.6px;
         transform: translateY(0);
     }

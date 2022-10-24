@@ -19,19 +19,50 @@
     box-shadow: 0 2px 4px rgba(33, 36, 41, 0.05);
     border-radius: 12px;
 }
-.preview__content{
-    display: flex;
+
+.preview__content {
+    display: grid;
+    gap: 30px;
+    grid-template-rows: 0.7fr 2fr;
     flex-direction: column;
 }
-.preview__content_histogram {
-    width: 300px;
-    place-items: start;
-    place-content: start;
+
+.preview__content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /*align-items: center;*/
 }
-.preview__content_tooltip {
+
+.preview__content-wrapper_histogram {
+    width: 300px;
+}
+
+.preview_content-wrapper_calendar {
+    align-items: center;
+    width: 304px;
+}
+
+.preview__content-wrapper_tooltip {
     align-items: center;
 }
+.preview__content-wrapper_custom {
+
+}
+.preview__inputs_wrapper {
+    box-sizing: border-box;
+    padding-top: 3.5625em;
+    display: grid;
+    align-items: start;
+    grid-template: repeat(3, 3em) / 1fr 1fr;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 0 37px;
+}
+
 .preview__title {
+    align-self: flex-start;
     font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -40,6 +71,7 @@
     margin: 0 0 24px 0;
     color: var(--grey-4);
 }
+
 .preview__button-inner {
     display: flex;
     padding-bottom: 92px;
@@ -52,6 +84,7 @@
         padding-bottom: 30px;
 
     }
+
     .preview__cards {
         padding: 24px 0;
         gap: 23px 16px;
@@ -62,24 +95,24 @@
         margin: 0;
         box-shadow: none;
     }
-
-    .preview__content_histogram {
+    .preview__content {
         width: 100%;
-        place-items: start;
-        place-content: start;
     }
-    .preview__content_tooltip {
+
+    .preview__content-wrapper_histogram, .preview_content-wrapper_calendar {
         width: 100%;
 
     }
-    .preview__content_tooltip .preview__title {
-        align-self: flex-start;
+
+    .preview__content-wrapper_tooltip, .preview__content-wrapper_modal {
+        width: fit-content;
     }
 
     .preview__title {
         font-size: 20px;
         line-height: 26px;
         margin: 0 0 20px 0;
+
     }
 }
 

@@ -23,7 +23,29 @@
                     <svg class="header__logo">
                         <use href="../assets/images/icons_sprite.svg#page-logo"></use>
                     </svg>
+                    <div class="header__menu">
+                        <a href="#" class="header__nav-link header__nav-link_focused">Components</a>
+                        <a href="#" class="header__nav-link">About</a>
+                        <a href="#" class="header__nav-link">Contact</a>
+                        <div class="header__theme-toggle-wrapper">
+                            <label class="toggle toggle_main-page">
+                                <input type="checkbox" class="toggle__input">
+                                <svg class="toggle__theme-icon toggle__theme-icon_sun">
+                                    <use href="../assets/images/icons_sprite.svg#theme-toggle-sun"></use>
+                                </svg>
 
+                                <div class="toggle__state">
+                                    <div class="toggle__control">
+                                        <div class="toggle__icon"></div>
+                                    </div>
+                                </div>
+                                <svg class="toggle__theme-icon toggle__theme-icon_moon">
+                                    <use href="../assets/images/icons_sprite.svg#theme-toggle-moon"></use>
+                                </svg>
+                            </label>
+
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -44,16 +66,16 @@
                             <a class="menu__link" href="../pages/tooltip.html">Tooltip</a>
                         </li>
                         <li>
-                            <a class="menu__link" href="#">Avatar</a>
+                            <a class="menu__link" href="../pages/avatar.html">Avatar</a>
                         </li>
                         <li>
-                            <a class="menu__link" href="#">Calendar</a>
+                            <a class="menu__link" href="../pages/calendar.html">Calendar</a>
                         </li>
                         <li>
                             <a class="menu__link" href="../pages/histogram.html">Histogram</a>
                         </li>
                         <li>
-                            <a class="menu__link" href="#">Custom from elements</a>
+                            <a class="menu__link" href="../pages/custom-form-elements.html">Custom from elements</a>
                         </li>
                     </ul>
                     <div class="menu__footer">
@@ -63,47 +85,64 @@
                 </aside>
                 <main class="preview preview_layout">
                     <div class="preview__content">
-                        <h3 class="preview__title">Modal</h3>
+                        <div class="preview__content-wrapper preview__content-wrapper_modal">
+                            <h3 class="preview__title">Modal</h3>
 
-                        <button id="modal-open" class="button button_primary">Open modal</button>
+                            <button id="modal-open" class="button button_primary">Open modal</button>
+                            <div id="modal" class="modal modal_component-page">
+                                <div class="modal__preview">
 
-                        <div id="modal" class="modal modal_component-page">
-                            <div class="modal__preview">
+                                    <button id="modal-close" class="modal__close modal__close_component-page">
+                                        <img src="../assets/images/close_icon.svg" alt="close-icon">
+                                    </button>
 
-                                <button id="modal-close" class="modal__close modal__close_component-page">
-                                    <img src="../assets/images/close_icon.svg" alt="close-icon">
-                                </button>
-
-                                <div class="input input_component-page">
-                                    <label class="input__label">name</label>
-                                    <div class="input__container">
-                                        <input type="text" placeholder="Placeholder" class="input__input-text">
-                                        <svg class="input__icon input__success-icon">
-                                            <use href="../../assets/images/icons_sprite.svg#success"></use>
-                                        </svg>
-                                        <svg class="input__icon input__icon_error">
-                                            <use href="../../assets/images/icons_sprite.svg#error"></use>
-                                        </svg>
+                                    <div class="input input_component-page">
+                                        <label class="input__label">name</label>
+                                        <div class="input__container">
+                                            <input type="text" placeholder="Placeholder" class="input__input-text">
+                                            <svg class="input__icon input__success-icon">
+                                                <use href="../../assets/images/icons_sprite.svg#success"></use>
+                                            </svg>
+                                            <svg class="input__icon input__icon_error">
+                                                <use href="../../assets/images/icons_sprite.svg#error"></use>
+                                            </svg>
+                                        </div>
                                     </div>
-                                </div>
 
-                                <div class="input input_component-page">
-                                    <label class="input__label">email</label>
-                                    <div class="input__container">
-                                        <input type="text" placeholder="Placeholder" class="input__input-text"
-                                               tabindex="1">
-                                        <svg class="input__icon input__success-icon">
-                                            <use href="../../assets/images/icons_sprite.svg#success"></use>
-                                        </svg>
-                                        <svg class="input__icon input__icon_error">
-                                            <use href="../../assets/images/icons_sprite.svg#error"></use>
-                                        </svg>
+                                    <div class="input input_component-page">
+                                        <label class="input__label">email</label>
+                                        <div class="input__container">
+                                            <input type="text" placeholder="Placeholder" class="input__input-text"
+                                                   tabindex="1">
+                                            <svg class="input__icon input__success-icon">
+                                                <use href="../../assets/images/icons_sprite.svg#success"></use>
+                                            </svg>
+                                            <svg class="input__icon input__icon_error">
+                                                <use href="../../assets/images/icons_sprite.svg#error"></use>
+                                            </svg>
+                                        </div>
                                     </div>
-                                </div>
 
-                                <button class="button button_primary modal_button-set" type="submit">Submit</button>
+                                    <button class="button button_primary modal_button-set" type="submit">Submit</button>
+                                </div>
                             </div>
+
                         </div>
+
+
+                        <input class="tabs-switcher__input" type="radio" id="html-preview" name="tabsSwitcher" checked>
+                        <input class="tabs-switcher__input" type="radio" id="css-preview" name="tabsSwitcher">
+
+                        <nav class="tabs-switcher">
+                            <div class="tabs-switcher__menu">
+                                <label class="tabs-switcher__label" for="html-preview">HTML</label>
+
+                                <label class="tabs-switcher__label" for="css-preview">CSS</label>
+
+                            </div>
+
+                        </nav>
+
 
                     </div>
 

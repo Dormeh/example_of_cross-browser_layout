@@ -72,7 +72,7 @@
 }
 
 @media screen and (max-width: 768px) {
-    .calendar {
+    .calendar_main-page-preview {
         font-size: 9px;
         max-width: 164px;
         padding: 0.9em 1.1em 0 1.1em;

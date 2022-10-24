@@ -22,7 +22,29 @@
                     <svg class="header__logo">
                         <use href="../assets/images/icons_sprite.svg#page-logo"></use>
                     </svg>
+                    <div class="header__menu">
+                        <a href="#" class="header__nav-link header__nav-link_focused">Components</a>
+                        <a href="#" class="header__nav-link">About</a>
+                        <a href="#" class="header__nav-link">Contact</a>
+                        <div class="header__theme-toggle-wrapper">
+                            <label class="toggle toggle_main-page">
+                                <input type="checkbox" class="toggle__input">
+                                <svg class="toggle__theme-icon toggle__theme-icon_sun">
+                                    <use href="../assets/images/icons_sprite.svg#theme-toggle-sun"></use>
+                                </svg>
 
+                                <div class="toggle__state">
+                                    <div class="toggle__control">
+                                        <div class="toggle__icon"></div>
+                                    </div>
+                                </div>
+                                <svg class="toggle__theme-icon toggle__theme-icon_moon">
+                                    <use href="../assets/images/icons_sprite.svg#theme-toggle-moon"></use>
+                                </svg>
+                            </label>
+
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -61,7 +83,78 @@
 
                 </aside>
                 <main class="preview preview_layout">
-                    <div class="preview__content"></div>
+                    <div class="preview__content">
+                        <div class="preview__content-wrapper preview_content-wrapper_calendar">
+                            <h3 class="preview__title">Calendar</h3>
+                            <div class="calendar">
+                                <div class="calendar__title">
+                                    October 2019
+                                </div>
+                                <div class="calendar__wrapper">
+                                    <div class="calendar__inner">
+                                        <span class="calendar__item calendar__week_day">Mon</span>
+                                        <span class="calendar__item calendar__week_day">Tue</span>
+                                        <span class="calendar__item calendar__week_day">Wed</span>
+                                        <span class="calendar__item calendar__week_day">Thu</span>
+                                        <span class="calendar__item calendar__week_day">Fri</span>
+                                        <span class="calendar__item calendar__week_day">Sat</span>
+                                        <span class="calendar__item calendar__week_day">Sun</span>
+                                        <span class="calendar__item"></span>
+                                        <span class="calendar__item"></span>
+                                        <span class="calendar__item"></span>
+                                        <span class="calendar__item"></span>
+                                        <span class="calendar__item"></span>
+                                        <span class="calendar__item">1</span>
+                                        <span class="calendar__item">2</span>
+                                        <span class="calendar__item">3</span>
+                                        <span class="calendar__item">4</span>
+                                        <span class="calendar__item">5</span>
+                                        <span class="calendar__item">6</span>
+                                        <span class="calendar__item">7</span>
+                                        <span class="calendar__item">8</span>
+                                        <span class="calendar__item">9</span>
+                                        <span class="calendar__item">10</span>
+                                        <span class="calendar__item">11</span>
+                                        <span class="calendar__item">12</span>
+                                        <span class="calendar__item">13</span>
+                                        <span class="calendar__item">14</span>
+                                        <span class="calendar__item">15</span>
+                                        <span class="calendar__item">16</span>
+                                        <span class="calendar__item calendar__item_active">17</span>
+                                        <span class="calendar__item calendar__item_between-active">18</span>
+                                        <span class="calendar__item calendar__item_between-active">19</span>
+                                        <span class="calendar__item calendar__item_between-active">20</span>
+                                        <span class="calendar__item calendar__item_between-active">21</span>
+                                        <span class="calendar__item calendar__item_active">22</span>
+                                        <span class="calendar__item">23</span>
+                                        <span class="calendar__item">24</span>
+                                        <span class="calendar__item">25</span>
+                                        <span class="calendar__item">26</span>
+                                        <span class="calendar__item">27</span>
+                                        <span class="calendar__item">28</span>
+                                        <span class="calendar__item">29</span>
+                                        <span class="calendar__item">30</span>
+                                        <span class="calendar__item">31</span>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <input class="tabs-switcher__input" type="radio" id="html-preview" name="tabsSwitcher" checked>
+                        <input class="tabs-switcher__input" type="radio" id="css-preview" name="tabsSwitcher">
+
+                        <nav class="tabs-switcher">
+                            <div class="tabs-switcher__menu">
+                                <label class="tabs-switcher__label" for="html-preview">HTML</label>
+
+                                <label class="tabs-switcher__label" for="css-preview">CSS</label>
+
+                            </div>
+
+                        </nav>
+
+                    </div>
                 </main>
 
             </div>

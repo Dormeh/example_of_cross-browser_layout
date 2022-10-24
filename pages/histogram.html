@@ -22,7 +22,29 @@
                     <svg class="header__logo">
                         <use href="../assets/images/icons_sprite.svg#page-logo"></use>
                     </svg>
+                    <div class="header__menu">
+                        <a href="#" class="header__nav-link header__nav-link_focused">Components</a>
+                        <a href="#" class="header__nav-link">About</a>
+                        <a href="#" class="header__nav-link">Contact</a>
+                        <div class="header__theme-toggle-wrapper">
+                            <label class="toggle toggle_main-page">
+                                <input type="checkbox" class="toggle__input">
+                                <svg class="toggle__theme-icon toggle__theme-icon_sun">
+                                    <use href="../assets/images/icons_sprite.svg#theme-toggle-sun"></use>
+                                </svg>
 
+                                <div class="toggle__state">
+                                    <div class="toggle__control">
+                                        <div class="toggle__icon"></div>
+                                    </div>
+                                </div>
+                                <svg class="toggle__theme-icon toggle__theme-icon_moon">
+                                    <use href="../assets/images/icons_sprite.svg#theme-toggle-moon"></use>
+                                </svg>
+                            </label>
+
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -61,48 +83,63 @@
 
                 </aside>
                 <main class="preview preview_layout">
-                    <div class="preview__content preview__content_histogram">
-                        <h3 class="preview__title">Histogram</h3>
-                        <div class="histogram">
-                            <div class="histogram__title">
-                                Total orders
-                                <a class="histogram__link" href="#">View all</a>
-                            </div>
-                            <div class="histogram__header">
-                                50254
-                            </div>
-                            <div class="histogram__body">
-                                <div style="height: 90%" class="histogram__item"></div>
-                                <div style="height: 80%" class="histogram__item"></div>
-                                <div style="height: 70%" class="histogram__item"></div>
-                                <div style="height: 60%" class="histogram__item"></div>
-                                <div style="height: 70%" class="histogram__item"></div>
-                                <div style="height: 40%" class="histogram__item"></div>
-                                <div style="height: 90%" class="histogram__item"></div>
-                                <div style="height: 70%" class="histogram__item"></div>
-                                <div style="height: 90%" class="histogram__item"></div>
-                                <div style="height: 80%" class="histogram__item"></div>
-                                <div style="height: 70%" class="histogram__item"></div>
-                                <div style="height: 60%" class="histogram__item"></div>
-                                <div style="height: 70%" class="histogram__item"></div>
-                                <div style="height: 40%" class="histogram__item"></div>
-                                <div style="height: 90%" class="histogram__item"></div>
-                                <div style="height: 70%" class="histogram__item"></div>
-                                <div style="height: 70%" class="histogram__item"></div>
-                                <div style="height: 60%" class="histogram__item"></div>
-                                <div style="height: 70%" class="histogram__item"></div>
-                                <div style="height: 40%" class="histogram__item"></div>
-                                <div style="height: 90%" class="histogram__item"></div>
-                                <div style="height: 70%" class="histogram__item"></div>
-                                <div style="height: 60%" class="histogram__item"></div>
-                                <div style="height: 70%" class="histogram__item"></div>
-                                <div style="height: 40%" class="histogram__item"></div>
-                                <div style="height: 90%" class="histogram__item"></div>
-                                <div style="height: 70%" class="histogram__item"></div>
+                    <div class="preview__content">
+                        <div class="preview__content-wrapper preview__content-wrapper_histogram">
+                            <h3 class="preview__title">Histogram</h3>
+                            <div class="histogram">
+                                <div class="histogram__title">
+                                    Total orders
+                                    <a class="histogram__link" href="#">View all</a>
+                                </div>
+                                <div class="histogram__header">
+                                    50254
+                                </div>
+                                <div class="histogram__body">
+                                    <div style="height: 90%" class="histogram__item"></div>
+                                    <div style="height: 80%" class="histogram__item"></div>
+                                    <div style="height: 70%" class="histogram__item"></div>
+                                    <div style="height: 60%" class="histogram__item"></div>
+                                    <div style="height: 70%" class="histogram__item"></div>
+                                    <div style="height: 40%" class="histogram__item"></div>
+                                    <div style="height: 90%" class="histogram__item"></div>
+                                    <div style="height: 70%" class="histogram__item"></div>
+                                    <div style="height: 90%" class="histogram__item"></div>
+                                    <div style="height: 80%" class="histogram__item"></div>
+                                    <div style="height: 70%" class="histogram__item"></div>
+                                    <div style="height: 60%" class="histogram__item"></div>
+                                    <div style="height: 70%" class="histogram__item"></div>
+                                    <div style="height: 40%" class="histogram__item"></div>
+                                    <div style="height: 90%" class="histogram__item"></div>
+                                    <div style="height: 70%" class="histogram__item"></div>
+                                    <div style="height: 70%" class="histogram__item"></div>
+                                    <div style="height: 60%" class="histogram__item"></div>
+                                    <div style="height: 70%" class="histogram__item"></div>
+                                    <div style="height: 40%" class="histogram__item"></div>
+                                    <div style="height: 90%" class="histogram__item"></div>
+                                    <div style="height: 70%" class="histogram__item"></div>
+                                    <div style="height: 60%" class="histogram__item"></div>
+                                    <div style="height: 70%" class="histogram__item"></div>
+                                    <div style="height: 40%" class="histogram__item"></div>
+                                    <div style="height: 90%" class="histogram__item"></div>
+                                    <div style="height: 70%" class="histogram__item"></div>
+                                </div>
                             </div>
                         </div>
 
+                        <input class="tabs-switcher__input" type="radio" id="html-preview" name="tabsSwitcher" checked>
+                        <input class="tabs-switcher__input" type="radio" id="css-preview" name="tabsSwitcher">
+
+                        <nav class="tabs-switcher">
+                            <div class="tabs-switcher__menu">
+                                <label class="tabs-switcher__label" for="html-preview">HTML</label>
+
+                                <label class="tabs-switcher__label" for="css-preview">CSS</label>
+
+                            </div>
+
+                        </nav>
                     </div>
+
                 </main>
 
             </div>
