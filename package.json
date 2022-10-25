@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Course Materials",
   "scripts": {
+    "start": "index.html",
     "test": "cross-env NODE_ENV=test mocha --no-warnings --ignore=node_modules/** **/*.test.js"
   },
   "husky": {
