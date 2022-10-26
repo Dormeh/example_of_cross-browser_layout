@@ -18,6 +18,7 @@
 @import "../../05-lection3/02-modal/modal.css";
 @import "../../04-lection2/01-histogram/histogram.css";
 @import "../../06-lection4/01-avatar/avatar.css";
+@import "../../components/burger-menu/burger-menu.css";
 
 :root {
     --white: #ffffff;

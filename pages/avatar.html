@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="../assets/css/normalize.css">
     <link rel="stylesheet" href="../assets/css/main.css">
     <link rel="stylesheet" href="../04-lection2/01-histogram/histogram.css">
+    <script defer src="../09-lection7/01-burger-menu/burger-menu.js"></script>
+
     <title>Layout</title>
 </head>
 <body>
@@ -14,7 +16,7 @@
         <header class="header header_layout">
             <div class="container">
                 <div class="header__head">
-                    <button class="menu__button">
+                    <button class="menu__button" id="burger-menu-open">
                         <svg class="menu__icon">
                             <use href="../assets/images/icons_sprite.svg#menu"></use>
                         </svg>
@@ -51,6 +53,84 @@
         </header>
 
     </div>
+    <div id="burger-menu" class="burger-menu">
+        <header class="header">
+            <div class="container container_burger-menu">
+                <button id="burger-menu-close" class="burger-menu__button-close">
+                    <svg class="burger-menu__icon-close">
+                        <use href="../assets/images/icons_sprite.svg#icon-close-burger"></use>
+                    </svg>
+
+                </button>
+
+                <div class="header__head">
+                    <svg class="header__logo">
+                        <use href="../assets/images/icons_sprite.svg#page-logo"></use>
+                    </svg>
+                </div>
+
+            </div>
+        </header>
+
+        <div class="burger-menu__theme-wrapper">
+            <div class="container container_burger-menu">
+                <div class="burger-menu__split-line"></div>
+                <div class="burger-menu__toggle-wrapper">
+                    <p class="burger-menu__theme-switcher-title">
+                        Dark mode
+                    </p>
+                    <label class="toggle toggle_main-page">
+                        <input type="checkbox" class="toggle__input">
+
+                        <div class="toggle__state">
+                            <div class="toggle__control">
+                                <div class="toggle__icon"></div>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+                <div class="burger-menu__split-line"></div>
+            </div>
+        </div>
+
+
+        <div class="burger-menu__body">
+            <div class="container">
+                <aside class="menu menu_burger-inner">
+                    <h5 class="menu__title">Components</h5>
+
+                    <ul class="menu__list">
+                        <li>
+                            <a class="menu__link" href="modal.html">Modal</a>
+                        </li>
+                        <li>
+                            <a class="menu__link" href="tooltip.html">Tooltip</a>
+                        </li>
+                        <li>
+                            <a class="menu__link" href="avatar.html">Avatar</a>
+                        </li>
+                        <li>
+                            <a class="menu__link" href="calendar.html">Calendar</a>
+                        </li>
+                        <li>
+                            <a class="menu__link" href="histogram.html">Histogram</a>
+                        </li>
+                        <li>
+                            <a class="menu__link" href="custom-form-elements.html">Custom from elements</a>
+                        </li>
+                    </ul>
+                    <div class="menu__footer">
+                        <a class="menu__link" href="../index.html">Main page</a>
+                    </div>
+
+                </aside>
+
+            </div>
+
+        </div>
+
+    </div>
+
     <div class="page__preview">
         <div class="container">
             <div class="gridLayout">
@@ -59,22 +139,22 @@
 
                     <ul class="menu__list">
                         <li>
-                            <a class="menu__link" href="../pages/modal.html">Modal</a>
+                            <a class="menu__link" href="modal.html">Modal</a>
                         </li>
                         <li>
-                            <a class="menu__link" href="../pages/tooltip.html">Tooltip</a>
+                            <a class="menu__link" href="tooltip.html">Tooltip</a>
                         </li>
                         <li>
-                            <a class="menu__link menu__link_active" href="../pages/avatar.html">Avatar</a>
+                            <a class="menu__link menu__link_active" href="avatar.html">Avatar</a>
                         </li>
                         <li>
-                            <a class="menu__link" href="../pages/calendar.html">Calendar</a>
+                            <a class="menu__link" href="calendar.html">Calendar</a>
                         </li>
                         <li>
-                            <a class="menu__link" href="../pages/histogram.html">Histogram</a>
+                            <a class="menu__link" href="histogram.html">Histogram</a>
                         </li>
                         <li>
-                            <a class="menu__link" href="../pages/custom-form-elements.html">Custom from elements</a>
+                            <a class="menu__link" href="custom-form-elements.html">Custom from elements</a>
                         </li>
                     </ul>
                     <div class="menu__footer">

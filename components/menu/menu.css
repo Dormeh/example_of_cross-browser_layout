@@ -62,4 +62,14 @@
     .menu__button {
         display: block;
     }
+    .menu_burger-inner {
+        display: grid;
+    }
+    .menu_burger-inner .menu__title {
+        color: #ACB5BD;
+    }
+    .menu_burger-inner .menu__link {
+        font-size: 16px;
+        line-height: 38px;
+    }
 }

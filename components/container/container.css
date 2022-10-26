@@ -6,6 +6,9 @@
     flex-direction: column;
     justify-content: space-between;
 }
+.container_burger-menu {
+    width: 90vw;
+}
 
 @media screen and (max-width: 768px) {
     .container {
