@@ -1,6 +1,6 @@
 .calendar {
     box-sizing: border-box;
-    background: var(--white);
+    background: var(--main-bg-color);
     border: 1px solid var(--grey-3);
     border-radius: 0.5em;
     padding: 1.5em 1.625em 1.5em 1.625em;
@@ -36,7 +36,7 @@
     font-weight: 400;
     font-size: 1em;
     line-height: 1.25em;
-    color: #334D6E;
+    color: var(--dark-blue);
 }
 
 .calendar__week_day {
@@ -59,7 +59,7 @@
 
 .calendar__item_active {
     background: var(--ligth-blue);
-    color: var(--white);
+    color: var(--main-bg-color);
 }
 
 .calendar__item_between-active {
@@ -72,6 +72,10 @@
 }
 
 @media screen and (max-width: 768px) {
+    .calendar_component_page {
+        font-size: 15px;
+        max-width: 250px;
+    }
     .calendar_main-page-preview {
         font-size: 9px;
         max-width: 164px;

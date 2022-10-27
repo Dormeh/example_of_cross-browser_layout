@@ -48,6 +48,7 @@
 .tooltip-icon {
     width: 1.5em;
     height: 1.5em;
+    color: var(--icons-color);
 }
 
 .tooltip_main-page-preview .tooltip__helper {

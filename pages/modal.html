@@ -8,6 +8,18 @@
     <link rel="stylesheet" href="../04-lection2/01-histogram/histogram.css">
     <script defer src="../05-lection3/02-modal/index.js"></script>
     <script defer src="../09-lection7/01-burger-menu/burger-menu.js"></script>
+    <script defer src="../assets/utils/theme-changer.js"></script>
+    <style>
+        html[data-theme-dark] {
+            --main-bg-color: #212429;
+            --main-font-color: #ffffff75;
+            --grey-4: #818c98;
+            --grey-5: #495057;
+            --active-text-color: #ffff;
+            --icons-color: #ffff;
+            --dark-blue: #a1b5ce;
+        }
+    </style>
     <title>Layout</title>
 </head>
 <body>
@@ -30,7 +42,7 @@
                         <a href="#" class="header__nav-link">Contact</a>
                         <div class="header__theme-toggle-wrapper">
                             <label class="toggle toggle_main-page">
-                                <input type="checkbox" class="toggle__input">
+                                <input type="checkbox" class="toggle__input" id="theme-changer">
                                 <svg class="toggle__theme-icon toggle__theme-icon_sun">
                                     <use href="../assets/images/icons_sprite.svg#theme-toggle-sun"></use>
                                 </svg>
@@ -54,7 +66,7 @@
 
     </div>
     <div id="burger-menu" class="burger-menu">
-        <header class="header">
+        <header class="header burger-menu_header">
             <div class="container container_burger-menu">
                 <button id="burger-menu-close" class="burger-menu__button-close">
                     <svg class="burger-menu__icon-close">
@@ -80,7 +92,7 @@
                         Dark mode
                     </p>
                     <label class="toggle toggle_main-page">
-                        <input type="checkbox" class="toggle__input">
+                        <input type="checkbox" class="toggle__input"  id="theme-changer-mobile">
 
                         <div class="toggle__state">
                             <div class="toggle__control">

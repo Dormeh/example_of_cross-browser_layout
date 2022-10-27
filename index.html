@@ -7,7 +7,18 @@
     <link rel="stylesheet" href="./assets/css/normalize.css">
     <link rel="stylesheet" href="./assets/css/main.css">
     <script defer src="09-lection7/01-burger-menu/burger-menu.js"></script>
-
+    <script defer src="assets/utils/theme-changer.js"></script>
+    <style>
+        html[data-theme-dark] {
+            --main-bg-color: #212429;
+            --main-font-color: #ffffff75;
+            --grey-4: #818c98;
+            --grey-5: #495057;
+            --active-text-color: #ffff;
+            --icons-color: #ffff;
+            --dark-blue: #a1b5ce;
+        }
+    </style>
     <title>Main page</title>
 </head>
 <body>
@@ -30,7 +41,7 @@
                     <a href="#" class="header__nav-link">Contact</a>
                     <div class="header__theme-toggle-wrapper">
                         <label class="toggle toggle_main-page">
-                            <input type="checkbox" class="toggle__input">
+                            <input type="checkbox" class="toggle__input" id="theme-changer">
                             <svg class="toggle__theme-icon toggle__theme-icon_sun">
                                 <use href="assets/images/icons_sprite.svg#theme-toggle-sun"></use>
                             </svg>
@@ -54,7 +65,7 @@
 
     </header>
     <div id="burger-menu" class="burger-menu">
-        <header class="header">
+        <header class="header burger-menu_header">
             <div class="container container_burger-menu">
                 <button id="burger-menu-close" class="burger-menu__button-close">
                     <svg class="burger-menu__icon-close">
@@ -80,7 +91,7 @@
                         Dark mode
                     </p>
                     <label class="toggle toggle_main-page">
-                        <input type="checkbox" class="toggle__input">
+                        <input type="checkbox" class="toggle__input" id="theme-changer-mobile">
 
                         <div class="toggle__state">
                             <div class="toggle__control">
@@ -175,7 +186,7 @@
                     <div class="card__body">
                         <div class="card__cover"></div>
                         <div class="card__content-wrapper">
-                            <label class="checkbox" style="grid-row: 1 /2">
+                            <label class="checkbox checkbox_main-page-preview" style="grid-row: 1 /2">
                                 <input type="checkbox" class="checkbox__input">
                                 <div class="checkbox__state">
                                     <div class="checkbox__control">
@@ -187,7 +198,7 @@
                                 </div>
 
                             </label>
-                            <label class="checkbox" style="grid-row: 2/3">
+                            <label class="checkbox checkbox_main-page-preview" style="grid-row: 2/3">
                                 <input type="checkbox" class="checkbox__input" checked>
                                 <div class="checkbox__state">
                                     <div class="checkbox__control">
@@ -199,7 +210,7 @@
                                 </div>
 
                             </label>
-                            <label class="checkbox" style="grid-row: 3/4">
+                            <label class="checkbox checkbox_main-page-preview" style="grid-row: 3/4">
                                 <input type="checkbox" class="checkbox__input" disabled>
                                 <div class="checkbox__state">
                                     <div class="checkbox__control">
@@ -211,7 +222,7 @@
                                 </div>
 
                             </label>
-                            <label class="radio">
+                            <label class="radio radio_main-page-preview">
                                 <input type="radio" class="radio__input" name="radio">
                                 <div class="radio__state">
                                     <div class="radio__control">
@@ -221,7 +232,7 @@
                                 </div>
 
                             </label>
-                            <label class="radio">
+                            <label class="radio radio_main-page-preview">
                                 <input type="radio" class="radio__input" name="radio" checked>
                                 <div class="radio__state">
                                     <div class="radio__control">
@@ -231,7 +242,7 @@
                                 </div>
 
                             </label>
-                            <label class="radio">
+                            <label class="radio  radio_main-page-preview">
                                 <input type="radio" class="radio__input" name="radio" disabled>
                                 <div class="radio__state">
                                     <div class="radio__control">

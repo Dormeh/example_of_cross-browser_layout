@@ -3,7 +3,9 @@
     box-sizing: border-box;
     font-family: 'Inter', sans-serif;
     font-style: normal;
-    font-weight: 400
+    font-weight: 400;
+    background: var(--main-bg-color);
+    color: var(--main-font-color);
 }
 
 .header__head {
@@ -19,14 +21,14 @@
     font-weight: 500;
     font-size: 50px;
     line-height: 64px;
-    color: var(--black);
+    color: var(--main-font-color);
 }
 
 
 .header__logo {
     width: 110px;
     height: 32px;
-    color: var(--black);
+    color: var(--icons-color);
 }
 
 .header__menu {
@@ -43,7 +45,7 @@
 }
 
 .header__nav-link:focus, .header__nav-link_focused {
-    color: var(--black);
+    color: var(--active-text-color);
 }
 
 .header__theme-toggle-wrapper {

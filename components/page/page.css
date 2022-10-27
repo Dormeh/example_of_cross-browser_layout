@@ -22,6 +22,6 @@
 
     .page__preview {
         padding: 32px 0 32px 0;
-        background: var(--white);
+        background: var(--main-bg-color);
     }
 }

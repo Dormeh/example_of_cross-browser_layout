@@ -1,7 +1,12 @@
+.tabs-switcher{
+    background: var(--main-bg-color);
+
+}
 .tabs-switcher__input {
     position: absolute;
     outline: none;
     clip: rect(0, 0, 0, 0);
+
 }
 
 #all-tab:checked ~ .tabs-switcher .tabs-switcher__label[for="all-tab"]::after,
@@ -15,8 +20,7 @@
     height: 5px;
     width: 100%;
     top: 100%;
-    color: var(--black);
-    background: var(--black);
+    background: var(--active-text-color);
 }
 
 #all-tab:checked ~ .preview .preview__cards_all,
@@ -43,7 +47,7 @@
 #simple-tab:checked ~ .tabs-switcher .tabs-switcher__label[for="simple-tab"],
 #html-preview:checked ~ .tabs-switcher .tabs-switcher__label[for="html-preview"],
 #css-preview:checked ~ .tabs-switcher .tabs-switcher__label[for="css-preview"] {
-    color: var(--black);
+    color: var(--active-text-color);
 }
 
 .tabs-switcher__menu {

@@ -35,14 +35,14 @@
     text-decoration: none;
     font-size: 14px;
     line-height: 22px;
-    color: var(--black);
+    color: var(--main-font-color);
 }
 
 .menu__title {
     font-weight: inherit;
     font-size: 20px;
     line-height: 26px;
-    color: var(--black);
+    color: var(--main-font-color);
     margin: 0 0 16px 0;
 }
 
@@ -66,7 +66,7 @@
         display: grid;
     }
     .menu_burger-inner .menu__title {
-        color: #ACB5BD;
+        color: var(--grey-3);
     }
     .menu_burger-inner .menu__link {
         font-size: 16px;

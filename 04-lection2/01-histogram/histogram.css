@@ -1,7 +1,7 @@
 .histogram {
     width: 100%;
     box-sizing: border-box;
-    background: var(--white);
+    background: var(--main-bg-color);
     border: 1px solid var(--grey-3);
     border-radius: 0.5em;
     font-family: 'Inter', sans-serif;
@@ -22,15 +22,14 @@
     line-height: 1.2em;
     padding-bottom: 0.375em;
 
-    color: var(--black);
+    color: var(--main-font-color);
     opacity: 0.8;
 }
 
 .histogram__header {
+    color: var(--active-text-color);
     font-size: 1.25em;
     line-height: 1.3em;
-
-    color: var(--black);
 }
 
 .histogram__body {

@@ -23,7 +23,7 @@
     box-sizing: border-box;
     width: 1.75em;
     height: 1.75em;
-    background: var(--white);
+    background: var(--main-bg-color);
     border: 0.0625em solid var(--grey-2);
     border-radius: 0.875em;
     cursor: pointer;
@@ -78,7 +78,7 @@
 }
 
 @media screen and (max-width: 768px) {
-    .radio {
+    .radio_main-page-preview {
         font-size: 10px;
     }
 }
