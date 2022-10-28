@@ -48,7 +48,7 @@
     animation-name: backgroundMovement;
     animation-timing-function: linear;
     background: var(--grey-2);
-    background: linear-gradient(267.58deg, var(--grey-2) 0%, var(--grey-1) 80%, var(--grey-2) 100%);
+    background: linear-gradient(267.58deg, var(--grey-2) 0%, var(--font-color-light) 80%, var(--grey-2) 100%);
     background-size: 200%;
 }
 

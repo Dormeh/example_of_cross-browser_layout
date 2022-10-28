@@ -8,15 +8,24 @@
     <link rel="stylesheet" href="./assets/css/main.css">
     <script defer src="09-lection7/01-burger-menu/burger-menu.js"></script>
     <script defer src="assets/utils/theme-changer.js"></script>
+    <link rel="stylesheet" href="assets/css/prism.css">
+    <script defer src="assets/utils/prism.js"></script>
+
     <style>
         html[data-theme-dark] {
             --main-bg-color: #212429;
-            --main-font-color: #ffffff75;
+            --main-font-color: #b0b3b6;
+            --grey-2: #666768;
             --grey-4: #818c98;
             --grey-5: #495057;
             --active-text-color: #ffff;
             --icons-color: #ffff;
             --dark-blue: #a1b5ce;
+            --token-tag: #c681a7;
+            --token-attr-name: #7b9e36;
+            --token-attr-value: #3e90b3;
+            --token-punctuation: #a4a3a3;
+
         }
     </style>
     <title>Main page</title>
@@ -131,7 +140,7 @@
                         </li>
                     </ul>
                     <div class="menu__footer">
-                        <a class="menu__link" href="index.html">Main page</a>
+                        <a class="menu__link menu__link_active" href="index.html">Main page</a>
                     </div>
 
                 </aside>

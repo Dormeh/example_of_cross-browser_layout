@@ -26,7 +26,7 @@
     line-height: 1.5em;
     text-align: center;
     padding: 0.8125em 1.5em;
-    color: var(--grey-2);
+    color: var(--font-color-light);
 
 }
 
@@ -59,15 +59,13 @@
     transform: translateY(2em);
 }
 
-.tooltip_component-page {
-    /*transform: translate(2em, 5em);*/
-}
-
 @media screen and (max-width: 768px) {
     .tooltip_main-page-preview {
         font-size: 12px;
     }
+
     .tooltip_component-page {
+        font-size: 14px;
         align-self: flex-end;
         transform: translateX(50%);
     }

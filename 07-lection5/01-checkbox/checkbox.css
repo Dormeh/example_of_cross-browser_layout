@@ -6,7 +6,7 @@
 .checkbox__input {
     position: absolute;
     outline: none;
-    clip: rect(0,0,0,0);
+    clip: rect(0, 0, 0, 0);
 }
 
 .checkbox__state {
@@ -40,7 +40,7 @@
     font-weight: 400;
     font-size: 1em;
     line-height: 1.5em;
-    color: #495057;
+    color: var(--active-text-color);
 }
 
 .checkbox__input:checked ~ .checkbox__state .checkbox__control {
@@ -80,6 +80,7 @@
     .checkbox_main-page-preview {
         font-size: 10px;
     }
+
     .checkbox_main-page-preview .checkbox__icon {
         transform: scale(0.7);
     }

@@ -30,6 +30,7 @@
 }
 
 .radio__icon {
+    transform: scale(0.9);
     width: 1.125em;
     height: 1.125em;
     border-radius: 50%;
@@ -42,7 +43,7 @@
     font-weight: 400;
     font-size: 1em;
     line-height: 1.5em;
-    color: #495057;
+    color: var(--active-text-color);
 }
 
 .radio__input:checked ~ .radio__state .radio__control {
@@ -73,6 +74,8 @@
 }
 
 .radio__input:disabled ~ .radio__state .radio__control {
+    border-color: var(--grey-2);
+
     background: var(--grey-2);
     cursor: default;
 }

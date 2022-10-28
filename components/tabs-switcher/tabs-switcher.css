@@ -29,6 +29,12 @@
     display: flex;
 }
 
+#html-preview:checked ~ #preview-html,
+#css-preview:checked ~ #preview-css {
+    display: block;
+}
+
+
 .tabs-switcher__label::after {
     display: none;
     margin-top: 8px;
@@ -66,3 +72,6 @@
     background: #DDE2E5;
 }
 
+.tabs-switcher__split-line_component-page {
+    position: static;
+}

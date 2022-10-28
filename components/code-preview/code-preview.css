@@ -1,0 +1,14 @@
+.code-preview {
+    overflow-x: auto;
+    display: none;
+    /*flex-direction: column;*/
+    /*justify-content: center;*/
+    /*align-items: flex-start;*/
+}
+.code-preview__element {
+    white-space: pre;
+    color: var(--main-font-color);
+    overflow-x: auto;
+
+}
+

@@ -8,6 +8,7 @@
 @import "../../components/menu/menu.css";
 @import "../../components/gridLayout/gridLayout.css";
 @import "../../components/tabs-switcher/tabs-switcher.css";
+@import "../../components/code-preview/code-preview.css";
 @import "../../03-lection1/01-button/button.css";
 @import "../../05-lection3/01-tooltip/tooltip.css";
 @import "../../07-lection5/01-checkbox/checkbox.css";
@@ -33,8 +34,8 @@
     --dark-purple: #5028C6;
     --red: #f03d3e;
     --red-orange: #d84910;
-    --grey-1: #F8F9FA;
-    --grey-2: #DDE2E5;
+    --font-color-light: #ffff;
+    --grey-2: #dde2e5;
     --grey-3: #ACB5BD;
     --grey-4: #495057;
     --grey-5: #F9FAFC;
@@ -46,6 +47,15 @@
 
     --primary: var(--blue);
     --secondary: var(--purple);
+
+
+    --token-attr-value: #07a;
+    --token-attr-name: #690;
+    --token-tag: #905;
+    --token-function: #dd4a68;
+    --token-punctuation: #999;
+
+
 }
 
 html, body {

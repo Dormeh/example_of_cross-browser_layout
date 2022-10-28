@@ -8,63 +8,68 @@
     <link rel="stylesheet" href="../04-lection2/01-histogram/histogram.css">
     <script defer src="../09-lection7/01-burger-menu/burger-menu.js"></script>
     <script defer src="../assets/utils/theme-changer.js"></script>
+    <link rel="stylesheet" href="../assets/css/prism.css">
+    <script defer src="../assets/utils/prism.js"></script>
 
     <style>
         html[data-theme-dark] {
             --main-bg-color: #212429;
-            --main-font-color: #ffffff75;
+            --main-font-color: #b0b3b6;
+            --grey-2: #666768;
             --grey-4: #818c98;
             --grey-5: #495057;
             --active-text-color: #ffff;
             --icons-color: #ffff;
             --dark-blue: #a1b5ce;
+            --token-tag: #c681a7;
+            --token-attr-name: #7b9e36;
+            --token-attr-value: #3e90b3;
+            --token-punctuation: #a4a3a3;
+
         }
     </style>
     <title>Layout</title>
 </head>
 <body>
 <div class="page">
-    <div class="page__tempHeaderFixHeight">
-        <header class="header header_layout">
-            <div class="container">
-                <div class="header__head">
-                    <button class="menu__button" id="burger-menu-open">
-                        <svg class="menu__icon">
-                            <use href="../assets/images/icons_sprite.svg#menu"></use>
-                        </svg>
-                    </button>
-                    <svg class="header__logo">
-                        <use href="../assets/images/icons_sprite.svg#page-logo"></use>
+    <header class="header header_layout">
+        <div class="container">
+            <div class="header__head">
+                <button class="menu__button" id="burger-menu-open">
+                    <svg class="menu__icon">
+                        <use href="../assets/images/icons_sprite.svg#menu"></use>
                     </svg>
-                    <div class="header__menu">
-                        <a href="#" class="header__nav-link header__nav-link_focused">Components</a>
-                        <a href="#" class="header__nav-link">About</a>
-                        <a href="#" class="header__nav-link">Contact</a>
-                        <div class="header__theme-toggle-wrapper">
-                            <label class="toggle toggle_main-page">
-                                <input type="checkbox" class="toggle__input" id="theme-changer">
-                                <svg class="toggle__theme-icon toggle__theme-icon_sun">
-                                    <use href="../assets/images/icons_sprite.svg#theme-toggle-sun"></use>
-                                </svg>
+                </button>
+                <svg class="header__logo">
+                    <use href="../assets/images/icons_sprite.svg#page-logo"></use>
+                </svg>
+                <div class="header__menu">
+                    <a href="#" class="header__nav-link header__nav-link_focused">Components</a>
+                    <a href="#" class="header__nav-link">About</a>
+                    <a href="#" class="header__nav-link">Contact</a>
+                    <div class="header__theme-toggle-wrapper">
+                        <label class="toggle toggle_main-page">
+                            <input type="checkbox" class="toggle__input" id="theme-changer">
+                            <svg class="toggle__theme-icon toggle__theme-icon_sun">
+                                <use href="../assets/images/icons_sprite.svg#theme-toggle-sun"></use>
+                            </svg>
 
-                                <div class="toggle__state">
-                                    <div class="toggle__control">
-                                        <div class="toggle__icon"></div>
-                                    </div>
+                            <div class="toggle__state">
+                                <div class="toggle__control">
+                                    <div class="toggle__icon"></div>
                                 </div>
-                                <svg class="toggle__theme-icon toggle__theme-icon_moon">
-                                    <use href="../assets/images/icons_sprite.svg#theme-toggle-moon"></use>
-                                </svg>
-                            </label>
+                            </div>
+                            <svg class="toggle__theme-icon toggle__theme-icon_moon">
+                                <use href="../assets/images/icons_sprite.svg#theme-toggle-moon"></use>
+                            </svg>
+                        </label>
 
-                        </div>
                     </div>
                 </div>
             </div>
+        </div>
 
-        </header>
-
-    </div>
+    </header>
     <div id="burger-menu" class="burger-menu">
         <header class="header burger-menu_header">
             <div class="container container_burger-menu">
@@ -119,7 +124,7 @@
                             <a class="menu__link" href="tooltip.html">Tooltip</a>
                         </li>
                         <li>
-                            <a class="menu__link" href="avatar.html">Avatar</a>
+                            <a class="menu__link menu__link_active" href="avatar.html">Avatar</a>
                         </li>
                         <li>
                             <a class="menu__link" href="calendar.html">Calendar</a>
@@ -179,21 +184,72 @@
                         <div class="preview__content-wrapper preview_content-wrapper_avatar">
                             <h3 class="preview__title">Avatar</h3>
                             <div class="avatar avatar_component-page">
-                                <img src="../06-lection4/01-avatar/public/avatar-200.jpg" alt="avatar" class="avatar__img">
+                                <img src="../06-lection4/01-avatar/public/avatar-200.jpg" alt="avatar"
+                                     class="avatar__img">
                             </div>
                         </div>
-                        <input class="tabs-switcher__input" type="radio" id="html-preview" name="tabsSwitcher" checked>
-                        <input class="tabs-switcher__input" type="radio" id="css-preview" name="tabsSwitcher">
+                        <div class="preview__code-wrapper">
+                            <input class="tabs-switcher__input" type="radio" id="html-preview" name="tabsSwitcher"
+                                   checked>
+                            <input class="tabs-switcher__input" type="radio" id="css-preview" name="tabsSwitcher">
+                            <nav class="tabs-switcher">
+                                <div class="tabs-switcher__menu">
+                                    <label class="tabs-switcher__label" for="html-preview">HTML</label>
 
-                        <nav class="tabs-switcher">
-                            <div class="tabs-switcher__menu">
-                                <label class="tabs-switcher__label" for="html-preview">HTML</label>
+                                    <label class="tabs-switcher__label" for="css-preview">CSS</label>
 
-                                <label class="tabs-switcher__label" for="css-preview">CSS</label>
+                                </div>
+
+                            </nav>
+                            <div class="tabs-switcher__split-line tabs-switcher__split-line_component-page"></div>
+
+                            <div class="code-preview" id="preview-html">
+                                    <pre class="code-preview__element">
+                                <code class="language-html">
+&lt;div class=&quot;avatar&quot;&gt;
+    &lt;img src=&quot;./public/avatar-200.jpg&quot; alt=&quot;avatar&quot; class=&quot;avatar__img&quot;&gt;
+&lt;/div&gt;
+                                </code>
+                            </pre>
+
 
                             </div>
+                            <div class="code-preview" id="preview-css">
 
-                        </nav>
+                            <pre class="code-preview__element">
+                                <code class="language-css">
+.avatar {
+    width: 10em;
+    height: 10em;
+}
+
+.avatar__img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.avatar_main-page-preview {
+    transform: translateY(-1.3em);
+}
+
+.avatar_component-page {
+    font-size: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .avatar_main-page-preview {
+        font-size: 11.6px;
+        transform: translateY(0);
+    }
+}
+
+                                </code>
+                            </pre>
+                            </div>
+                        </div>
+
 
                     </div>
                 </main>
@@ -213,5 +269,6 @@
         </div>
     </footer>
 </div>
+
 </body>
 </html>
