@@ -4,11 +4,9 @@
     height: 100%;
 }
 
-.page__tempHeaderFixHeight {
-    height: 82px;
-}
-
 .page__preview {
+    display: inline-flex;
+    justify-content: center;
     flex-grow: 1;
     padding-top: 36px;
     padding-bottom: 36px;

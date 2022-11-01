@@ -1,6 +1,8 @@
 .preview {
     flex-grow: 1;
     background: var(--grey-5);
+    display: inline-flex;
+    justify-content: center;
 }
 
 .preview__cards {

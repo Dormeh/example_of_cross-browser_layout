@@ -1,5 +1,7 @@
 .footer {
     background: var(--main-bg-color);
+    display: inline-flex;
+    justify-content: center;
 }
 
 .footer__title {
