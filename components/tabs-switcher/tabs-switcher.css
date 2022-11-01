@@ -6,6 +6,10 @@
     width: 100%;
 
 }
+.tabs-switcher_component-page {
+    justify-content: flex-start;
+    position: static;
+}
 .tabs-switcher__input {
     position: absolute;
     outline: none;
