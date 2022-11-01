@@ -3,6 +3,7 @@
     background: var(--grey-5);
     display: inline-flex;
     justify-content: center;
+    width: 100%;
 }
 
 .preview__cards {

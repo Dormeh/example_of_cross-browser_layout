@@ -3,6 +3,7 @@
     display: inline-flex;
     justify-content: center;
     position: relative;
+    width: 100%;
 
 }
 .tabs-switcher__input {
