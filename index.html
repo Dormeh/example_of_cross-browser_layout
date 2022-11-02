@@ -154,17 +154,20 @@
 
     <section class="page__tabs">
         <input class="tabs-switcher__input" type="radio" id="all-tab" name="tabsSwitcher" checked>
+        <input class="tabs-switcher__input" type="radio" id="elements-tab" name="tabsSwitcher">
+        <input class="tabs-switcher__input" type="radio" id="containers-tab" name="tabsSwitcher">
         <input class="tabs-switcher__input" type="radio" id="complex-tab" name="tabsSwitcher">
-        <input class="tabs-switcher__input" type="radio" id="simple-tab" name="tabsSwitcher">
 
         <nav class="tabs-switcher">
             <div class="container">
                 <div class="tabs-switcher__menu">
                     <label class="tabs-switcher__label" for="all-tab">All components</label>
 
-                    <label class="tabs-switcher__label" for="complex-tab">Elements</label>
+                    <label class="tabs-switcher__label" for="elements-tab">Elements</label>
 
-                    <label class="tabs-switcher__label" for="simple-tab">Containers</label>
+                    <label class="tabs-switcher__label" for="containers-tab">Containers</label>
+
+                    <label class="tabs-switcher__label" for="complex-tab">Complex</label>
                 </div>
 
                 <div class="tabs-switcher__split-line"></div>
@@ -189,7 +192,7 @@
                             </div>
                             <div class="card__footer">
                                 <h4 class="card__title">Tooltip</h4>
-                                <p class="card__text">Container</p>
+                                <p class="card__text">Element</p>
 
                             </div>
 
@@ -341,7 +344,7 @@
                         <a href="pages/modal.html" class="card">
                             <div class="card__body">
                                 <div class="card__cover"></div>
-                                <div id="modal" class="modal modal_main-page-preview">
+                                <div class="modal modal_main-page-preview">
                                     <div class="modal__preview">
 
                                         <div class="input input_main-page-preview">
@@ -378,7 +381,7 @@
                             </div>
                             <div class="card__footer">
                                 <h4 class="card__title">Modal dialog</h4>
-                                <p class="card__text">Container</p>
+                                <p class="card__text">Complex</p>
 
                             </div>
 
@@ -426,8 +429,8 @@
 
                             </div>
                             <div class="card__footer">
-                                <h4 class="card__title">Tooltip</h4>
-                                <p class="card__text">Element</p>
+                                <h4 class="card__title">Histogram</h4>
+                                <p class="card__text">Complex</p>
 
                             </div>
 
@@ -749,6 +752,107 @@
                             <div class="card__footer">
                                 <h4 class="card__title">Calendar</h4>
                                 <p class="card__text">Container</p>
+
+                            </div>
+
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="preview__tab4">
+                    <div class="preview__cards" style="justify-content: flex-start;">
+                        <!-- Complex -->
+                        <a href="pages/modal.html" class="card">
+                            <div class="card__body">
+                                <div class="card__cover"></div>
+                                <div class="modal modal_main-page-preview">
+                                    <div class="modal__preview">
+
+                                        <div class="input input_main-page-preview">
+                                            <label class="input__label">name</label>
+                                            <div class="input__container">
+                                                <input type="text" placeholder="Placeholder" class="input__input-text">
+                                                <svg class="input__icon input__success-icon">
+                                                    <use href="../../assets/images/icons_sprite.svg#success"></use>
+                                                </svg>
+                                                <svg class="input__icon input__icon_error">
+                                                    <use href="../../assets/images/icons_sprite.svg#error"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+
+                                        <div class="input input_main-page-preview">
+                                            <label class="input__label">email</label>
+                                            <div class="input__container">
+                                                <input type="text" placeholder="Placeholder" class="input__input-text"
+                                                       tabindex="1">
+                                                <svg class="input__icon input__success-icon">
+                                                    <use href="../../assets/images/icons_sprite.svg#success"></use>
+                                                </svg>
+                                                <svg class="input__icon input__icon_error">
+                                                    <use href="../../assets/images/icons_sprite.svg#error"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+
+                                        <button class="button button_primary modal_button-set_main-preview" type="submit">Submit
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card__footer">
+                                <h4 class="card__title">Modal dialog</h4>
+                                <p class="card__text">Complex</p>
+
+                            </div>
+
+                        </a>
+                        <a href="pages/histogram.html" class="card">
+                            <div class="card__body">
+                                <div class="histogram histogram_main-page-preview">
+                                    <div class="histogram__title">
+                                        Total orders
+                                        <div class="histogram__link">View all</div>
+                                    </div>
+                                    <div class="histogram__header">
+                                        50254
+                                    </div>
+                                    <div class="histogram__body">
+                                        <div style="height: 90%" class="histogram__item"></div>
+                                        <div style="height: 80%" class="histogram__item"></div>
+                                        <div style="height: 70%" class="histogram__item"></div>
+                                        <div style="height: 60%" class="histogram__item"></div>
+                                        <div style="height: 70%" class="histogram__item"></div>
+                                        <div style="height: 40%" class="histogram__item"></div>
+                                        <div style="height: 90%" class="histogram__item"></div>
+                                        <div style="height: 70%" class="histogram__item"></div>
+                                        <div style="height: 90%" class="histogram__item"></div>
+                                        <div style="height: 80%" class="histogram__item"></div>
+                                        <div style="height: 70%" class="histogram__item"></div>
+                                        <div style="height: 60%" class="histogram__item"></div>
+                                        <div style="height: 70%" class="histogram__item"></div>
+                                        <div style="height: 40%" class="histogram__item"></div>
+                                        <div style="height: 90%" class="histogram__item"></div>
+                                        <div style="height: 70%" class="histogram__item"></div>
+                                        <div style="height: 70%" class="histogram__item"></div>
+                                        <div style="height: 60%" class="histogram__item"></div>
+                                        <div style="height: 70%" class="histogram__item"></div>
+                                        <div style="height: 40%" class="histogram__item"></div>
+                                        <div style="height: 90%" class="histogram__item"></div>
+                                        <div style="height: 70%" class="histogram__item"></div>
+                                        <div style="height: 60%" class="histogram__item"></div>
+                                        <div style="height: 70%" class="histogram__item"></div>
+                                        <div style="height: 40%" class="histogram__item"></div>
+                                        <div style="height: 90%" class="histogram__item"></div>
+                                        <div style="height: 70%" class="histogram__item"></div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="card__footer">
+                                <h4 class="card__title">Histogram</h4>
+                                <p class="card__text">Complex</p>
 
                             </div>
 

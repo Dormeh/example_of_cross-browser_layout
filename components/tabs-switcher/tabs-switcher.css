@@ -19,7 +19,8 @@
 
 #all-tab:checked ~ .tabs-switcher .tabs-switcher__label[for="all-tab"]::after,
 #complex-tab:checked ~ .tabs-switcher .tabs-switcher__label[for="complex-tab"]::after,
-#simple-tab:checked ~ .tabs-switcher .tabs-switcher__label[for="simple-tab"]::after,
+#elements-tab:checked ~ .tabs-switcher .tabs-switcher__label[for="elements-tab"]::after,
+#containers-tab:checked ~ .tabs-switcher .tabs-switcher__label[for="containers-tab"]::after,
 #html-preview:checked ~ .tabs-switcher .tabs-switcher__label[for="html-preview"]::after,
 #css-preview:checked ~ .tabs-switcher .tabs-switcher__label[for="css-preview"]::after {
     content: "";
@@ -32,12 +33,16 @@
 }
 
 #all-tab:checked ~ .preview .preview__tab1,
-#complex-tab:checked ~ .preview .preview__tab2,
-#simple-tab:checked ~ .preview .preview__tab3 {
+#elements-tab:checked ~ .preview .preview__tab2,
+#containers-tab:checked ~ .preview .preview__tab3,
+#complex-tab:checked ~ .preview .preview__tab4
+{
     display: flex;
 }
 #complex-tab:checked ~ .preview .preview__button-inner,
-#simple-tab:checked ~ .preview .preview__button-inner {
+#elements-tab:checked ~ .preview .preview__button-inner,
+#containers-tab:checked ~ .preview .preview__button-inner
+{
     display: none;
 }
 
@@ -62,7 +67,8 @@
 
 #all-tab:checked ~ .tabs-switcher .tabs-switcher__label[for="all-tab"],
 #complex-tab:checked ~ .tabs-switcher .tabs-switcher__label[for="complex-tab"],
-#simple-tab:checked ~ .tabs-switcher .tabs-switcher__label[for="simple-tab"],
+#elements-tab:checked ~ .tabs-switcher .tabs-switcher__label[for="elements-tab"],
+#containers-tab:checked ~ .tabs-switcher .tabs-switcher__label[for="containers-tab"],
 #html-preview:checked ~ .tabs-switcher .tabs-switcher__label[for="html-preview"],
 #css-preview:checked ~ .tabs-switcher .tabs-switcher__label[for="css-preview"] {
     color: var(--active-text-color);
@@ -88,4 +94,11 @@
 
 .tabs-switcher__split-line_component-page {
     position: static;
+}
+
+@media screen and (max-width: 768px) {
+    .tabs-switcher__menu {
+        gap: 30px;
+        overflow-x: scroll;
+    }
 }
