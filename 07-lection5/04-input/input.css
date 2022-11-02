@@ -6,6 +6,7 @@
     line-height: 1.125em;
     color: var(--grey-3);
     text-align: start;
+    width: 100%;
 
 }
 
@@ -24,7 +25,7 @@
 
 .input__input-text {
     padding: 1.1em 1.5em 1.1em 1.5em;
-    background: var(--main-bg-color);
+    /*background-color: unset;*/
     border: 1px solid var(--grey-2);
     border-radius: 0.4em;
     font-weight: 400;
@@ -38,7 +39,7 @@
     color: var(--grey-2);
 }
 
-.input__input-text:focus {
+.input__input-text:focus, .input__input-text.input__input-text_focused {
     color: var(--grey-4);
     border: 1px solid var(--ligth-blue);
     box-shadow: 0 1px 1px rgba(51, 154, 240, 0.1);
@@ -74,7 +75,6 @@
 
 .input_main-page-preview {
     font-size: 9px;
-    width: 100%;
 }
 
 .input_main-page-preview .input__input-text {

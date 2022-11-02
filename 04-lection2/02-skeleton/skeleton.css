@@ -1,5 +1,5 @@
 .skeleton {
-    background: var(--main-bg-color);
+    /*background: var(--main-bg-color);*/
     border: 1px solid var(--grey-3);
     border-radius: 8px;
     padding: 24px;
