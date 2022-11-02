@@ -22,8 +22,7 @@
     box-sizing: border-box;
     width: 1.75em;
     height: 1.75em;
-    background: var(--main-bg-color);
-    border: 0.0625em solid var(--grey-2);
+    border: 0.0625em solid var(--grey-3);
     border-radius: 0.25em;
     cursor: pointer;
 }

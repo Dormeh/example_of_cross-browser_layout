@@ -9,6 +9,7 @@
 @import "../../components/gridLayout/gridLayout.css";
 @import "../../components/tabs-switcher/tabs-switcher.css";
 @import "../../components/code-preview/code-preview.css";
+@import "../../components/preload/preload.css";
 @import "../../03-lection1/01-button/button.css";
 @import "../../05-lection3/01-tooltip/tooltip.css";
 @import "../../07-lection5/01-checkbox/checkbox.css";

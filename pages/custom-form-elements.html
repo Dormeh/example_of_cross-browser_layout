@@ -10,7 +10,7 @@
     <script defer src="../09-lection7/01-burger-menu/burger-menu.js"></script>
     <script defer src="../assets/utils/theme-changer.js"></script>
     <script defer src="../assets/utils/prism.js"></script>
-
+    <script src="../assets/utils/preload.js"></script>
     <style>
         html[data-theme-dark] {
             --main-bg-color: #212429;
@@ -30,7 +30,7 @@
     </style>
     <title>Custom form elements</title>
 </head>
-<body>
+<body class="preload">
 <div class="page">
         <header class="header header_layout">
             <div class="container">
@@ -182,7 +182,7 @@
                     <div class="preview__content">
                         <div class="preview__content-wrapper preview__content-wrapper_custom">
                             <h3 class="preview__title">Custom form elements</h3>
-                            <div class="preview__body-wrapper_inputs">
+                            <div class="preview__body-wrapper preview__body-wrapper_inputs">
                                 <label class="checkbox" style="grid-row: 1 /2">
                                     <input type="checkbox" class="checkbox__input">
                                     <div class="checkbox__state">

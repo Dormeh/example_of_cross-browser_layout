@@ -33,10 +33,9 @@
 
 .card__content-wrapper_inputs {
     box-sizing: border-box;
-    padding-left: 1.3125em;
     display: grid;
     align-items: start;
-    grid-template: repeat(3, 3em) / 1fr 1fr;
+    grid-template: repeat(3, 3em) / auto auto;
     width: 100%;
     flex-direction: column;
     justify-content: space-evenly;
@@ -112,4 +111,9 @@
         line-height: 20px;
     }
 
+}
+@media screen and (max-width: 320px) {
+    .card {
+        width: 100%;
+    }
 }

@@ -106,6 +106,7 @@
 .modal_button-set_main-preview {
     margin-top: 1.5em;
     font-size: 10px;
+    width: 10em;
 
 }
 
@@ -124,6 +125,12 @@
     .modal_button-set_main-preview {
         margin-top: 0.7em;
         font-size: 7.7px;
+        width: 9em;
 
+    }
+
+    .modal_button-set {
+        margin-top: 14px;
+        max-width: 150px;
     }
 }

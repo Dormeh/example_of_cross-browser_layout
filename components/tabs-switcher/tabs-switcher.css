@@ -31,10 +31,14 @@
     background: var(--active-text-color);
 }
 
-#all-tab:checked ~ .preview .preview__cards_all,
-#complex-tab:checked ~ .preview .preview__cards_complex,
-#simple-tab:checked ~ .preview .preview__cards_simple {
+#all-tab:checked ~ .preview .preview__tab1,
+#complex-tab:checked ~ .preview .preview__tab2,
+#simple-tab:checked ~ .preview .preview__tab3 {
     display: flex;
+}
+#complex-tab:checked ~ .preview .preview__button-inner,
+#simple-tab:checked ~ .preview .preview__button-inner {
+    display: none;
 }
 
 #html-preview:checked ~ #preview-html,

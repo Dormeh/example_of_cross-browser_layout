@@ -1,6 +1,10 @@
 /* Стилизация кнопки */
 .button {
-    padding:  0.9em 3.25em 0.8em 3.25em;
+    display: inline-flex;
+    justify-content: center;
+    color: var(--main-font-color);
+    background: unset;
+    padding:  0.9em 1.2em 0.8em 1.2em;
     border: none;
     font-family: 'Roboto', sans-serif;
     font-size: 1em;
@@ -8,6 +12,7 @@
     text-align: center;
     cursor: pointer;
     outline-style: none;
+    white-space: nowrap;
 
     border-radius: 0.5em;
     transition: opacity 200ms ease-in-out, background 200ms ease-in-out, border 200ms ease-in-out, transform 100ms ease-in-out;

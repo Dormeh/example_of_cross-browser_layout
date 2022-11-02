@@ -15,11 +15,11 @@
 }
 
 .preview_layout {
+    box-sizing: border-box;
     overflow-x: hidden;
     position: relative;
     display: flex;
     padding: 32px 48px;
-    margin-left: 56px;
     background: var(--main-bg-color);
     box-shadow: 0 2px 4px rgba(33, 36, 41, 0.05);
     border-radius: 12px;
@@ -32,6 +32,9 @@
     gap: 30px;
 
 }
+.preview__content_main-page {
+    margin-bottom: 50px;
+}
 
 .preview__content-wrapper {
     display: flex;
@@ -39,6 +42,10 @@
     justify-content: flex-start;
     align-items: start;
     width: fit-content;
+}
+
+.preview__content-wrapper_main-page {
+    width: 100%;
 }
 
 .preview__content-wrapper_histogram, .preview_content-wrapper_calendar {
@@ -59,9 +66,23 @@
     display: grid;
     align-items: start;
     grid-template: repeat(3, 3em) / auto auto;
-    flex-direction: column;
     justify-content: space-evenly;
     gap: 0 45px;
+}
+.preview__body-wrapper_buttons {
+    width: 100%;
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(2, auto);
+    grid-auto-flow: column;
+    grid-gap: 2rem;
+}
+.preview__body-wrapper_inputs-main {
+    width: 100%;
+    display: grid;
+    grid-gap: 2rem;
+    grid-template: repeat(3, auto) / repeat(3, auto);
 }
 
 .preview__title {
@@ -73,6 +94,11 @@
     line-height: 38px;
     margin: 0 0 24px 0;
     color: var(--grey-4);
+}
+
+.preview__title_main-page {
+    text-transform: uppercase;
+    color: var(--grey-3);
 }
 
 .preview__button-inner {
@@ -116,8 +142,26 @@
         margin: 0 0 20px 0;
 
     }
+
+    .preview__body-wrapper_buttons {
+        display: grid;
+        grid-template: repeat(4, auto) / repeat(2, auto);
+        grid-gap: 1rem;
+        font-size: 15px;
+        grid-auto-flow: row;
+
+    }
+
+    .preview__body-wrapper_inputs-main {
+       font-size: 12px;
+        gap: 1.1em;
+    }
+    .preview__body-wrapper_inputs-main .checkbox__icon {
+        transform: scale(0.8);
+    }
 }
 
-.preview__cards.preview__cards_all, .preview__cards.preview__cards_complex, .preview__cards.preview__cards_simple {
+.preview__tab1, .preview__tab2, .preview__tab3 {
     display: none;
+    flex-direction: column;
 }
