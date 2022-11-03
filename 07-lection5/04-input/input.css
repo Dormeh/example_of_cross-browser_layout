@@ -25,7 +25,7 @@
 
 .input__input-text {
     padding: 1.1em 1.5em 1.1em 1.5em;
-    /*background-color: unset;*/
+    background-color: unset;
     border: 1px solid var(--grey-2);
     border-radius: 0.4em;
     font-weight: 400;
@@ -40,7 +40,7 @@
 }
 
 .input__input-text:focus, .input__input-text.input__input-text_focused {
-    color: var(--grey-4);
+    color: var(--active-text-color);
     border: 1px solid var(--ligth-blue);
     box-shadow: 0 1px 1px rgba(51, 154, 240, 0.1);
     border-radius: 0.4em;

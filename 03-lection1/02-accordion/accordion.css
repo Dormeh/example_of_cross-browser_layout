@@ -26,6 +26,14 @@
     align-items: center;
 }
 
+.accordion__card_animation-mp {
+    transition: height 0.2s ease-out;
+    height: 72px;
+}
+
+.accordion__card_animation-mp[open] {
+    height: 140px;
+}
 
 .accordion__card[open] .accordion__marker {
     transform: rotate(180deg);
@@ -44,4 +52,10 @@
 
 .accordion__card:last-child {
     margin-bottom: 0;
+}
+
+@media all and (max-width: 768px) {
+    .accordion__card_animation-mp[open] {
+        height: 210px;
+    }
 }

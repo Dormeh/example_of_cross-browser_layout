@@ -59,3 +59,7 @@
     transform: translate(1%, 1%);
 }
 
+.button_set-big-btn {
+    padding: 0.9em 3em 0.8em 3em;
+}
+

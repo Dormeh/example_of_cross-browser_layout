@@ -11,6 +11,7 @@
 @import "../../components/code-preview/code-preview.css";
 @import "../../components/preload/preload.css";
 @import "../../03-lection1/01-button/button.css";
+@import "../../03-lection1/02-accordion/accordion.css";
 @import "../../04-lection2/02-skeleton/skeleton.css";
 @import "../../05-lection3/01-tooltip/tooltip.css";
 @import "../../07-lection5/01-checkbox/checkbox.css";
@@ -42,7 +43,7 @@
     --grey-4: #495057;
     --grey-5: #F9FAFC;
     --grey-6: #90A0B7;
-    --grey-7: #C4C4C4;
+    --grey-7: #F9FAFC;
 
     --error: var(--red);
     --success: var(--blue);

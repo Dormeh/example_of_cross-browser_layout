@@ -36,6 +36,7 @@
     display: grid;
     align-items: start;
     grid-template: repeat(3, 3em) / auto auto;
+    grid-auto-flow: column;
     width: 100%;
     flex-direction: column;
     justify-content: space-evenly;

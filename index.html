@@ -9,6 +9,7 @@
     <script defer src="09-lection7/01-burger-menu/burger-menu.js"></script>
     <script defer src="assets/utils/theme-changer.js"></script>
     <link rel="stylesheet" href="assets/css/prism.css">
+    <script defer src="05-lection3/02-modal/index.js"></script>
     <script defer src="assets/utils/prism.js"></script>
     <script src="assets/utils/preload.js"></script>
 
@@ -200,8 +201,8 @@
                         <a href="pages/custom-form-elements.html" class="card">
                             <div class="card__body">
                                 <div class="card__cover"></div>
-                                <div class="card__content-wrapper_inputs">
-                                    <label class="checkbox checkbox_main-page-preview" style="grid-row: 1 /2">
+                                <div class="card__content-wrapper card__content-wrapper_inputs">
+                                    <label class="checkbox checkbox_main-page-preview">
                                         <input type="checkbox" class="checkbox__input">
                                         <div class="checkbox__state">
                                             <div class="checkbox__control">
@@ -213,7 +214,7 @@
                                         </div>
 
                                     </label>
-                                    <label class="checkbox checkbox_main-page-preview" style="grid-row: 2/3">
+                                    <label class="checkbox checkbox_main-page-preview">
                                         <input type="checkbox" class="checkbox__input" checked>
                                         <div class="checkbox__state">
                                             <div class="checkbox__control">
@@ -225,7 +226,7 @@
                                         </div>
 
                                     </label>
-                                    <label class="checkbox checkbox_main-page-preview" style="grid-row: 3/4">
+                                    <label class="checkbox checkbox_main-page-preview">
                                         <input type="checkbox" class="checkbox__input" disabled>
                                         <div class="checkbox__state">
                                             <div class="checkbox__control">
@@ -826,7 +827,7 @@
                 </div>
 
                 <div class="preview__tab4">
-                    <div class="preview__cards" style="justify-content: flex-start;">
+                    <div class="preview__cards preview__cards_next-tab">
                         <!-- Complex -->
                         <a href="pages/modal.html" class="card">
                             <div class="card__body">
@@ -922,6 +923,86 @@
                             </div>
 
                         </a>
+                    </div>
+                    <div class="preview__content preview__content_main-page">
+                        <div class="preview__content-wrapper preview__content-wrapper_main-page">
+                            <div class="preview__title preview__title_main-page">Modal</div>
+                            <div class="preview__body-wrapper">
+                                <button id="modal-open" class="button button_primary button_set-big-btn">Open modal</button>
+                                <div id="modal" class="modal modal_component-page">
+                                    <div class="modal__preview">
+
+                                        <button id="modal-close" class="modal__close modal__close_component-page">
+                                            <img src="assets/images/close_icon.svg" alt="close-icon">
+                                        </button>
+
+                                        <div class="input input_component-page">
+                                            <label class="input__label">name</label>
+                                            <div class="input__container">
+                                                <input type="text" placeholder="Placeholder" class="input__input-text">
+                                                <svg class="input__icon input__success-icon">
+                                                    <use href="assets/images/icons_sprite.svg#success"></use>
+                                                </svg>
+                                                <svg class="input__icon input__icon_error">
+                                                    <use href="assets/images/icons_sprite.svg#error"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+
+                                        <div class="input input_component-page">
+                                            <label class="input__label">email</label>
+                                            <div class="input__container">
+                                                <input type="text" placeholder="Placeholder" class="input__input-text"
+                                                       tabindex="1">
+                                                <svg class="input__icon input__success-icon">
+                                                    <use href="assets/images/icons_sprite.svg#success"></use>
+                                                </svg>
+                                                <svg class="input__icon input__icon_error">
+                                                    <use href="assets/images/icons_sprite.svg#error"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+
+                                        <button class="button button_primary modal_button-set" type="submit">Submit</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="preview__content-wrapper preview__content-wrapper_main-page">
+                            <div class="preview__title preview__title_main-page">Accordion</div>
+                            <div class="preview__body-wrapper">
+                                <div class="accordion">
+                                    <details class="accordion__card accordion__card_animation-mp" open>
+                                        <summary class="accordion__summary">
+                                            Accordion item 1
+                                            <img class="accordion__marker" src="assets/images/marker.svg" alt="arrow marker">
+                                        </summary>
+                                        <p class="accordion__text">
+                                            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                                        </p>
+                                    </details>
+                                    <details class="accordion__card accordion__card_animation-mp">
+                                        <summary class="accordion__summary">
+                                            Accordion item 2
+                                            <img class="accordion__marker" src="assets/images/marker.svg" alt="arrow marker">
+                                        </summary>
+                                        <p class="accordion__text">
+                                            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                                        </p>
+                                    </details>
+                                    <details class="accordion__card accordion__card_animation-mp">
+                                        <summary class="accordion__summary">
+                                            Accordion item 3
+                                            <img class="accordion__marker" src="assets/images/marker.svg" alt="arrow marker">
+                                        </summary>
+                                        <p class="accordion__text">
+                                            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                                        </p>
+                                    </details>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                 </div>

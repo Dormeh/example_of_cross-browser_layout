@@ -58,11 +58,10 @@
 }
 
 .tabs-switcher__label {
+    text-align: center;
     white-space: nowrap;
     color: var(--grey-3);
-    /*position: relative;*/
     cursor: pointer;
-    /*padding-bottom: 8px;*/
 }
 
 #all-tab:checked ~ .tabs-switcher .tabs-switcher__label[for="all-tab"],
@@ -98,7 +97,10 @@
 
 @media screen and (max-width: 768px) {
     .tabs-switcher__menu {
-        gap: 30px;
+        gap: 20px;
         overflow-x: scroll;
+    }
+    .tabs-switcher__label {
+        padding: 0 10px
     }
 }
