@@ -243,14 +243,17 @@
                             </nav>
 
                             <div class="code-preview" id="preview-html">
+
                                     <pre class="code-preview__element">
-                                <code class="language-html">
+<code class="language-html">
 &lt;div id=&quot;modal&quot; class=&quot;modal modal_component-page&quot;&gt;
 	&lt;div class=&quot;modal__preview&quot;&gt;
 
 		&lt;button id=&quot;modal-close&quot; class=&quot;modal__close modal__close_component-page&quot;&gt;
-			&lt;img src=&quot;../assets/images/close_icon.svg&quot; alt=&quot;close-icon&quot;&gt;
-		&lt;/button&gt;
+            &lt;svg class=&quot;modal__close-icon&quot;&gt;
+                &lt;use href=&quot;../assets/images/icons_sprite.svg#icon-close-modal&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+        &lt;/button&gt;
 
 		&lt;div class=&quot;input input_component-page&quot;&gt;
 			&lt;label class=&quot;input__label&quot;&gt;name&lt;/label&gt;
@@ -281,8 +284,7 @@
 
 		&lt;button class=&quot;button button_primary modal_button-set&quot; type=&quot;submit&quot;&gt;Submit&lt;/button&gt;
 	&lt;/div&gt;
-&lt;/div&gt;
-                                </code>
+&lt;/div&gt;</code>
                             </pre>
 
 
@@ -290,7 +292,7 @@
                             <div class="code-preview" id="preview-css">
 
                             <pre class="code-preview__element">
-                                <code class="language-css">
+<code class="language-css">
 .modal {
     display: none;
     background: rgba(196, 196, 196, 0.5);
@@ -410,8 +412,7 @@
         height: 80%;
         padding-bottom: 2em;
     }
-}
-                                </code>
+}</code>
                             </pre>
                             </div>
                         </div>
