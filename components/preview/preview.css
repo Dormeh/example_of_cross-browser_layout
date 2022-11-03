@@ -22,7 +22,6 @@
 .preview_layout {
     box-sizing: border-box;
     overflow-x: hidden;
-    position: relative;
     display: flex;
     padding: 32px 48px;
     background: var(--main-bg-color);

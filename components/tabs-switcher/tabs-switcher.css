@@ -8,8 +8,8 @@
 }
 .tabs-switcher_component-page {
     justify-content: flex-start;
-    position: static;
 }
+
 .tabs-switcher__input {
     position: absolute;
     outline: none;
@@ -22,15 +22,12 @@
 #elements-tab:checked ~ .tabs-switcher .tabs-switcher__label[for="elements-tab"]::after,
 #containers-tab:checked ~ .tabs-switcher .tabs-switcher__label[for="containers-tab"]::after,
 #html-preview:checked ~ .tabs-switcher .tabs-switcher__label[for="html-preview"]::after,
-#css-preview:checked ~ .tabs-switcher .tabs-switcher__label[for="css-preview"]::after {
-    content: "";
-    /*position: absolute;*/
-    display: block;
-    height: 5px;
-    width: 100%;
-    top: 100%;
-    background: var(--active-text-color);
+#css-preview:checked ~ .tabs-switcher .tabs-switcher__label[for="css-preview"]::after,
+.tabs-switcher__label:hover::after
+{
+    transform: scaleX(1);
 }
+
 
 #all-tab:checked ~ .preview .preview__tab1,
 #elements-tab:checked ~ .preview .preview__tab2,
@@ -53,8 +50,15 @@
 
 
 .tabs-switcher__label::after {
-    display: none;
+    display: block;
+    content: "";
+    height: 5px;
+    width: 100%;
+    top: 100%;
+    background: var(--active-text-color);
+    transform: scaleX(0);
     margin-top: 8px;
+    transition: transform 250ms ease-in-out;
 }
 
 .tabs-switcher__label {
@@ -73,6 +77,12 @@
     color: var(--active-text-color);
 }
 
+.tabs-switcher__label:hover,
+.tabs-switcher__label:active,
+.tabs-switcher__label:focus {
+    color: var(--active-text-color);
+}
+
 .tabs-switcher__menu {
     display: inline-flex;
     gap: 40px;
@@ -84,16 +94,15 @@
 }
 .tabs-switcher__split-line {
     position: absolute;
+    width: 100vw;
     top: 100%;
-    left: 0;
-    width: 100%;
+    left: 50%;
+    margin: 0;
+    transform: translate(-50%, 0);
     height: 1px;
     background: #DDE2E5;
 }
 
-.tabs-switcher__split-line_component-page {
-    position: static;
-}
 
 @media screen and (max-width: 768px) {
     .tabs-switcher__menu {
