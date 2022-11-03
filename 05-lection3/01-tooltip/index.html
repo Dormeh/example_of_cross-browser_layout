@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <!-- Страница с тултипом -->
 <html lang="ru">
-    <head>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="../../assets/css/main.css">
-        <link rel="stylesheet" href="./tooltip.css">
-        <title>Tooltip</title>
-        <style type="text/css">
-            body {
-                padding: 100px;
-            }
-        </style>
-    </head>
-    <body>
-    <div class="tooltip">
-        <div class="tooltip__trigger">
-            <img src="../../assets/images/tooltip_question_mark.svg" alt="tooltip-icon">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="./tooltip.css">
+    <title>Tooltip</title>
+    <style type="text/css">
+        body {
+            padding: 100px;
+        }
+    </style>
+</head>
+<body>
+<div class="tooltip">
+    <svg class="tooltip__trigger">
+        <use class="tooltip__icon" href="../../assets/images/icons_sprite.svg#tooltip-question">
 
-        </div>
-        <div class="tooltip__helper">Helper Text</div>
+        </use>
+    </svg>
+    <div class="tooltip__helper">Helper Text</div>
+</div>
 
-    </div>
-
-    </body>
+</body>
 </html>

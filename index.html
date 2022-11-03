@@ -3,17 +3,42 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device=width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/normalize.css">
     <link rel="stylesheet" href="./assets/css/main.css">
+    <script defer src="09-lection7/01-burger-menu/burger-menu.js"></script>
+    <script defer src="assets/utils/theme-changer.js"></script>
+    <link rel="stylesheet" href="assets/css/prism.css">
+    <script defer src="05-lection3/02-modal/index.js"></script>
+    <script defer src="assets/utils/prism.js"></script>
+    <script src="assets/utils/preload.js"></script>
+
+    <style>
+        html[data-theme-dark] {
+            --main-bg-color: #212429;
+            --main-font-color: #b0b3b6;
+            --grey-2: #666768;
+            --grey-4: #818c98;
+            --grey-5: #495057;
+            --active-text-color: #ffff;
+            --icons-color: #ffff;
+            --dark-blue: #a1b5ce;
+            --token-tag: #c681a7;
+            --token-attr-name: #7b9e36;
+            --token-attr-value: #3e90b3;
+            --token-punctuation: #a4a3a3;
+
+        }
+    </style>
     <title>Main page</title>
 </head>
-<body>
+<body class="preload">
+
 <div class="page">
     <header class="header">
         <div class="container">
             <div class="header__head">
-                <button class="menu__button">
+                <button class="menu__button" id="burger-menu-open">
                     <svg class="menu__icon">
                         <use href="assets/images/icons_sprite.svg#menu"></use>
                     </svg>
@@ -21,56 +46,986 @@
                 <svg class="header__logo">
                     <use href="assets/images/icons_sprite.svg#page-logo"></use>
                 </svg>
+                <div class="header__menu">
+                    <a href="pages/modal.html" class="header__nav-link header__nav-link_focused">Components</a>
+                    <a href="#" class="header__nav-link">About</a>
+                    <a href="#" class="header__nav-link">Contact</a>
+                    <div class="header__theme-toggle-wrapper">
+                        <label class="toggle toggle_main-page">
+                            <input type="checkbox" class="toggle__input" id="theme-changer">
+                            <svg class="toggle__theme-icon toggle__theme-icon_sun">
+                                <use href="assets/images/icons_sprite.svg#theme-toggle-sun"></use>
+                            </svg>
+
+                            <div class="toggle__state">
+                                <div class="toggle__control">
+                                    <div class="toggle__icon"></div>
+                                </div>
+                            </div>
+                            <svg class="toggle__theme-icon toggle__theme-icon_moon">
+                                <use href="assets/images/icons_sprite.svg#theme-toggle-moon"></use>
+                            </svg>
+                        </label>
+
+                    </div>
+                </div>
 
             </div>
             <h1 class="header__title">Reusable component library</h1>
         </div>
 
     </header>
-    <input class="tabs-switcher__input" type="radio" id="all-tab" name="tabsSwitcher" checked>
-    <input class="tabs-switcher__input" type="radio" id="complex-tab" name="tabsSwitcher">
-    <input class="tabs-switcher__input" type="radio" id="simple-tab" name="tabsSwitcher">
+    <div id="burger-menu" class="burger-menu">
+        <header class="header burger-menu_header">
+            <div class="container container_burger-menu">
+                <button id="burger-menu-close" class="burger-menu__button-close">
+                    <svg class="burger-menu__icon-close">
+                        <use href="assets/images/icons_sprite.svg#icon-close-burger"></use>
+                    </svg>
 
-    <nav class="tabs-switcher">
-        <div class="container">
-            <div class="tabs-switcher__menu">
-                <label class="tabs-switcher__label" for="all-tab">All components</label>
+                </button>
 
-                <label class="tabs-switcher__label" for="complex-tab">Complex</label>
+                <div class="header__head">
+                    <svg class="header__logo">
+                        <use href="assets/images/icons_sprite.svg#page-logo"></use>
+                    </svg>
+                </div>
 
-                <label class="tabs-switcher__label" for="simple-tab">Simple</label>
+            </div>
+        </header>
+
+        <div class="burger-menu__theme-wrapper">
+            <div class="container container_burger-menu">
+                <div class="burger-menu__split-line"></div>
+                <div class="burger-menu__toggle-wrapper">
+                    <p class="burger-menu__theme-switcher-title">
+                        Dark mode
+                    </p>
+                    <label class="toggle toggle_main-page">
+                        <input type="checkbox" class="toggle__input" id="theme-changer-mobile">
+
+                        <div class="toggle__state">
+                            <div class="toggle__control">
+                                <div class="toggle__icon"></div>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+                <div class="burger-menu__split-line"></div>
+            </div>
+        </div>
+
+
+        <div class="burger-menu__body">
+            <div class="container">
+                <aside class="menu menu_burger-inner">
+                    <h5 class="menu__title">Components</h5>
+
+                    <ul class="menu__list">
+                        <li>
+                            <a class="menu__link" href="./pages/modal.html">Modal</a>
+                        </li>
+                        <li>
+                            <a class="menu__link" href="./pages/tooltip.html">Tooltip</a>
+                        </li>
+                        <li>
+                            <a class="menu__link" href="./pages/avatar.html">Avatar</a>
+                        </li>
+                        <li>
+                            <a class="menu__link" href="./pages/calendar.html">Calendar</a>
+                        </li>
+                        <li>
+                            <a class="menu__link" href="./pages/histogram.html">Histogram</a>
+                        </li>
+                        <li>
+                            <a class="menu__link" href="./pages/custom-form-elements.html">Custom from elements</a>
+                        </li>
+                    </ul>
+                    <div class="menu__footer">
+                        <a class="menu__link menu__link_active" href="index.html">Main page</a>
+                    </div>
+
+                </aside>
+
             </div>
 
         </div>
-    </nav>
 
-    <main class="preview">
-        <div class="container">
-            <div class="preview__cards preview__cards_all">
-                <div class="card"></div>
-                <div class="card"></div>
-                <div class="card"></div>
-                <div class="card"></div>
-                <div class="card"></div>
-                <div class="card"></div>
+    </div>
+
+    <section class="page__tabs">
+        <input class="tabs-switcher__input" type="radio" id="all-tab" name="tabsSwitcher" checked>
+        <input class="tabs-switcher__input" type="radio" id="elements-tab" name="tabsSwitcher">
+        <input class="tabs-switcher__input" type="radio" id="containers-tab" name="tabsSwitcher">
+        <input class="tabs-switcher__input" type="radio" id="complex-tab" name="tabsSwitcher">
+
+        <nav class="tabs-switcher">
+            <div class="container">
+                <div class="tabs-switcher__menu">
+                    <label class="tabs-switcher__label" for="all-tab">All components</label>
+
+                    <label class="tabs-switcher__label" for="elements-tab">Elements</label>
+
+                    <label class="tabs-switcher__label" for="containers-tab">Containers</label>
+
+                    <label class="tabs-switcher__label" for="complex-tab">Complex</label>
+                </div>
+
+                <div class="tabs-switcher__split-line"></div>
             </div>
-            <div class="preview__cards preview__cards_complex">
-                <!-- Сложные компоненты -->
-                <div class="card"></div>
-                <div class="card"></div>
-                <div class="card"></div>
-                <div class="card"></div>
+        </nav>
+
+
+        <main class="preview">
+            <div class="container">
+                <div class="preview__tab1">
+                    <div class="preview__cards">
+                        <a href="pages/tooltip.html" class="card">
+                            <div class="card__body">
+                                <div class="tooltip tooltip_main-page-preview">
+                                    <svg class="tooltip__trigger">
+                                        <use class="tooltip__icon" href="./assets/images/icons_sprite.svg#tooltip-question">
+
+                                        </use>
+                                    </svg>
+                                    <div class="tooltip__helper">Helper Text</div>
+                                </div>
+                            </div>
+                            <div class="card__footer">
+                                <h4 class="card__title">Tooltip</h4>
+                                <p class="card__text">Element</p>
+
+                            </div>
+
+                        </a>
+                        <a href="pages/custom-form-elements.html" class="card">
+                            <div class="card__body">
+                                <div class="card__cover"></div>
+                                <div class="card__content-wrapper card__content-wrapper_inputs">
+                                    <label class="checkbox checkbox_main-page-preview">
+                                        <input type="checkbox" class="checkbox__input">
+                                        <div class="checkbox__state">
+                                            <div class="checkbox__control">
+                                                <svg class="checkbox__icon">
+                                                    <use href="./assets/images/icons_sprite.svg#checkbox"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="checkbox__title">Default</div>
+                                        </div>
+
+                                    </label>
+                                    <label class="checkbox checkbox_main-page-preview">
+                                        <input type="checkbox" class="checkbox__input" checked>
+                                        <div class="checkbox__state">
+                                            <div class="checkbox__control">
+                                                <svg class="checkbox__icon">
+                                                    <use href="./assets/images/icons_sprite.svg#checkbox"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="checkbox__title">Checked</div>
+                                        </div>
+
+                                    </label>
+                                    <label class="checkbox checkbox_main-page-preview">
+                                        <input type="checkbox" class="checkbox__input" disabled>
+                                        <div class="checkbox__state">
+                                            <div class="checkbox__control">
+                                                <svg class="checkbox__icon">
+                                                    <use href="./assets/images/icons_sprite.svg#checkbox"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="checkbox__title">Disabled</div>
+                                        </div>
+
+                                    </label>
+                                    <label class="radio radio_main-page-preview">
+                                        <input type="radio" class="radio__input" name="radio">
+                                        <div class="radio__state">
+                                            <div class="radio__control">
+                                                <div class="radio__icon"></div>
+                                            </div>
+                                            <div class="radio__title">Default</div>
+                                        </div>
+
+                                    </label>
+                                    <label class="radio radio_main-page-preview">
+                                        <input type="radio" class="radio__input" name="radio" checked>
+                                        <div class="radio__state">
+                                            <div class="radio__control">
+                                                <div class="radio__icon"></div>
+                                            </div>
+                                            <div class="radio__title">Checked</div>
+                                        </div>
+
+                                    </label>
+                                    <label class="radio  radio_main-page-preview">
+                                        <input type="radio" class="radio__input" name="radio" disabled>
+                                        <div class="radio__state">
+                                            <div class="radio__control">
+                                                <div class="radio__icon"></div>
+                                            </div>
+                                            <div class="radio__title radio__title_disabled">Disabled</div>
+                                        </div>
+
+                                    </label>
+                                </div>
+                            </div>
+
+
+                            <div class="card__footer">
+                                <h4 class="card__title">Custom form elements</h4>
+                                <p class="card__text">Element</p>
+
+                            </div>
+
+                        </a>
+                        <a href="pages/calendar.html" class="card">
+                            <div class="card__body card__body_calendar_set">
+                                <div class="calendar calendar_main-page-preview">
+                                    <div class="calendar__title">
+                                        October 2019
+                                    </div>
+                                    <div class="calendar__wrapper">
+                                        <div class="calendar__inner">
+                                            <span class="calendar__item calendar__week_day">Mon</span>
+                                            <span class="calendar__item calendar__week_day">Tue</span>
+                                            <span class="calendar__item calendar__week_day">Wed</span>
+                                            <span class="calendar__item calendar__week_day">Thu</span>
+                                            <span class="calendar__item calendar__week_day">Fri</span>
+                                            <span class="calendar__item calendar__week_day">Sat</span>
+                                            <span class="calendar__item calendar__week_day">Sun</span>
+                                            <span class="calendar__item"></span>
+                                            <span class="calendar__item"></span>
+                                            <span class="calendar__item"></span>
+                                            <span class="calendar__item"></span>
+                                            <span class="calendar__item"></span>
+                                            <span class="calendar__item">1</span>
+                                            <span class="calendar__item">2</span>
+                                            <span class="calendar__item">3</span>
+                                            <span class="calendar__item">4</span>
+                                            <span class="calendar__item">5</span>
+                                            <span class="calendar__item">6</span>
+                                            <span class="calendar__item">7</span>
+                                            <span class="calendar__item">8</span>
+                                            <span class="calendar__item">9</span>
+                                            <span class="calendar__item">10</span>
+                                            <span class="calendar__item">11</span>
+                                            <span class="calendar__item">12</span>
+                                            <span class="calendar__item">13</span>
+                                            <span class="calendar__item">14</span>
+                                            <span class="calendar__item">15</span>
+                                            <span class="calendar__item">16</span>
+                                            <span class="calendar__item calendar__item_active">17</span>
+                                            <span class="calendar__item calendar__item_between-active">18</span>
+                                            <span class="calendar__item calendar__item_between-active">19</span>
+                                            <span class="calendar__item calendar__item_between-active">20</span>
+                                            <span class="calendar__item calendar__item_between-active">21</span>
+                                            <span class="calendar__item calendar__item_active">22</span>
+                                            <span class="calendar__item">23</span>
+                                            <span class="calendar__item">24</span>
+                                            <span class="calendar__item">25</span>
+                                            <span class="calendar__item">26</span>
+                                            <span class="calendar__item">27</span>
+                                            <span class="calendar__item">28</span>
+                                            <span class="calendar__item">29</span>
+                                            <span class="calendar__item">30</span>
+                                            <span class="calendar__item">31</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="card__footer">
+                                <h4 class="card__title">Calendar</h4>
+                                <p class="card__text">Container</p>
+
+                            </div>
+
+                        </a>
+                        <a href="pages/modal.html" class="card">
+                            <div class="card__body">
+                                <div class="card__cover"></div>
+                                <div class="modal modal_main-page-preview">
+                                    <div class="modal__preview">
+
+                                        <div class="input input_main-page-preview">
+                                            <label class="input__label">name</label>
+                                            <div class="input__container">
+                                                <input type="text" placeholder="Placeholder" class="input__input-text">
+                                                <svg class="input__icon input__success-icon">
+                                                    <use href="../../assets/images/icons_sprite.svg#success"></use>
+                                                </svg>
+                                                <svg class="input__icon input__icon_error">
+                                                    <use href="../../assets/images/icons_sprite.svg#error"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+
+                                        <div class="input input_main-page-preview">
+                                            <label class="input__label">email</label>
+                                            <div class="input__container">
+                                                <input type="text" placeholder="Placeholder" class="input__input-text"
+                                                       tabindex="1">
+                                                <svg class="input__icon input__success-icon">
+                                                    <use href="../../assets/images/icons_sprite.svg#success"></use>
+                                                </svg>
+                                                <svg class="input__icon input__icon_error">
+                                                    <use href="../../assets/images/icons_sprite.svg#error"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+
+                                        <button class="button button_primary modal_button-set_main-preview" type="submit">Submit
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card__footer">
+                                <h4 class="card__title">Modal dialog</h4>
+                                <p class="card__text">Complex</p>
+
+                            </div>
+
+                        </a>
+                        <a href="pages/histogram.html" class="card">
+                            <div class="card__body">
+                                <div class="histogram histogram_main-page-preview">
+                                    <div class="histogram__title">
+                                        Total orders
+                                        <div class="histogram__link">View all</div>
+                                    </div>
+                                    <div class="histogram__header">
+                                        50254
+                                    </div>
+                                    <div class="histogram__body">
+                                        <div style="height: 90%" class="histogram__item"></div>
+                                        <div style="height: 80%" class="histogram__item"></div>
+                                        <div style="height: 70%" class="histogram__item"></div>
+                                        <div style="height: 60%" class="histogram__item"></div>
+                                        <div style="height: 70%" class="histogram__item"></div>
+                                        <div style="height: 40%" class="histogram__item"></div>
+                                        <div style="height: 90%" class="histogram__item"></div>
+                                        <div style="height: 70%" class="histogram__item"></div>
+                                        <div style="height: 90%" class="histogram__item"></div>
+                                        <div style="height: 80%" class="histogram__item"></div>
+                                        <div style="height: 70%" class="histogram__item"></div>
+                                        <div style="height: 60%" class="histogram__item"></div>
+                                        <div style="height: 70%" class="histogram__item"></div>
+                                        <div style="height: 40%" class="histogram__item"></div>
+                                        <div style="height: 90%" class="histogram__item"></div>
+                                        <div style="height: 70%" class="histogram__item"></div>
+                                        <div style="height: 70%" class="histogram__item"></div>
+                                        <div style="height: 60%" class="histogram__item"></div>
+                                        <div style="height: 70%" class="histogram__item"></div>
+                                        <div style="height: 40%" class="histogram__item"></div>
+                                        <div style="height: 90%" class="histogram__item"></div>
+                                        <div style="height: 70%" class="histogram__item"></div>
+                                        <div style="height: 60%" class="histogram__item"></div>
+                                        <div style="height: 70%" class="histogram__item"></div>
+                                        <div style="height: 40%" class="histogram__item"></div>
+                                        <div style="height: 90%" class="histogram__item"></div>
+                                        <div style="height: 70%" class="histogram__item"></div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="card__footer">
+                                <h4 class="card__title">Histogram</h4>
+                                <p class="card__text">Complex</p>
+
+                            </div>
+
+                        </a>
+                        <a href="pages/avatar.html" class="card">
+                            <div class="card__body">
+                                <div class="avatar avatar_main-page-preview">
+                                    <img src="./06-lection4/01-avatar/public/avatar-200.jpg" alt="avatar"
+                                         class="avatar__img">
+                                </div>
+                            </div>
+                            <div class="card__footer">
+                                <h4 class="card__title">Avatar</h4>
+                                <p class="card__text">Element</p>
+
+                            </div>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="preview__tab2" >
+                    <div class="preview__cards" style="justify-content: flex-start;">
+                        <!-- Elements -->
+                        <a href="pages/tooltip.html" class="card">
+                            <div class="card__body">
+                                <div class="tooltip tooltip_main-page-preview">
+                                    <svg class="tooltip__trigger">
+                                        <use class="tooltip__icon" href="./assets/images/icons_sprite.svg#tooltip-question">
+
+                                        </use>
+                                    </svg>
+                                    <div class="tooltip__helper">Helper Text</div>
+                                </div>
+                            </div>
+                            <div class="card__footer">
+                                <h4 class="card__title">Tooltip</h4>
+                                <p class="card__text">Container</p>
+
+                            </div>
+
+                        </a>
+                        <a href="pages/avatar.html" class="card">
+                            <div class="card__body">
+                                <div class="avatar avatar_main-page-preview">
+                                    <img src="./06-lection4/01-avatar/public/avatar-200.jpg" alt="avatar"
+                                         class="avatar__img">
+                                </div>
+                            </div>
+                            <div class="card__footer">
+                                <h4 class="card__title">Avatar</h4>
+                                <p class="card__text">Element</p>
+
+                            </div>
+
+                        </a>
+                    </div>
+                    <div class="preview__content preview__content_main-page">
+                        <div class="preview__content-wrapper preview__content-wrapper_main-page">
+                            <div class="preview__title preview__title_main-page">Buttons</div>
+                            <div class="preview__body-wrapper preview__body-wrapper_buttons">
+                                <button class="button">Button</button>
+                                <button class="button" disabled>Button disabled</button>
+                                <button class="button button_primary">Primary</button>
+                                <button class="button button_primary" disabled>Primary disabled</button>
+                                <button class="button button_secondary">Secondary</button>
+                                <button class="button button_secondary" disabled>Secondary disabled</button>
+                                <button class="button button_alternate">Alternate</button>
+                                <button class="button button_alternate" disabled>Alternate disabled</button>
+                            </div>
+                        </div>
+                        <div class="preview__content-wrapper preview__content-wrapper_main-page">
+                            <div class="preview__title preview__title_main-page">Custom form elements</div>
+                            <div class="preview__body-wrapper preview__body-wrapper_inputs-main">
+                                <label class="checkbox" style="grid-row: 1 /2">
+                                    <input type="checkbox" class="checkbox__input">
+                                    <div class="checkbox__state">
+                                        <div class="checkbox__control">
+                                            <svg class="checkbox__icon">
+                                                <use href="assets/images/icons_sprite.svg#checkbox"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="checkbox__title">Default</div>
+                                    </div>
+
+                                </label>
+                                <label class="checkbox" style="grid-row: 2/3">
+                                    <input type="checkbox" class="checkbox__input" checked>
+                                    <div class="checkbox__state">
+                                        <div class="checkbox__control">
+                                            <svg class="checkbox__icon">
+                                                <use href="assets/images/icons_sprite.svg#checkbox"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="checkbox__title">Checked</div>
+                                    </div>
+
+                                </label>
+                                <label class="checkbox" style="grid-row: 3/4">
+                                    <input type="checkbox" class="checkbox__input" disabled>
+                                    <div class="checkbox__state">
+                                        <div class="checkbox__control">
+                                            <svg class="checkbox__icon">
+                                                <use href="assets/images/icons_sprite.svg#checkbox"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="checkbox__title">Disabled</div>
+                                    </div>
+
+                                </label>
+                                <label class="radio" style="grid-row: 1/2">
+                                    <input type="radio" class="radio__input" name="radio1">
+                                    <div class="radio__state">
+                                        <div class="radio__control">
+                                            <div class="radio__icon"></div>
+                                        </div>
+                                        <div class="radio__title">Default</div>
+                                    </div>
+
+                                </label>
+                                <label class="radio"  style="grid-row: 2/3">
+                                    <input type="radio" class="radio__input" name="radio1" checked>
+                                    <div class="radio__state">
+                                        <div class="radio__control">
+                                            <div class="radio__icon"></div>
+                                        </div>
+                                        <div class="radio__title">Checked</div>
+                                    </div>
+
+                                </label>
+                                <label class="radio"  style="grid-row: 3/4">
+                                    <input type="radio" class="radio__input" name="radio1" disabled>
+                                    <div class="radio__state">
+                                        <div class="radio__control">
+                                            <div class="radio__icon"></div>
+                                        </div>
+                                        <div class="radio__title radio__title_disabled">Disabled</div>
+                                    </div>
+
+                                </label>
+                                <label class="toggle">
+                                    <input type="checkbox" class="toggle__input">
+                                    <div class="toggle__state">
+                                        <div class="toggle__control">
+                                            <div class="toggle__icon"></div>
+                                        </div>
+                                        <div class="toggle__title">Default</div>
+                                    </div>
+
+                                </label> <label class="toggle">
+                                <input type="checkbox" class="toggle__input" checked>
+                                <div class="toggle__state">
+                                    <div class="toggle__control">
+                                        <div class="toggle__icon"></div>
+                                    </div>
+                                    <div class="toggle__title">Checked</div>
+                                </div>
+
+                            </label>
+                                <label class="toggle">
+                                    <input type="checkbox" class="toggle__input" disabled>
+                                    <div class="toggle__state">
+                                        <div class="toggle__control">
+                                            <div class="toggle__icon"></div>
+                                        </div>
+                                        <div class="toggle__title">Disabled</div>
+                                    </div>
+
+                                </label>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="preview__tab3">
+                    <div class="preview__cards" style="justify-content: flex-start;">
+                        <!-- Containers -->
+                        <a href="pages/custom-form-elements.html" class="card">
+                            <div class="card__body">
+                                <div class="card__cover"></div>
+                                <div class="card__content-wrapper_inputs">
+                                    <label class="checkbox checkbox_main-page-preview" style="grid-row: 1 /2">
+                                        <input type="checkbox" class="checkbox__input">
+                                        <div class="checkbox__state">
+                                            <div class="checkbox__control">
+                                                <svg class="checkbox__icon">
+                                                    <use href="./assets/images/icons_sprite.svg#checkbox"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="checkbox__title">Default</div>
+                                        </div>
+
+                                    </label>
+                                    <label class="checkbox checkbox_main-page-preview" style="grid-row: 2/3">
+                                        <input type="checkbox" class="checkbox__input" checked>
+                                        <div class="checkbox__state">
+                                            <div class="checkbox__control">
+                                                <svg class="checkbox__icon">
+                                                    <use href="./assets/images/icons_sprite.svg#checkbox"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="checkbox__title">Checked</div>
+                                        </div>
+
+                                    </label>
+                                    <label class="checkbox checkbox_main-page-preview" style="grid-row: 3/4">
+                                        <input type="checkbox" class="checkbox__input" disabled>
+                                        <div class="checkbox__state">
+                                            <div class="checkbox__control">
+                                                <svg class="checkbox__icon">
+                                                    <use href="./assets/images/icons_sprite.svg#checkbox"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="checkbox__title">Disabled</div>
+                                        </div>
+
+                                    </label>
+                                    <label class="radio radio_main-page-preview">
+                                        <input type="radio" class="radio__input" name="radio2">
+                                        <div class="radio__state">
+                                            <div class="radio__control">
+                                                <div class="radio__icon"></div>
+                                            </div>
+                                            <div class="radio__title">Default</div>
+                                        </div>
+
+                                    </label>
+                                    <label class="radio radio_main-page-preview">
+                                        <input type="radio" class="radio__input" name="radio2" checked>
+                                        <div class="radio__state">
+                                            <div class="radio__control">
+                                                <div class="radio__icon"></div>
+                                            </div>
+                                            <div class="radio__title">Checked</div>
+                                        </div>
+
+                                    </label>
+                                    <label class="radio  radio_main-page-preview">
+                                        <input type="radio" class="radio__input" name="radio2" disabled>
+                                        <div class="radio__state">
+                                            <div class="radio__control">
+                                                <div class="radio__icon"></div>
+                                            </div>
+                                            <div class="radio__title radio__title_disabled">Disabled</div>
+                                        </div>
+
+                                    </label>
+                                </div>
+                            </div>
+
+
+                            <div class="card__footer">
+                                <h4 class="card__title">Custom form elements</h4>
+                                <p class="card__text">Element</p>
+
+                            </div>
+
+                        </a>
+                        <a href="pages/calendar.html" class="card">
+                            <div class="card__body card__body_calendar_set">
+                                <div class="calendar calendar_main-page-preview">
+                                    <div class="calendar__title">
+                                        October 2019
+                                    </div>
+                                    <div class="calendar__wrapper">
+                                        <div class="calendar__inner">
+                                            <span class="calendar__item calendar__week_day">Mon</span>
+                                            <span class="calendar__item calendar__week_day">Tue</span>
+                                            <span class="calendar__item calendar__week_day">Wed</span>
+                                            <span class="calendar__item calendar__week_day">Thu</span>
+                                            <span class="calendar__item calendar__week_day">Fri</span>
+                                            <span class="calendar__item calendar__week_day">Sat</span>
+                                            <span class="calendar__item calendar__week_day">Sun</span>
+                                            <span class="calendar__item"></span>
+                                            <span class="calendar__item"></span>
+                                            <span class="calendar__item"></span>
+                                            <span class="calendar__item"></span>
+                                            <span class="calendar__item"></span>
+                                            <span class="calendar__item">1</span>
+                                            <span class="calendar__item">2</span>
+                                            <span class="calendar__item">3</span>
+                                            <span class="calendar__item">4</span>
+                                            <span class="calendar__item">5</span>
+                                            <span class="calendar__item">6</span>
+                                            <span class="calendar__item">7</span>
+                                            <span class="calendar__item">8</span>
+                                            <span class="calendar__item">9</span>
+                                            <span class="calendar__item">10</span>
+                                            <span class="calendar__item">11</span>
+                                            <span class="calendar__item">12</span>
+                                            <span class="calendar__item">13</span>
+                                            <span class="calendar__item">14</span>
+                                            <span class="calendar__item">15</span>
+                                            <span class="calendar__item">16</span>
+                                            <span class="calendar__item calendar__item_active">17</span>
+                                            <span class="calendar__item calendar__item_between-active">18</span>
+                                            <span class="calendar__item calendar__item_between-active">19</span>
+                                            <span class="calendar__item calendar__item_between-active">20</span>
+                                            <span class="calendar__item calendar__item_between-active">21</span>
+                                            <span class="calendar__item calendar__item_active">22</span>
+                                            <span class="calendar__item">23</span>
+                                            <span class="calendar__item">24</span>
+                                            <span class="calendar__item">25</span>
+                                            <span class="calendar__item">26</span>
+                                            <span class="calendar__item">27</span>
+                                            <span class="calendar__item">28</span>
+                                            <span class="calendar__item">29</span>
+                                            <span class="calendar__item">30</span>
+                                            <span class="calendar__item">31</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="card__footer">
+                                <h4 class="card__title">Calendar</h4>
+                                <p class="card__text">Container</p>
+
+                            </div>
+
+                        </a>
+                    </div>
+                    <div class="preview__content preview__content_main-page">
+                        <div class="preview__content-wrapper preview__content-wrapper_main-page">
+                            <div class="preview__title preview__title_main-page">Skeleton</div>
+                            <div class="preview__body-wrapper preview__body-wrapper_skeleton">
+                                <div class="skeleton">
+                                    <div class="skeleton__header">
+                                        <div class="skeleton__circle"></div>
+                                        <div class="skeleton__line-container">
+                                            <div class="skeleton__line skeleton__line_small"></div>
+                                            <div class="skeleton__line skeleton__line_medium"></div>
+                                        </div>
+
+                                    </div>
+                                    <div class="skeleton__body">
+                                        <div class="skeleton__line"></div>
+                                        <div class="skeleton__line"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="preview__content-wrapper preview__content-wrapper_main-page">
+                            <div class="preview__title preview__title_main-page">Custom form elements</div>
+                            <div class="preview__body-wrapper preview__body-wrapper_inputs-text">
+                                <div class="input">
+                                    <label class="input__label">focus</label>
+                                    <div class="input__container">
+                                        <input type="text" placeholder="Placeholder" class="input__input-text" tabindex="1">
+                                        <svg class="input__icon input__success-icon">
+                                            <use href="assets/images/icons_sprite.svg#success"></use>
+                                        </svg>
+                                        <svg class="input__icon input__icon_error">
+                                            <use href="assets/images/icons_sprite.svg#error"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+
+                                <div class="input input_success">
+                                    <label class="input__label">success</label>
+                                    <div class="input__container">
+                                        <input type="text" placeholder="Placeholder" class="input__input-text input__input-text_focused">
+                                        <svg class="input__icon input__icon_success">
+                                            <use href="assets/images/icons_sprite.svg#success"></use>
+                                        </svg>
+                                        <svg class="input__icon input__icon_error">
+                                            <use href="assets/images/icons_sprite.svg#error"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+
+                                <div class="input input_invalid">
+                                    <label class="input__label">error</label>
+                                    <div class="input__container">
+                                        <input type="text" placeholder="Placeholder" class="input__input-text">
+                                        <svg class="input__icon input__icon_success">
+                                            <use href="assets/images/icons_sprite.svg#success"></use>
+                                        </svg>
+                                        <svg class="input__icon input__icon_error">
+                                            <use href="assets/images/icons_sprite.svg#error"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="preview__tab4">
+                    <div class="preview__cards preview__cards_next-tab">
+                        <!-- Complex -->
+                        <a href="pages/modal.html" class="card">
+                            <div class="card__body">
+                                <div class="card__cover"></div>
+                                <div class="modal modal_main-page-preview">
+                                    <div class="modal__preview">
+
+                                        <div class="input input_main-page-preview">
+                                            <label class="input__label">name</label>
+                                            <div class="input__container">
+                                                <input type="text" placeholder="Placeholder" class="input__input-text">
+                                                <svg class="input__icon input__success-icon">
+                                                    <use href="../../assets/images/icons_sprite.svg#success"></use>
+                                                </svg>
+                                                <svg class="input__icon input__icon_error">
+                                                    <use href="../../assets/images/icons_sprite.svg#error"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+
+                                        <div class="input input_main-page-preview">
+                                            <label class="input__label">email</label>
+                                            <div class="input__container">
+                                                <input type="text" placeholder="Placeholder" class="input__input-text"
+                                                       tabindex="1">
+                                                <svg class="input__icon input__success-icon">
+                                                    <use href="../../assets/images/icons_sprite.svg#success"></use>
+                                                </svg>
+                                                <svg class="input__icon input__icon_error">
+                                                    <use href="../../assets/images/icons_sprite.svg#error"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+
+                                        <button class="button button_primary modal_button-set_main-preview" type="submit">Submit
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card__footer">
+                                <h4 class="card__title">Modal dialog</h4>
+                                <p class="card__text">Complex</p>
+
+                            </div>
+
+                        </a>
+                        <a href="pages/histogram.html" class="card">
+                            <div class="card__body">
+                                <div class="histogram histogram_main-page-preview">
+                                    <div class="histogram__title">
+                                        Total orders
+                                        <div class="histogram__link">View all</div>
+                                    </div>
+                                    <div class="histogram__header">
+                                        50254
+                                    </div>
+                                    <div class="histogram__body">
+                                        <div style="height: 90%" class="histogram__item"></div>
+                                        <div style="height: 80%" class="histogram__item"></div>
+                                        <div style="height: 70%" class="histogram__item"></div>
+                                        <div style="height: 60%" class="histogram__item"></div>
+                                        <div style="height: 70%" class="histogram__item"></div>
+                                        <div style="height: 40%" class="histogram__item"></div>
+                                        <div style="height: 90%" class="histogram__item"></div>
+                                        <div style="height: 70%" class="histogram__item"></div>
+                                        <div style="height: 90%" class="histogram__item"></div>
+                                        <div style="height: 80%" class="histogram__item"></div>
+                                        <div style="height: 70%" class="histogram__item"></div>
+                                        <div style="height: 60%" class="histogram__item"></div>
+                                        <div style="height: 70%" class="histogram__item"></div>
+                                        <div style="height: 40%" class="histogram__item"></div>
+                                        <div style="height: 90%" class="histogram__item"></div>
+                                        <div style="height: 70%" class="histogram__item"></div>
+                                        <div style="height: 70%" class="histogram__item"></div>
+                                        <div style="height: 60%" class="histogram__item"></div>
+                                        <div style="height: 70%" class="histogram__item"></div>
+                                        <div style="height: 40%" class="histogram__item"></div>
+                                        <div style="height: 90%" class="histogram__item"></div>
+                                        <div style="height: 70%" class="histogram__item"></div>
+                                        <div style="height: 60%" class="histogram__item"></div>
+                                        <div style="height: 70%" class="histogram__item"></div>
+                                        <div style="height: 40%" class="histogram__item"></div>
+                                        <div style="height: 90%" class="histogram__item"></div>
+                                        <div style="height: 70%" class="histogram__item"></div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="card__footer">
+                                <h4 class="card__title">Histogram</h4>
+                                <p class="card__text">Complex</p>
+
+                            </div>
+
+                        </a>
+                    </div>
+                    <div class="preview__content preview__content_main-page">
+                        <div class="preview__content-wrapper preview__content-wrapper_main-page">
+                            <div class="preview__title preview__title_main-page">Modal</div>
+                            <div class="preview__body-wrapper">
+                                <button id="modal-open" class="button button_primary button_set-big-btn">Open modal</button>
+                                <div id="modal" class="modal modal_component-page">
+                                    <div class="modal__preview">
+
+                                        <button id="modal-close" class="modal__close modal__close_component-page">
+                                            <svg class="modal__close-icon">
+                                                <use href="assets/images/icons_sprite.svg#icon-close-modal"></use>
+                                            </svg>
+                                        </button>
+
+                                        <div class="input input_component-page">
+                                            <label class="input__label">name</label>
+                                            <div class="input__container">
+                                                <input type="text" placeholder="Placeholder" class="input__input-text">
+                                                <svg class="input__icon input__success-icon">
+                                                    <use href="assets/images/icons_sprite.svg#success"></use>
+                                                </svg>
+                                                <svg class="input__icon input__icon_error">
+                                                    <use href="assets/images/icons_sprite.svg#error"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+
+                                        <div class="input input_component-page">
+                                            <label class="input__label">email</label>
+                                            <div class="input__container">
+                                                <input type="text" placeholder="Placeholder" class="input__input-text"
+                                                       tabindex="1">
+                                                <svg class="input__icon input__success-icon">
+                                                    <use href="assets/images/icons_sprite.svg#success"></use>
+                                                </svg>
+                                                <svg class="input__icon input__icon_error">
+                                                    <use href="assets/images/icons_sprite.svg#error"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+
+                                        <button class="button button_primary modal_button-set" type="submit">Submit</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="preview__content-wrapper preview__content-wrapper_main-page">
+                            <div class="preview__title preview__title_main-page">Accordion</div>
+                            <div class="preview__body-wrapper">
+                                <div class="accordion">
+                                    <details class="accordion__card accordion__card_animation-mp" open>
+                                        <summary class="accordion__summary">
+                                            Accordion item 1
+                                            <svg class="accordion__marker">
+                                                <use href="assets/images/icons_sprite.svg#accordion-marker"></use>
+                                            </svg>
+                                        </summary>
+                                        <p class="accordion__text">
+                                            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim
+                                            velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                                        </p>
+                                    </details>
+                                    <details class="accordion__card accordion__card_animation-mp">
+                                        <summary class="accordion__summary">
+                                            Accordion item 2
+                                            <svg class="accordion__marker">
+                                                <use href="assets/images/icons_sprite.svg#accordion-marker"></use>
+                                            </svg>
+                                        </summary>
+                                        <p class="accordion__text">
+                                            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim
+                                            velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                                        </p>
+                                    </details>
+                                    <details class="accordion__card accordion__card_animation-mp">
+                                        <summary class="accordion__summary">
+                                            Accordion item 3
+                                            <svg class="accordion__marker">
+                                                <use href="assets/images/icons_sprite.svg#accordion-marker"></use>
+                                            </svg>
+                                        </summary>
+                                        <p class="accordion__text">
+                                            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim
+                                            velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                                        </p>
+                                    </details>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="preview__button-inner">
+                    <button class="button button_alternate">Load more</button>
+                </div>
+
             </div>
-            <div class="preview__cards preview__cards_simple">
-                <!-- Простые компоненты -->
-                <div class="card"></div>
-                <div class="card"></div>
-            </div>
+        </main>
 
-
-        </div>
-
-    </main>
+    </section>
     <footer class="footer">
         <div class="container">
             <div class="footer__content">

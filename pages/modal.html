@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/normalize.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../04-lection2/01-histogram/histogram.css">
+    <link rel="stylesheet" href="../assets/css/prism.css">
+    <script defer src="../05-lection3/02-modal/index.js"></script>
+    <script defer src="../09-lection7/01-burger-menu/burger-menu.js"></script>
+    <script defer src="../assets/utils/theme-changer.js"></script>
+    <script defer src="../assets/utils/prism.js"></script>
+
+    <style>
+        html[data-theme-dark] {
+            --main-bg-color: #212429;
+            --main-font-color: #b0b3b6;
+            --grey-2: #666768;
+            --grey-4: #818c98;
+            --grey-5: #495057;
+            --active-text-color: #ffff;
+            --icons-color: #ffff;
+            --dark-blue: #a1b5ce;
+            --token-tag: #c681a7;
+            --token-attr-name: #7b9e36;
+            --token-attr-value: #3e90b3;
+            --token-punctuation: #a4a3a3;
+
+        }
+    </style>
+    <title>Modal window</title>
+</head>
+<body>
+<div class="page">
+    <header class="header header_layout">
+        <div class="container">
+            <div class="header__head">
+                <button class="menu__button" id="burger-menu-open">
+                    <svg class="menu__icon">
+                        <use href="../assets/images/icons_sprite.svg#menu"></use>
+                    </svg>
+                </button>
+                <svg class="header__logo">
+                    <use href="../assets/images/icons_sprite.svg#page-logo"></use>
+                </svg>
+                <div class="header__menu">
+                    <a href="#" class="header__nav-link header__nav-link_focused">Components</a>
+                    <a href="#" class="header__nav-link">About</a>
+                    <a href="#" class="header__nav-link">Contact</a>
+                    <div class="header__theme-toggle-wrapper">
+                        <label class="toggle toggle_main-page">
+                            <input type="checkbox" class="toggle__input" id="theme-changer">
+                            <svg class="toggle__theme-icon toggle__theme-icon_sun">
+                                <use href="../assets/images/icons_sprite.svg#theme-toggle-sun"></use>
+                            </svg>
+
+                            <div class="toggle__state">
+                                <div class="toggle__control">
+                                    <div class="toggle__icon"></div>
+                                </div>
+                            </div>
+                            <svg class="toggle__theme-icon toggle__theme-icon_moon">
+                                <use href="../assets/images/icons_sprite.svg#theme-toggle-moon"></use>
+                            </svg>
+                        </label>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <div id="burger-menu" class="burger-menu">
+        <header class="header burger-menu_header">
+            <div class="container container_burger-menu">
+                <button id="burger-menu-close" class="burger-menu__button-close">
+                    <svg class="burger-menu__icon-close">
+                        <use href="../assets/images/icons_sprite.svg#icon-close-burger"></use>
+                    </svg>
+
+                </button>
+
+                <div class="header__head">
+                    <svg class="header__logo">
+                        <use href="../assets/images/icons_sprite.svg#page-logo"></use>
+                    </svg>
+                </div>
+
+            </div>
+        </header>
+
+        <div class="burger-menu__theme-wrapper">
+            <div class="container container_burger-menu">
+                <div class="burger-menu__split-line"></div>
+                <div class="burger-menu__toggle-wrapper">
+                    <p class="burger-menu__theme-switcher-title">
+                        Dark mode
+                    </p>
+                    <label class="toggle toggle_main-page">
+                        <input type="checkbox" class="toggle__input" id="theme-changer-mobile">
+
+                        <div class="toggle__state">
+                            <div class="toggle__control">
+                                <div class="toggle__icon"></div>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+                <div class="burger-menu__split-line"></div>
+            </div>
+        </div>
+
+
+        <div class="burger-menu__body">
+            <div class="container">
+                <aside class="menu menu_burger-inner">
+                    <h5 class="menu__title">Components</h5>
+
+                    <ul class="menu__list">
+                        <li>
+                            <a class="menu__link menu__link_active" href="modal.html">Modal</a>
+                        </li>
+                        <li>
+                            <a class="menu__link" href="tooltip.html">Tooltip</a>
+                        </li>
+                        <li>
+                            <a class="menu__link" href="avatar.html">Avatar</a>
+                        </li>
+                        <li>
+                            <a class="menu__link" href="calendar.html">Calendar</a>
+                        </li>
+                        <li>
+                            <a class="menu__link" href="histogram.html">Histogram</a>
+                        </li>
+                        <li>
+                            <a class="menu__link" href="custom-form-elements.html">Custom from elements</a>
+                        </li>
+                    </ul>
+                    <div class="menu__footer">
+                        <a class="menu__link" href="../index.html">Main page</a>
+                    </div>
+
+                </aside>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="page__preview">
+        <div class="container">
+            <div class="gridLayout">
+                <aside class="menu">
+                    <h5 class="menu__title">Components</h5>
+
+                    <ul class="menu__list">
+                        <li>
+                            <a class="menu__link menu__link_active" href="modal.html">Modal</a>
+                        </li>
+                        <li>
+                            <a class="menu__link" href="tooltip.html">Tooltip</a>
+                        </li>
+                        <li>
+                            <a class="menu__link" href="avatar.html">Avatar</a>
+                        </li>
+                        <li>
+                            <a class="menu__link" href="calendar.html">Calendar</a>
+                        </li>
+                        <li>
+                            <a class="menu__link" href="histogram.html">Histogram</a>
+                        </li>
+                        <li>
+                            <a class="menu__link" href="custom-form-elements.html">Custom from elements</a>
+                        </li>
+                    </ul>
+                    <div class="menu__footer">
+                        <a class="menu__link" href="../index.html">Main page</a>
+                    </div>
+
+                </aside>
+                <main class="preview preview_layout">
+                    <div class="preview__content">
+                        <div class="preview__content-wrapper preview__content-wrapper_modal">
+                            <h3 class="preview__title">Modal</h3>
+
+                            <button id="modal-open" class="button button_primary button_set-big-btn">Open modal</button>
+                            <div id="modal" class="modal modal_component-page">
+                                <div class="modal__preview">
+
+                                    <button id="modal-close" class="modal__close modal__close_component-page">
+                                        <svg class="modal__close-icon">
+                                            <use href="../assets/images/icons_sprite.svg#icon-close-modal"></use>
+                                        </svg>
+                                    </button>
+
+                                    <div class="input input_component-page">
+                                        <label class="input__label">name</label>
+                                        <div class="input__container">
+                                            <input type="text" placeholder="Placeholder" class="input__input-text">
+                                            <svg class="input__icon input__success-icon">
+                                                <use href="../../assets/images/icons_sprite.svg#success"></use>
+                                            </svg>
+                                            <svg class="input__icon input__icon_error">
+                                                <use href="../../assets/images/icons_sprite.svg#error"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+
+                                    <div class="input input_component-page">
+                                        <label class="input__label">email</label>
+                                        <div class="input__container">
+                                            <input type="text" placeholder="Placeholder" class="input__input-text"
+                                                   tabindex="1">
+                                            <svg class="input__icon input__success-icon">
+                                                <use href="../../assets/images/icons_sprite.svg#success"></use>
+                                            </svg>
+                                            <svg class="input__icon input__icon_error">
+                                                <use href="../../assets/images/icons_sprite.svg#error"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+
+                                    <button class="button button_primary modal_button-set" type="submit">Submit</button>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="preview__code-wrapper">
+                            <input class="tabs-switcher__input" type="radio" id="html-preview" name="tabsSwitcher"
+                                   checked>
+                            <input class="tabs-switcher__input" type="radio" id="css-preview" name="tabsSwitcher">
+                            <nav class="tabs-switcher tabs-switcher_component-page">
+                                <div class="tabs-switcher__menu">
+                                    <label class="tabs-switcher__label" for="html-preview">HTML</label>
+
+                                    <label class="tabs-switcher__label" for="css-preview">CSS</label>
+
+                                </div>
+
+                                <div class="tabs-switcher__split-line"></div>
+                            </nav>
+
+                            <div class="code-preview" id="preview-html">
+
+                                    <pre class="code-preview__element">
+<code class="language-html">
+&lt;div id=&quot;modal&quot; class=&quot;modal modal_component-page&quot;&gt;
+	&lt;div class=&quot;modal__preview&quot;&gt;
+
+		&lt;button id=&quot;modal-close&quot; class=&quot;modal__close modal__close_component-page&quot;&gt;
+            &lt;svg class=&quot;modal__close-icon&quot;&gt;
+                &lt;use href=&quot;../assets/images/icons_sprite.svg#icon-close-modal&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+        &lt;/button&gt;
+
+		&lt;div class=&quot;input input_component-page&quot;&gt;
+			&lt;label class=&quot;input__label&quot;&gt;name&lt;/label&gt;
+			&lt;div class=&quot;input__container&quot;&gt;
+				&lt;input type=&quot;text&quot; placeholder=&quot;Placeholder&quot; class=&quot;input__input-text&quot;&gt;
+				&lt;svg class=&quot;input__icon input__success-icon&quot;&gt;
+					&lt;use href=&quot;../../assets/images/icons_sprite.svg#success&quot;&gt;&lt;/use&gt;
+				&lt;/svg&gt;
+				&lt;svg class=&quot;input__icon input__icon_error&quot;&gt;
+					&lt;use href=&quot;../../assets/images/icons_sprite.svg#error&quot;&gt;&lt;/use&gt;
+				&lt;/svg&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+
+		&lt;div class=&quot;input input_component-page&quot;&gt;
+			&lt;label class=&quot;input__label&quot;&gt;email&lt;/label&gt;
+			&lt;div class=&quot;input__container&quot;&gt;
+				&lt;input type=&quot;text&quot; placeholder=&quot;Placeholder&quot; class=&quot;input__input-text&quot;
+					   tabindex=&quot;1&quot;&gt;
+				&lt;svg class=&quot;input__icon input__success-icon&quot;&gt;
+					&lt;use href=&quot;../../assets/images/icons_sprite.svg#success&quot;&gt;&lt;/use&gt;
+				&lt;/svg&gt;
+				&lt;svg class=&quot;input__icon input__icon_error&quot;&gt;
+					&lt;use href=&quot;../../assets/images/icons_sprite.svg#error&quot;&gt;&lt;/use&gt;
+				&lt;/svg&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+
+		&lt;button class=&quot;button button_primary modal_button-set&quot; type=&quot;submit&quot;&gt;Submit&lt;/button&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code>
+                            </pre>
+
+
+                            </div>
+                            <div class="code-preview" id="preview-css">
+
+                            <pre class="code-preview__element">
+<code class="language-css">
+.modal {
+    display: none;
+    background: rgba(196, 196, 196, 0.5);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.modal__preview {
+    box-sizing: border-box;
+    position: absolute;
+    width: 10em;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    padding: 0.9em 0.9em 2.5em 2.5em;
+    background: var(--main-bg-color);
+    border-radius: 0.4em;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    z-index: 1;
+}
+
+.modal__header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal__close {
+    padding: 0;
+    height: 15px;
+    width: 15px;
+    outline-style: none;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.modal__title {
+    margin: 0.9em 0 0.8em 0;
+    font-weight: 600;
+    font-size: 1.25em;
+    line-height: 1.5em;
+    color: var(--dark-blue);
+}
+
+.modal__body {
+    margin: 0;
+    padding-right: 25px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--grey-4);
+}
+
+.modal_main-page-preview {
+    max-height: 222px;
+    display: block;
+    position: static;
+}
+
+.modal_main-page-preview .modal__preview {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    width: 80%;
+    height: 70%;
+    margin: 0;
+    padding: 0.9em 1.5em 1.2em 1.5em;
+}
+
+.modal_component-page {
+    background: rgba(196, 196, 196, 0.8);
+}
+
+.modal_component-page .modal__preview {
+    max-width: 428px;
+    max-height: 318px;
+    width: 100%;
+    height: 100%;
+    padding: 27px 40px 40px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.modal_component-page .modal__header {
+    justify-content: flex-end;
+}
+
+.modal__close_component-page {
+    position: absolute;
+    top: 0;
+    left: calc(100% - 15px);
+    transform: translate(-100%, 100%);
+}
+
+.modal_button-set {
+    margin-top: 18px;
+    max-width: 182px;
+}
+
+@media screen and (max-width: 768px) {
+    .modal_main-page-preview {
+        font-size: 8px;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+    }
+
+    .modal_main-page-preview .modal__preview {
+        width: 100%;
+        height: 80%;
+        padding-bottom: 2em;
+    }
+}</code>
+                            </pre>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </main>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer class="footer footer_layout">
+        <div class="container">
+            <div class="footer__content footer__content_layout">
+                <h2 class="footer__title footer__title_layout">Reusable component library</h2>
+
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

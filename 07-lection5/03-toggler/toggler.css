@@ -12,7 +12,7 @@
 .toggle__state {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 0.75em;
 }
 
 .toggle__control {
@@ -20,28 +20,32 @@
     align-items: center;
     justify-content: flex-start;
     box-sizing: border-box;
-    width: 52px;
-    height: 28px;
-    background: var(--white);
+    width: 3.25em;
+    height: 1.75em;
     border: 1px solid var(--grey-3);
-    border-radius: 16px;
+    border-radius: 1em;
     cursor: pointer;
+    transition: background-color 0.5s ease;
 }
 
 .toggle__icon {
-    border-radius: 16px;
-    width: 24px;
-    height: 24px;
-    transform: scale(.9);
+    box-sizing: border-box;
+    position: relative;
+    border-radius: 1em;
+    width: 1.5em;
+    height: 1.5em;
+    left: 0;
+    transform: scale(0.9);
     background: var(--grey-3);
+    transition: left 0.5s ease, background-color 0.5s ease;
 }
 
 .toggle__title {
     font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 1em;
+    line-height: 1.5em;
     color: var(--grey-4);
 }
 
@@ -49,12 +53,11 @@
     background: var(--ligth-blue);
     border: 1px solid var(--ligth-blue);
     align-items: center;
-
-    justify-content: flex-end;
 }
 
 .toggle__input:checked ~ .toggle__state .toggle__icon {
-    background: var(--white);
+    background: #ffff;
+    left: 1.625em;
 }
 
 .toggle__input:disabled ~ .toggle__state .toggle__control {
@@ -74,17 +77,17 @@
 
 
 .toggle__theme-icon, .toggle__input:checked ~ .toggle__theme-icon_sun {
-    width: 24px;
-    height: 24px;
+    width: 1.5em;
+    height: 1.5em;
     color: var(--grey-3);
 }
 
 .toggle__input:checked ~ .toggle__theme-icon_moon {
-    color: var(--white);
+    color: #ffff;
 }
 
 .toggle__input ~ .toggle__theme-icon_sun {
-    color: var(--black)
+    color: var(--main-font-color)
 }
 
 .toggle_main-page {

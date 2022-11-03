@@ -1,6 +1,7 @@
 .gridLayout {
     display: grid;
     grid-template-columns: auto 1fr;
+    gap: 56px;
     height: 100%;
 }
 @media screen and (max-width: 768px) {

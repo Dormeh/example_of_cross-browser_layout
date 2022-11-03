@@ -1,11 +1,12 @@
 .container {
     max-width: 1110px;
-    margin: 0 auto;
+    width: 100%;
+    margin: 0 15px;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
-
-@media screen and (max-width: 768px) {
-    .container {
-        margin: 0 15px;
-    }
+.container_burger-menu {
+    width: 90vw;
 }

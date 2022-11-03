@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/normalize.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../04-lection2/01-histogram/histogram.css">
+    <link rel="stylesheet" href="../assets/css/prism.css">
+    <script defer src="../09-lection7/01-burger-menu/burger-menu.js"></script>
+    <script defer src="../assets/utils/theme-changer.js"></script>
+    <script defer src="../assets/utils/prism.js"></script>
+    <script src="../assets/utils/preload.js"></script>
+    <style>
+        html[data-theme-dark] {
+            --main-bg-color: #212429;
+            --main-font-color: #b0b3b6;
+            --grey-2: #666768;
+            --grey-4: #818c98;
+            --grey-5: #495057;
+            --active-text-color: #ffff;
+            --icons-color: #ffff;
+            --dark-blue: #a1b5ce;
+            --token-tag: #c681a7;
+            --token-attr-name: #7b9e36;
+            --token-attr-value: #3e90b3;
+            --token-punctuation: #a4a3a3;
+
+        }
+    </style>
+    <title>Custom form elements</title>
+</head>
+<body class="preload">
+<div class="page">
+    <header class="header header_layout">
+        <div class="container">
+            <div class="header__head">
+                <button class="menu__button" id="burger-menu-open">
+                    <svg class="menu__icon">
+                        <use href="../assets/images/icons_sprite.svg#menu"></use>
+                    </svg>
+                </button>
+                <svg class="header__logo">
+                    <use href="../assets/images/icons_sprite.svg#page-logo"></use>
+                </svg>
+                <div class="header__menu">
+                    <a href="#" class="header__nav-link header__nav-link_focused">Components</a>
+                    <a href="#" class="header__nav-link">About</a>
+                    <a href="#" class="header__nav-link">Contact</a>
+                    <div class="header__theme-toggle-wrapper">
+                        <label class="toggle toggle_main-page">
+                            <input type="checkbox" class="toggle__input" id="theme-changer">
+                            <svg class="toggle__theme-icon toggle__theme-icon_sun">
+                                <use href="../assets/images/icons_sprite.svg#theme-toggle-sun"></use>
+                            </svg>
+
+                            <div class="toggle__state">
+                                <div class="toggle__control">
+                                    <div class="toggle__icon"></div>
+                                </div>
+                            </div>
+                            <svg class="toggle__theme-icon toggle__theme-icon_moon">
+                                <use href="../assets/images/icons_sprite.svg#theme-toggle-moon"></use>
+                            </svg>
+                        </label>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <div id="burger-menu" class="burger-menu">
+        <header class="header burger-menu_header">
+            <div class="container container_burger-menu">
+                <button id="burger-menu-close" class="burger-menu__button-close">
+                    <svg class="burger-menu__icon-close">
+                        <use href="../assets/images/icons_sprite.svg#icon-close-burger"></use>
+                    </svg>
+
+                </button>
+
+                <div class="header__head">
+                    <svg class="header__logo">
+                        <use href="../assets/images/icons_sprite.svg#page-logo"></use>
+                    </svg>
+                </div>
+
+            </div>
+        </header>
+
+        <div class="burger-menu__theme-wrapper">
+            <div class="container container_burger-menu">
+                <div class="burger-menu__split-line"></div>
+                <div class="burger-menu__toggle-wrapper">
+                    <p class="burger-menu__theme-switcher-title">
+                        Dark mode
+                    </p>
+                    <label class="toggle toggle_main-page">
+                        <input type="checkbox" class="toggle__input" id="theme-changer-mobile">
+
+                        <div class="toggle__state">
+                            <div class="toggle__control">
+                                <div class="toggle__icon"></div>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+                <div class="burger-menu__split-line"></div>
+            </div>
+        </div>
+
+
+        <div class="burger-menu__body">
+            <div class="container">
+                <aside class="menu menu_burger-inner">
+                    <h5 class="menu__title">Components</h5>
+
+                    <ul class="menu__list">
+                        <li>
+                            <a class="menu__link" href="modal.html">Modal</a>
+                        </li>
+                        <li>
+                            <a class="menu__link" href="tooltip.html">Tooltip</a>
+                        </li>
+                        <li>
+                            <a class="menu__link" href="avatar.html">Avatar</a>
+                        </li>
+                        <li>
+                            <a class="menu__link" href="calendar.html">Calendar</a>
+                        </li>
+                        <li>
+                            <a class="menu__link" href="histogram.html">Histogram</a>
+                        </li>
+                        <li>
+                            <a class="menu__link menu__link_active" href="custom-form-elements.html">Custom from
+                                elements</a>
+                        </li>
+                    </ul>
+                    <div class="menu__footer">
+                        <a class="menu__link" href="../index.html">Main page</a>
+                    </div>
+
+                </aside>
+
+            </div>
+
+        </div>
+
+    </div>
+    <div class="page__preview">
+        <div class="container">
+            <div class="gridLayout">
+                <aside class="menu">
+                    <h5 class="menu__title">Components</h5>
+
+                    <ul class="menu__list">
+                        <li>
+                            <a class="menu__link" href="modal.html">Modal</a>
+                        </li>
+                        <li>
+                            <a class="menu__link" href="tooltip.html">Tooltip</a>
+                        </li>
+                        <li>
+                            <a class="menu__link" href="avatar.html">Avatar</a>
+                        </li>
+                        <li>
+                            <a class="menu__link" href="calendar.html">Calendar</a>
+                        </li>
+                        <li>
+                            <a class="menu__link" href="histogram.html">Histogram</a>
+                        </li>
+                        <li>
+                            <a class="menu__link menu__link_active" href="custom-form-elements.html">Custom from
+                                elements</a>
+                        </li>
+                    </ul>
+                    <div class="menu__footer">
+                        <a class="menu__link" href="../index.html">Main page</a>
+                    </div>
+
+                </aside>
+                <main class="preview preview_layout">
+                    <div class="preview__content">
+                        <div class="preview__content-wrapper preview__content-wrapper_custom">
+                            <h3 class="preview__title">Custom form elements</h3>
+                            <div class="preview__body-wrapper preview__body-wrapper_inputs">
+                                <label class="checkbox">
+                                    <input type="checkbox" class="checkbox__input">
+                                    <div class="checkbox__state">
+                                        <div class="checkbox__control">
+                                            <svg class="checkbox__icon">
+                                                <use href="../assets/images/icons_sprite.svg#checkbox"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="checkbox__title">Default</div>
+                                    </div>
+
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox" class="checkbox__input" checked>
+                                    <div class="checkbox__state">
+                                        <div class="checkbox__control">
+                                            <svg class="checkbox__icon">
+                                                <use href="../assets/images/icons_sprite.svg#checkbox"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="checkbox__title">Checked</div>
+                                    </div>
+
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox" class="checkbox__input" disabled>
+                                    <div class="checkbox__state">
+                                        <div class="checkbox__control">
+                                            <svg class="checkbox__icon">
+                                                <use href="../assets/images/icons_sprite.svg#checkbox"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="checkbox__title">Disabled</div>
+                                    </div>
+
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" class="radio__input" name="radio">
+                                    <div class="radio__state">
+                                        <div class="radio__control">
+                                            <div class="radio__icon"></div>
+                                        </div>
+                                        <div class="radio__title">Default</div>
+                                    </div>
+
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" class="radio__input" name="radio" checked>
+                                    <div class="radio__state">
+                                        <div class="radio__control">
+                                            <div class="radio__icon"></div>
+                                        </div>
+                                        <div class="radio__title">Checked</div>
+                                    </div>
+
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" class="radio__input" name="radio" disabled>
+                                    <div class="radio__state">
+                                        <div class="radio__control">
+                                            <div class="radio__icon"></div>
+                                        </div>
+                                        <div class="radio__title radio__title_disabled">Disabled</div>
+                                    </div>
+
+                                </label>
+                            </div>
+
+                        </div>
+                        <div class="preview__code-wrapper">
+                            <input class="tabs-switcher__input" type="radio" id="html-preview" name="tabsSwitcher"
+                                   checked>
+                            <input class="tabs-switcher__input" type="radio" id="css-preview" name="tabsSwitcher">
+                            <nav class="tabs-switcher tabs-switcher_component-page">
+                                <div class="tabs-switcher__menu">
+                                    <label class="tabs-switcher__label" for="html-preview">HTML</label>
+
+                                    <label class="tabs-switcher__label" for="css-preview">CSS</label>
+
+                                </div>
+                                <div class="tabs-switcher__split-line"></div>
+                            </nav>
+
+                            <div class="code-preview" id="preview-html">
+                                    <pre class="code-preview__element">
+<code class="language-html">&lt;label class=&quot;checkbox&quot;&gt;
+    &lt;input type=&quot;checkbox&quot; class=&quot;checkbox__input&quot;&gt;
+    &lt;div class=&quot;checkbox__state&quot;&gt;
+        &lt;div class=&quot;checkbox__control&quot;&gt;
+            &lt;svg class=&quot;checkbox__icon&quot;&gt;
+                &lt;use href=&quot;../../assets/images/icons_sprite.svg#checkbox&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;checkbox__title&quot;&gt;Default&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/label&gt;
+&lt;label class=&quot;checkbox&quot;&gt;
+    &lt;input type=&quot;checkbox&quot; class=&quot;checkbox__input&quot; checked&gt;
+    &lt;div class=&quot;checkbox__state&quot;&gt;
+        &lt;div class=&quot;checkbox__control&quot;&gt;
+            &lt;svg class=&quot;checkbox__icon&quot;&gt;
+                &lt;use href=&quot;../../assets/images/icons_sprite.svg#checkbox&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;checkbox__title&quot;&gt;Checked&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/label&gt;
+&lt;label class=&quot;checkbox&quot;&gt;
+    &lt;input type=&quot;checkbox&quot; class=&quot;checkbox__input&quot; disabled&gt;
+    &lt;div class=&quot;checkbox__state&quot;&gt;
+        &lt;div class=&quot;checkbox__control&quot;&gt;
+            &lt;svg class=&quot;checkbox__icon&quot;&gt;
+                &lt;use href=&quot;../../assets/images/icons_sprite.svg#checkbox&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;checkbox__title&quot;&gt;Disabled&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/label&gt;</code>
+                            </pre>
+
+                            </div>
+                            <div class="code-preview" id="preview-css">
+
+                            <pre class="code-preview__element">
+<code class="language-css">
+.checkbox {
+    display: inline-block;
+    position: relative;
+}
+
+.checkbox__input {
+    position: absolute;
+    outline: none;
+    clip: rect(0, 0, 0, 0);
+}
+
+.checkbox__state {
+    display: flex;
+    align-items: center;
+    gap: 0.75em;
+}
+
+.checkbox__control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 1.75em;
+    height: 1.75em;
+    background: var(--main-bg-color);
+    border: 0.0625em solid var(--grey-2);
+    border-radius: 0.25em;
+    cursor: pointer;
+}
+
+.checkbox__icon {
+    width: 15px;
+    height: 13px;
+    display: none;
+}
+
+.checkbox__title {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1em;
+    line-height: 1.5em;
+    color: var(--active-text-color);
+}
+
+.checkbox__input:checked ~ .checkbox__state .checkbox__control {
+    background: var(--ligth-blue);
+    border: 0.0625em solid var(--ligth-blue);
+    animation: pulse 0.5s;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 #bdc3c7;
+    }
+    100% {
+        box-shadow: 0 0 1em 1.5rem rgba(189, 195, 199, 0);
+    }
+}
+
+.checkbox__input:checked ~ .checkbox__state .checkbox__icon {
+    display: block;
+}
+
+.checkbox__input:disabled ~ .checkbox__state .checkbox__control {
+    cursor: default;
+    background: var(--grey-2);
+    border: 0.0625em solid var(--grey-2);
+}
+
+.checkbox__input:disabled ~ .checkbox__state .checkbox__title {
+    color: var(--grey-2);
+}
+
+.checkbox__input:focus ~ .checkbox__state .checkbox__title {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+    .checkbox_main-page-preview {
+        font-size: 10px;
+    }
+
+    .checkbox_main-page-preview .checkbox__icon {
+        transform: scale(0.7);
+    }
+}
+                                </code>
+                            </pre>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer class="footer footer_layout">
+        <div class="container">
+            <div class="footer__content footer__content_layout">
+                <h2 class="footer__title footer__title_layout">Reusable component library</h2>
+
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

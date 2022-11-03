@@ -1,5 +1,5 @@
 .skeleton {
-    background: var(--white);
+    /*background: var(--main-bg-color);*/
     border: 1px solid var(--grey-3);
     border-radius: 8px;
     padding: 24px;
@@ -22,14 +22,12 @@
 }
 
 .skeleton__circle {
-    background: var(--grey-2);
     width: 64px;
     height: 64px;
     border-radius: 50%;
 }
 
 .skeleton__line {
-    background: var(--grey-2);
     height: 20px;
     margin-bottom: 8px;
 }
@@ -41,4 +39,25 @@
 
 .skeleton__line_medium {
     width: 55%;
+}
+
+.skeleton__circle, .skeleton__line {
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: backgroundMovement;
+    animation-timing-function: linear;
+    background: var(--grey-2);
+    background: linear-gradient(267.58deg, var(--grey-2) 0%, var(--font-color-light) 80%, var(--grey-2) 100%);
+    background-size: 200%;
+}
+
+@keyframes backgroundMovement {
+    0% {
+        background-position: 100%;
+    }
+
+    100% {
+        background-position: -100%;
+    }
 }

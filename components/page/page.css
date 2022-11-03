@@ -2,26 +2,25 @@
     display: flex;
     flex-direction: column;
     height: 100%;
-}
-
-.page__tempHeaderFixHeight {
-    height: 82px;
+    background: var(--main-bg-color);
 }
 
 .page__preview {
+    display: inline-flex;
+    justify-content: center;
     flex-grow: 1;
     padding-top: 36px;
     padding-bottom: 36px;
     background: var(--grey-5);
 }
 
-
 @media screen and (max-width: 768px) {
     .page__tempHeaderFixHeight {
         height: 64px;
     }
+
     .page__preview {
         padding: 32px 0 32px 0;
-        background: var(--white);
+        background: var(--main-bg-color);
     }
 }

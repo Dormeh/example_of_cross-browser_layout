@@ -1,6 +1,6 @@
 .avatar {
-    width: 102px;
-    height: 102px;
+    width: 10em;
+    height: 10em;
 }
 
 .avatar__img {
@@ -8,4 +8,19 @@
     width: 100%;
     border-radius: 50%;
     object-fit: cover;
+}
+
+.avatar_main-page-preview {
+    transform: translateY(-1.3em);
+}
+
+.avatar_component-page {
+    font-size: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .avatar_main-page-preview {
+        font-size: 11.6px;
+        transform: translateY(0);
+    }
 }
