@@ -1,0 +1,7 @@
+@function px-to-em($px, $context: 16px){
+  @return ($px / $context) * 1em;
+}
+
+@function naked-value($value) {
+  @return $value / (($value * 0) + 1);
+}

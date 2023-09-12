@@ -159,7 +159,7 @@
 
     }
 
-    .preview__content-wrapper_tooltip, .preview__content-wrapper_modal {
+    .preview .preview__content-wrapper_tooltip, .preview__content-wrapper_modal {
         width: fit-content;
     }
 

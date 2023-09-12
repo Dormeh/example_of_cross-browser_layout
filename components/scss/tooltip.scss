@@ -1,0 +1,71 @@
+@import "partials/mixins";
+@import "partials/params";
+
+.tooltip {
+  position: relative;
+  display: inline-flex;
+
+  &__trigger {
+    cursor: pointer;
+    height: 24px;
+    width: 24px;
+  }
+
+  &_component-page {
+    @include media(md) {
+      font-size: 14px;
+      align-self: flex-end;
+      transform: translateX(50%);
+    }
+  }
+
+  &__helper {
+    @include text(1em, 1.5em, 400, normal, var(--font-color-light));
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    display: none;
+    position: absolute;
+    bottom: calc(100% + 0.625em);
+    right: 50%;
+    transform: translateX(50%);
+    white-space: nowrap;
+    background: var(--ligth-blue);
+    box-shadow: 0 0.125em 0.25em rgba(33, 36, 41, 0.05);
+    border-radius: 0.625em;
+    padding: 0.8125em 1.5em;
+
+  }
+
+  &__trigger:hover ~ &__helper {
+    display: block;
+  }
+
+  &__helper:before {
+    position: absolute;
+    content: "";
+    border: 0.45em solid transparent;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-top: 0.4em solid var(--ligth-blue);
+
+  }
+
+  &__icon {
+    width: 1.5em;
+    height: 1.5em;
+    color: var(--icons-color);
+  }
+
+  &_main-page-preview &__helper {
+    display: block;
+  }
+
+  &_main-page-preview {
+    transform: translateY(2em);
+    @media screen and (max-width: 768px) {
+        font-size: 12px;
+      }
+  }
+
+}

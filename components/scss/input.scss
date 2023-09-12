@@ -1,0 +1,92 @@
+@import "partials/mixins";
+@import "partials/params";
+
+.input {
+  @include text(0.75em, 1.125em, 500, normal, var(--grey-3));
+  font-family: 'Inter', sans-serif;
+  text-align: start;
+  width: 100%;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  &__label {
+    @include text($size: 0.75em, $lh: 2.5em);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  &__input-text {
+    padding: 1.1em 1.5em 1.1em 1.5em;
+    background-color: unset;
+    border: 1px solid var(--grey-2);
+    border-radius: 0.4em;
+    @include text(1.25em, 1.625em, 400, normal, false);
+    transition: border-color 0.25s ease-in-out, box-shadow 0.30s ease-in-out;
+
+    &::placeholder {
+      color: var(--grey-2);
+    }
+  }
+
+  &__input-text:focus, &__input-text.input__input-text_focused {
+    color: var(--active-text-color);
+    border: 1px solid var(--ligth-blue);
+    box-shadow: 0 1px 1px rgba(51, 154, 240, 0.1);
+    border-radius: 0.4em;
+    outline: none;
+  }
+
+  &__icon {
+    width: 2em;
+    height: 2em;
+    top: calc(50%);
+    transform: translate(-100%, -50%);
+    position: absolute;
+    left: calc(100% - 1.125em);
+    display: none;
+  }
+
+  &_success &__icon_success {
+    color: var(--blue);
+    display: block;
+  }
+
+  &_invalid {
+    & .input__icon_error {
+      color: var(--red);
+      display: block;
+    }
+
+    & .input__input-text {
+      border: 1px solid var(--red);
+      box-shadow: 0 1px 1px rgba(240, 61, 62, 0.1);
+      border-radius: 0.4em;
+    }
+  }
+
+  &_main-page-preview {
+    font-size: 9px;
+
+    @include media(md) {
+      font-size: 6px;
+    }
+
+    & .input__input-text {
+      padding: 0.6em;
+
+    }
+  }
+
+  &_component-page {
+    font-size: 16px;
+
+    & .input__input-text {
+      padding: 0.55em 24px;
+
+    }
+  }
+}

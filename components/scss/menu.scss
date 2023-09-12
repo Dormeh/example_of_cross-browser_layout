@@ -1,0 +1,74 @@
+@import "partials/mixins";
+@import "partials/params";
+
+.menu {
+  width: 229px;
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  font-family: 'Inter', sans-serif;
+  @include text($fs: normal, $fw: 400);
+  @include media(md) {
+    display: none;
+  }
+
+  &__button {
+    padding: 0;
+    display: none;
+    outline-style: none;
+    border: none;
+    background: transparent;
+    color: var(--grey-4);
+    text-align: center;
+    @include media(md) {
+      display: block;
+    }
+  }
+
+  &__icon {
+    left: 15px;
+    position: absolute;
+    width: 18px;
+    height: 20px;
+    top: 20px;
+  }
+
+  &__list {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
+
+  &__link {
+    text-decoration: none;
+    @include text(14px, 22px, $color:var(--main-font-color));
+  }
+
+  &__title {
+    font-weight: inherit;
+    @include text(20px, 26px, $color:var(--main-font-color));
+    margin: 0 0 16px 0;
+  }
+
+  &__footer {
+    margin-top: 30px;
+  }
+
+  &__link:focus, &__link_active {
+    color: var(--red-orange);
+  }
+  &_burger-inner {
+    @include media(md) {
+      display: grid;
+
+      &  .menu__title {
+        color: var(--grey-3);
+      }
+
+      &  .menu__link {
+        font-size: 16px;
+        line-height: 38px;
+      }
+    }
+  }
+}
+

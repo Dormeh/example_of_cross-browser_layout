@@ -1,0 +1,78 @@
+@import "partials/mixins";
+@import "partials/params";
+
+.burger-menu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  overflow-y: scroll;
+  height: 100vh;
+  background: rgba(249, 250, 252, 1);
+  transform: translateX(-100vw);
+  transition: transform 200ms ease-in-out;
+  z-index: 1;
+  background: var(--main-bg-color);
+  @media screen and (min-width: 769px) {
+      display: none;
+  }
+
+  &_header {
+    background: var(--main-bg-color);
+  }
+
+  &[data-open] {
+    transform: translateX(0);
+  }
+
+  &__button-close {
+    position: absolute;
+    top: 16px;
+    left: 12px;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    @include flex-center;
+    outline-style: none;
+    border: none;
+    background: var(--grey-2);
+    border-radius: 50%;
+    cursor: pointer;
+
+  }
+
+  &__icon-close {
+    width: 24px;
+    height: 24px;
+  }
+
+  &__split-line {
+    position: relative;
+    height: 1px;
+    background: var(--grey-2);
+    width: 100%;
+
+  }
+
+  &__toggle-wrapper {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__theme-switcher-title {
+    white-space: nowrap;
+    font-family: 'Inter', sans-serif;
+    @include text(16px, 24px, 400, normal, var(--active-text-color));
+  }
+
+  &__theme-wrapper {
+    height: 76px;
+    padding-bottom: 24px;
+  }
+
+  &__body {
+    margin-bottom: 24px;
+  }
+}
+

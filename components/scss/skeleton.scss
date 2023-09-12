@@ -1,0 +1,62 @@
+@import "partials/mixins";
+@import "partials/params";
+
+.skeleton {
+  border: 1px solid var(--grey-3);
+  border-radius: 8px;
+  padding: 24px;
+
+  &__header {
+    @include flex-center(row);
+    gap: 16px;
+    align-items: flex-start;
+    margin-bottom: 24px;
+  }
+
+  &__body {
+    padding-right: 16px;
+  }
+
+  &__line-container {
+    flex-grow: 1;
+  }
+
+  &__circle {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+  }
+
+  &__line {
+    height: 20px;
+    margin-bottom: 8px;
+  }
+
+  &__line_small {
+    width: 35%;
+
+  }
+
+  &__line_medium {
+    width: 55%;
+  }
+
+  &__circle, &__line {
+    animation: 1.5s linear infinite forwards backgroundMovement;
+    background: var(--grey-2);
+    background: linear-gradient(267.58deg, var(--grey-2) 0%, var(--font-color-light) 80%, var(--grey-2) 100%);
+    background-size: 200%;
+  }
+
+  @keyframes backgroundMovement {
+    0% {
+      background-position: 100%;
+    }
+
+    100% {
+      background-position: -100%;
+    }
+  }
+}
+
+

@@ -1,0 +1,78 @@
+@import "partials/mixins";
+@import "partials/params";
+
+.histogram {
+  width: 100%;
+  box-sizing: border-box;
+  background: var(--main-bg-color);
+  border: 1px solid var(--grey-3);
+  border-radius: 0.5em;
+  font-family: 'Inter', sans-serif;
+  @include text($fw: 400, $fs: normal);
+  padding: 1em 1.5em 1.5em 1.5em;
+  text-align: left;
+
+  &_main-page-preview {
+    font-size: 14px;
+    @include media(md){
+      font-size: 8px;
+      width: 90%;
+    }
+  }
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0.375em;
+    @include text($size: 1em, $lh: 1.2em, $color: var(--main-font-color));
+    opacity: 0.8;
+  }
+
+  &__header {
+    @include text($size: 1.25em, $lh: 1.3em, $color: var(--active-text-color));
+
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    height: 3.125em;
+    margin-top: 2.4375em;
+    animation: appear 0.6s ease-out;
+  }
+
+  @keyframes appear {
+    0% {
+      transform: scaleY(0);
+      transform-origin: bottom center;
+    }
+    50% {
+      transform: scaleY(0);
+      transform-origin: bottom center;
+    }
+    100% {
+      transform: scaleY(1);
+      transform-origin: bottom center;
+    }
+  }
+
+  &__item {
+    min-width: 1px;
+    background: var(--ligth-blue);
+    flex-grow: 1;
+    margin-right: 1px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    padding-top: 0.1875em;
+    text-decoration: none;
+    @include text(1em, 1.2em, false, false, var(--ligth-blue));
+
+  }
+
+}

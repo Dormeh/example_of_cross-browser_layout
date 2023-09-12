@@ -1,0 +1,101 @@
+@import "partials/mixins";
+@import "partials/params";
+
+.card {
+  @include text($fs: normal, $color: var(--main-font-color));
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  @include flex-center;
+  text-decoration: none;
+  box-sizing: border-box;
+  padding: 2em 1.5625em 2em 1.5625em;
+  background: var(--main-bg-color);
+  box-shadow: 0 2px 4px rgba(33, 36, 41, 0.05);
+  border-radius: 12px;
+  width: 350px;
+  height: 367px;
+
+  @include media(md) {
+    @include text($size: 12px, $fs: normal, $fw: 400);
+    font-family: 'Inter', sans-serif;
+    border-radius: 8px;
+    padding: 0;
+    width: 164px;
+    height: 232px;
+  }
+  @include media(xs) {
+    width: 100%;
+  }
+
+  &__body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    @include flex-center;
+    @include media(md) {
+      max-height: 165px;
+    }
+  }
+
+  &__body_calendar_set {
+    justify-content: start;
+  }
+
+  &__content-wrapper_inputs {
+    box-sizing: border-box;
+    display: grid;
+    align-items: start;
+    grid-template: repeat(3, 3em) / auto auto;
+    grid-auto-flow: column;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    @include media(md) {
+      padding: 0.8em;
+      font-size: 10px;
+      align-items: center;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: flex-end;
+    @include media(md) {
+      border-top: 0.125em solid var(--grey-2);
+      justify-content: center;
+    }
+
+  }
+
+  &__text {
+    @include text(16px, 19px, 400, false, var(--grey-4));
+    @include media(md) {
+      @include text($size: 13px, $lh: 20px, $color: var(--grey-4));
+    }
+  }
+
+  &__title {
+    margin: 0 0 6px 0;
+    font-weight: 500;
+    font-size: 1.3em;
+    line-height: 1.4em;
+    @include text(1.3em, 1.4em, 500, false);
+    @include media(md) {
+      margin: 0;
+    }
+  }
+
+  &__cover {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0;
+  }
+}
+

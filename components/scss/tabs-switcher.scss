@@ -1,0 +1,108 @@
+@import "partials/mixins";
+@import "partials/params";
+
+.tabs-switcher {
+  background: var(--main-bg-color);
+  @include flex-center(row);
+  position: relative;
+  width: 100%;
+
+  &_component-page {
+    justify-content: flex-start;
+  }
+
+  &__input {
+    position: absolute;
+    outline: none;
+    clip: rect(0, 0, 0, 0);
+
+  }
+
+
+  &__label {
+    text-align: center;
+    white-space: nowrap;
+    color: var(--grey-3);
+    cursor: pointer;
+    &:hover, &:active, &:focus {
+      color: var(--active-text-color);
+    }
+    &::after {
+      display: block;
+      content: "";
+      height: 5px;
+      width: 100%;
+      top: 100%;
+      background: var(--active-text-color);
+      transform: scaleX(0);
+      margin-top: 8px;
+      transition: transform 250ms ease-in-out;
+    }
+    @include media(md) {
+      padding: 0 10px
+    }
+  }
+
+
+  &__menu {
+    display: inline-flex;
+    gap: 40px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    @include media(md) {
+      gap: 20px;
+      overflow-x: scroll;
+    }
+  }
+
+  &__split-line {
+    position: absolute;
+    width: 100vw;
+    top: 100%;
+    left: 50%;
+    margin: 0;
+    transform: translate(-50%, 0);
+    height: 1px;
+    background: #DDE2E5;
+  }
+}
+
+#all-tab:checked ~ .tabs-switcher .tabs-switcher__label[for="all-tab"]::after,
+#complex-tab:checked ~ .tabs-switcher .tabs-switcher__label[for="complex-tab"]::after,
+#elements-tab:checked ~ .tabs-switcher .tabs-switcher__label[for="elements-tab"]::after,
+#containers-tab:checked ~ .tabs-switcher .tabs-switcher__label[for="containers-tab"]::after,
+#html-preview:checked ~ .tabs-switcher .tabs-switcher__label[for="html-preview"]::after,
+#css-preview:checked ~ .tabs-switcher .tabs-switcher__label[for="css-preview"]::after,
+.tabs-switcher__label:hover::after {
+  transform: scaleX(1);
+}
+
+#all-tab:checked ~ .tabs-switcher .tabs-switcher__label[for="all-tab"],
+#complex-tab:checked ~ .tabs-switcher .tabs-switcher__label[for="complex-tab"],
+#elements-tab:checked ~ .tabs-switcher .tabs-switcher__label[for="elements-tab"],
+#containers-tab:checked ~ .tabs-switcher .tabs-switcher__label[for="containers-tab"],
+#html-preview:checked ~ .tabs-switcher .tabs-switcher__label[for="html-preview"],
+#css-preview:checked ~ .tabs-switcher .tabs-switcher__label[for="css-preview"] {
+  color: var(--active-text-color);
+}
+
+#all-tab:checked ~ .preview .preview__tab1,
+#elements-tab:checked ~ .preview .preview__tab2,
+#containers-tab:checked ~ .preview .preview__tab3,
+#complex-tab:checked ~ .preview .preview__tab4 {
+  display: flex;
+}
+
+#complex-tab:checked ~ .preview .preview__button-inner,
+#elements-tab:checked ~ .preview .preview__button-inner,
+#containers-tab:checked ~ .preview .preview__button-inner {
+  display: none;
+}
+
+#html-preview:checked ~ #preview-html,
+#css-preview:checked ~ #preview-css {
+  display: block;
+}

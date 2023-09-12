@@ -1,0 +1,13 @@
+@import "partials/mixins";
+@import "partials/params";
+
+.gridLayout {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 56px;
+  height: 100%;
+  @include media(md) {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}

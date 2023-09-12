@@ -1,0 +1,66 @@
+@import "partials/mixins";
+@import "partials/params";
+
+
+.accordion {
+  @include text(16px, 24px, 400, normal, var(--main-font-color));
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+
+  &__marker {
+    color: var(--icons-color);
+    width: 18px;
+    height: 10px;
+  }
+
+  &__text {
+    margin: 0;
+    padding-bottom: 32px;
+  }
+
+  &__summary {
+    &::-webkit-details-marker {
+      display: none
+    }
+    padding: 24px 0 24px 0;
+    outline: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__card_animation-mp {
+    transition: height 0.2s ease-out;
+    height: 72px;
+  }
+
+  &__card_animation-mp[open] {
+    height: 140px;
+    @include media(md) {
+      height: 210px;
+    }
+  }
+
+  &__card[open] &__marker {
+    transform: rotate(180deg);
+  }
+
+  &__card {
+    padding-left: 32px;
+    padding-right: 32px;
+    box-sizing: border-box;
+    background: var(--main-bg-color);
+
+    border: 1px solid var(--grey-3);
+    border-radius: 8px;
+    margin-bottom: 8px;
+  }
+
+  &__card:last-child {
+    margin-bottom: 0;
+  }
+
+}
+
+
+
