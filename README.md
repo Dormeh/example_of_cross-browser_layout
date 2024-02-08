@@ -1,5 +1,6 @@
-# Задачник для курса по современной вёрстке
+### Кросс-браузерная верстка для десктопа и мобильных устройств
 
-https://learn.javascript.ru/courses/htmlcss
+#### Preview:
+![img.png](assets/images/desktop_preview.png)
 
-Содержит теоретические материалы и практические задания.
+![img.png](assets/images/mobile_preview.png)
